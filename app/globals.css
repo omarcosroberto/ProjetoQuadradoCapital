@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Quadrado Capital — Design Tokens
+   Fonte: brand/quadrado-capital/DESIGN-SYSTEM-SEED.md
+   ============================================================ */
+
+:root {
+  --qc-verde: #2d8659;
+  --qc-verde-suave: #5da582;
+  --qc-verde-escuro: #1e5c40;
+  --qc-ceu: #87ceeb;
+  --qc-concreto: #2f3435;
+  --qc-concreto-claro: #5a6162;
+  --qc-ar: #f5f7f6;
+  --qc-branco: #ffffff;
+  --qc-linha: #d9dedb;
+  --qc-capivara: #8b6f47;
+  --qc-aviso: #f5a623;
+}
+
+@theme inline {
+  --color-verde: var(--qc-verde);
+  --color-verde-suave: var(--qc-verde-suave);
+  --color-verde-escuro: var(--qc-verde-escuro);
+  --color-ceu: var(--qc-ceu);
+  --color-concreto: var(--qc-concreto);
+  --color-concreto-claro: var(--qc-concreto-claro);
+  --color-ar: var(--qc-ar);
+  --color-branco: var(--qc-branco);
+  --color-linha: var(--qc-linha);
+  --color-capivara: var(--qc-capivara);
+  --color-aviso: var(--qc-aviso);
+  --color-background: var(--qc-ar);
+  --color-foreground: var(--qc-concreto);
+
+  --font-display: var(--font-poppins), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-brand: var(--font-fredoka), var(--font-poppins), system-ui, sans-serif;
+}
+
+* {
+  border-color: var(--qc-linha);
+}
+
+body {
+  background: var(--qc-ar);
+  color: var(--qc-concreto);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.qc-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.qc-brand {
+  font-family: var(--font-brand);
+  letter-spacing: 0.01em;
+}
+
+@keyframes qc-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.qc-float {
+  animation: qc-float 5s ease-in-out infinite;
+}
+
+@keyframes qc-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.qc-rise {
+  animation: qc-rise 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
