@@ -51,6 +51,15 @@ export function ClaimForm({
     <form action={formAction} className="grid gap-3">
       <input type="hidden" name="slug" value={slug} />
       <input type="hidden" name="tipo" value={variant} />
+      {/* honeypot anti-spam: invisível para humanos, bots preenchem */}
+      <input
+        type="text"
+        name="empresa_site"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute left-[-9999px] h-0 w-0 opacity-0"
+      />
       <div className="grid gap-3 sm:grid-cols-2">
         <input
           name="nome"
