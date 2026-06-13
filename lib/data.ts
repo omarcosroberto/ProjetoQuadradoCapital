@@ -32,10 +32,58 @@ const EMOJI: Record<string, string> = {
   Pizzaria: "🍕",
   Bar: "🍺",
   Sorveteria: "🍦",
+  Ótica: "👓",
+  Clínica: "🩺",
+  Lavanderia: "🧺",
+  Papelaria: "📒",
+  Estética: "💆",
 };
 
 export function categoriaEmoji(c: string) {
   return EMOJI[c] ?? "📍";
+}
+
+/** As 18 categorias do diretório (usadas no select do painel admin). */
+export const CATEGORIAS: string[] = [
+  "Academia",
+  "Restaurante",
+  "Padaria",
+  "Farmácia",
+  "Cafeteria",
+  "Barbearia",
+  "Salão de Beleza",
+  "Pet Shop",
+  "Mercado",
+  "Lanchonete",
+  "Pizzaria",
+  "Bar",
+  "Sorveteria",
+  "Ótica",
+  "Clínica",
+  "Lavanderia",
+  "Papelaria",
+  "Estética",
+];
+
+/** Normaliza uma categoria para slug de URL. Ex: "Salão de Beleza" → "salao-de-beleza". */
+export function categoriaParaSlug(cat: string): string {
+  return cat
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+}
+
+/** Resolve um slug de categoria de volta ao nome original, usando a lista de comércios. */
+export function slugParaCategoria(
+  slug: string,
+  businesses: Business[],
+): string | null {
+  for (const b of businesses) {
+    if (categoriaParaSlug(b.categoria) === slug) return b.categoria;
+  }
+  return null;
 }
 
 export function contagemPorCategoria(businesses: Business[]) {

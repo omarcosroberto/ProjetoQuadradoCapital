@@ -12,7 +12,21 @@ export function BusinessCard({ b }: { b: Business }) {
         aria-hidden
         className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-verde transition-transform duration-300 group-hover:scale-x-100"
       />
-      <div className="flex items-start gap-3">
+
+      {/* badge de avaliação — canto superior direito */}
+      <span
+        aria-label={`${b.capivaras.toFixed(1)} capivaras`}
+        className="absolute right-3 top-3 flex items-center gap-1 rounded-lg bg-verde/10 px-2 py-1 leading-none text-verde"
+      >
+        <span className="qc-display text-lg">
+          {b.capivaras.toFixed(1).replace(".", ",")}
+        </span>
+        <span aria-hidden className="text-xs">
+          🦫
+        </span>
+      </span>
+
+      <div className="flex items-start gap-3 pr-12">
         <span
           aria-hidden
           className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-ar text-xl"

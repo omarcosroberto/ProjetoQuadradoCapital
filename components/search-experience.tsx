@@ -1,9 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import {
   buscar,
   categoriaEmoji,
+  categoriaParaSlug,
   computeStats,
   contagemPorCategoria,
   type Business,
@@ -12,6 +14,7 @@ import { BusinessCard } from "./business-card";
 import { CapivaraMascote } from "./capivara-mascote";
 
 const EXEMPLOS = ["Academias", "409 Sul", "Restaurantes", "513 Sul", "Cafeterias", "408 Norte"];
+const QUADRAS_POPULARES = ["409 Sul", "410 Sul", "513 Sul", "408 Norte", "410 Norte"];
 
 function LupaIcon() {
   return (
@@ -117,6 +120,23 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
                 ))}
               </div>
 
+              {/* quadras populares — atalho rápido */}
+              <div className="mt-3 flex flex-wrap items-center gap-2">
+                <span className="text-xs font-semibold uppercase tracking-wide text-branco/45">
+                  Quadras populares
+                </span>
+                {QUADRAS_POPULARES.map((q) => (
+                  <button
+                    key={q}
+                    type="button"
+                    onClick={() => setQuery(q)}
+                    className="rounded-full bg-verde/15 px-3 py-1 text-sm font-semibold text-verde-suave transition-colors hover:bg-verde/25 hover:text-branco"
+                  >
+                    {q}
+                  </button>
+                ))}
+              </div>
+
               {/* stats */}
               <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-branco/55">
                 <span>
@@ -158,10 +178,9 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
             </p>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
               {categorias.map(({ categoria, total }) => (
-                <button
+                <Link
                   key={categoria}
-                  type="button"
-                  onClick={() => setQuery(categoria)}
+                  href={`/categoria/${categoriaParaSlug(categoria)}`}
                   className="group flex items-center gap-3 rounded-xl border border-linha bg-branco p-3 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-verde/40 hover:shadow-md"
                 >
                   <span
@@ -178,7 +197,7 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
                       {total} {total === 1 ? "lugar" : "lugares"}
                     </span>
                   </span>
-                </button>
+                </Link>
               ))}
             </div>
             <p className="mt-8 max-w-lg text-sm text-concreto-claro">
