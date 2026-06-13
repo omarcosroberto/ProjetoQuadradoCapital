@@ -25,7 +25,7 @@ export function Footer() {
             rel="noopener noreferrer"
             className="text-[11px] text-branco/30 transition-colors hover:text-verde-suave"
           >
-            Site por Marcos Roberto PRO
+            © 2026 Marcos Roberto PRO · Todos os direitos reservados.
           </a>
         </div>
       </div>
