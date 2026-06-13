@@ -12,6 +12,7 @@ import {
 } from "@/lib/data";
 import { BusinessCard } from "./business-card";
 import { CapivaraMascote } from "./capivara-mascote";
+import { LogoQC } from "./logo-qc";
 
 const EXEMPLOS = ["Academias", "409 Sul", "Restaurantes", "513 Sul", "Cafeterias", "408 Norte"];
 const QUADRAS_POPULARES = ["409 Sul", "410 Sul", "513 Sul", "408 Norte", "410 Norte"];
@@ -65,14 +66,7 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
 
         <div className="relative mx-auto max-w-[1100px] px-6 py-12 md:py-16">
           {/* Marca */}
-          <div className="flex items-center gap-2.5">
-            <span className="flex h-9 w-9 items-center justify-center bg-verde qc-brand text-lg leading-none text-branco">
-              Q
-            </span>
-            <span className="qc-brand text-lg text-branco">
-              Quadrado <span className="text-verde-suave">Capital</span>
-            </span>
-          </div>
+          <LogoQC variant="light" href={null} />
 
           <div className="mt-8 grid items-center gap-8 lg:grid-cols-[1.35fr_1fr]">
             <div>

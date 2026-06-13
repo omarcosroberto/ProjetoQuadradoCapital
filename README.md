@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🦫 Quadrado Capital
 
-## Getting Started
+**O diretório de comércios de Brasília por quadra e bloco.**
 
-First, run the development server:
+Comércios da Asa Sul e Asa Norte organizados por **quadra** e **bloco**, avaliados em capivaras pelos próprios moradores.
+
+[quadradocapital.com.br](https://quadradocapital.com.br)
+
+## 🗺️ O que é
+
+O Google te mostra um pino. O Quadrado Capital te mostra a **quadra**. Em vez de coordenadas, organizamos os comércios do jeito que o brasiliense pensa o endereço: por superquadra e bloco. Quem mora na 409 Sul acha o que precisa na 409 Sul.
+
+## ⚙️ Funcionalidades
+
+- 🔍 Busca por quadra (ex: 409 Sul) ou categoria (ex: Restaurantes)
+- 🦫 Sistema de avaliação em capivaras (membros cadastrados)
+- 🗂️ Páginas por categoria (/categoria/restaurante)
+- 👤 Login/cadastro de membros
+- 🛡️ Painel admin protegido por senha (/admin)
+- 📜 Política de privacidade, cookies e termos de uso
+
+## 🏗️ Stack
+
+- **Next.js 16** App Router
+- **Tailwind CSS v4** com design tokens customizados
+- **Supabase** (PostgreSQL + Auth + RLS)
+- **Vercel** (deploy)
+
+## 🚀 Desenvolvimento local
 
 ```bash
+npm install
+cp .env.example .env.local  # preencha as vars do Supabase
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔐 Variáveis de ambiente
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Variável | Descrição |
+|----------|-----------|
+| NEXT_PUBLIC_SUPABASE_URL | URL do projeto Supabase |
+| NEXT_PUBLIC_SUPABASE_ANON_KEY | Chave anon pública |
+| SUPABASE_SERVICE_ROLE_KEY | Chave admin (só server-side) |
+| QC_ADMIN_PASS | Senha do painel /admin |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Estrutura
 
-## Learn More
+```
+app/
+├── page.tsx              # Home com busca
+├── comercio/[slug]/      # Página do comércio
+├── categoria/[slug]/     # Listagem por categoria
+├── entrar/               # Login / cadastro
+├── conta/                # Perfil do membro
+├── admin/                # Painel admin (protegido)
+├── privacidade/          # Política de privacidade
+├── termos/               # Termos de uso
+└── cookies/              # Política de cookies
 
-To learn more about Next.js, take a look at the following resources:
+components/
+├── search-experience.tsx # Hero + busca
+├── business-card.tsx     # Card de comércio
+├── avaliacao-form.tsx    # Formulário de avaliação
+├── logo-qc.tsx           # Logo SVG
+└── cookie-banner.tsx     # Banner LGPD
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+lib/
+├── supabase.ts           # Clientes Supabase
+├── comercios.ts          # Queries de comércios
+└── data.ts               # Tipos + lógica de busca
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🦫 O sistema de capivaras
 
-## Deploy on Vercel
+A nota de 1 a 5 capivaras é calculada automaticamente pela média das avaliações dos membros cadastrados. Cada membro pode avaliar cada comércio uma vez. Comércios novos começam com 5.0 🦫 até receberem avaliações.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛡️ Segurança
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- RLS ativo em todas as tabelas
+- Uma avaliação por usuário por comércio (constraint único no banco)
+- Comentários limitados a 500 caracteres
+- Cookies de sessão httpOnly
+- Admin protegido por senha separada do Supabase
+
+## 📄 Legal
+
+- [Política de Privacidade](/privacidade)
+- [Termos de Uso](/termos)
+- [Política de Cookies](/cookies)
+
+---
+
+Feito em Brasília 🦫 por [Marcos Roberto PRO](https://marcosroberto.pro)

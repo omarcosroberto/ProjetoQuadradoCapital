@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Inter, Fredoka } from "next/font/google";
 import "./globals.css";
+import { CookieBanner } from "@/components/cookie-banner";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -29,6 +30,12 @@ export const metadata: Metadata = {
   description:
     "Encontre lojas e serviços da Asa Sul e Asa Norte de Brasília organizados por QUADRA e BLOCO. Avaliados em capivaras 🦫.",
   alternates: { canonical: "https://quadradocapital.com.br" },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
+    ],
+  },
   openGraph: {
     title: "Quadrado Capital",
     description:
@@ -54,7 +61,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-dvh">{children}</body>
+      <body className="min-h-dvh">
+        {children}
+        <CookieBanner />
+      </body>
     </html>
   );
 }

@@ -10,6 +10,7 @@ import {
   type ComercioDetalhe,
 } from "@/lib/comercios";
 import { ClaimForm } from "./claim-form";
+import { AvaliacaoForm } from "@/components/avaliacao-form";
 
 export const revalidate = 300;
 export const dynamicParams = true;
@@ -191,6 +192,9 @@ export default async function ComercioPage({
                 <ClaimForm slug={c.id} variant="lead_mrp" />
               </div>
             </div>
+
+            {/* avaliações da comunidade (membros logados) */}
+            <AvaliacaoForm slug={c.id} />
           </div>
 
           {/* coluna lateral — reivindicar */}
