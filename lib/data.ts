@@ -6,6 +6,8 @@
 
 export type Asa = "Sul" | "Norte";
 
+export type PresencaGoogle = "forte" | "fraca" | "ausente" | "desconhecida";
+
 export type Business = {
   id: string;
   nome: string;
@@ -16,7 +18,16 @@ export type Business = {
   capivaras: number; // 1.0 – 5.0
   avaliacoes: number;
   whatsapp?: string;
+  // Enriquecimento (opcional — usado pelos cards/filtros da home).
+  fotoUrl?: string;
+  horarioFuncionamento?: string[]; // weekday descriptions do Google
+  presencaGoogle?: PresencaGoogle; // "forte" => comércio verificado
 };
+
+/** Verdadeiro quando a presença no Google é forte (selo "Verificado"). */
+export function isVerificado(b: Pick<Business, "presencaGoogle">): boolean {
+  return b.presencaGoogle === "forte";
+}
 
 const EMOJI: Record<string, string> = {
   // Alimentação

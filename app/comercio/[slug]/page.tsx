@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { CapivaraRating } from "@/components/capivara";
 import { Footer } from "@/components/footer";
+import { FolhaCapivara } from "@/components/folha-capivara";
 import { asaSigla, categoriaEmoji } from "@/lib/data";
 import {
   getComercioBySlug,
@@ -12,7 +13,8 @@ import {
 import { ClaimForm } from "./claim-form";
 import { ClaimNegocio } from "@/components/claim-negocio";
 import { AvaliacaoForm } from "@/components/avaliacao-form";
-import { estaAbertoAgora } from "@/lib/horario";
+import { EstadoAberto } from "@/components/estado-aberto";
+import { HorarioSemana } from "@/components/horario-semana";
 
 export const revalidate = 300;
 export const dynamicParams = true;
@@ -30,10 +32,20 @@ export async function generateMetadata({
   const { slug } = await params;
   const c = await getComercioBySlug(slug);
   if (!c) return { title: "Comércio não encontrado — Quadrado Capital" };
+  const asaNome = c.asa === "Sul" ? "Asa Sul" : "Asa Norte";
   const local = `Quadra ${c.quadra} ${asaSigla(c.asa)}${c.bloco ? `, Bloco ${c.bloco}` : ""}`;
   return {
-    title: `${c.nome} — ${c.categoria} na ${local} | Quadrado Capital`,
-    description: `${c.nome}, ${c.categoria} em ${local}, Brasília. ${c.capivaras.toFixed(1)} capivaras em ${c.avaliacoes} avaliações.`,
+    title: `${c.nome} — Quadrado Capital`,
+    description: `${c.categoria} na ${asaNome}, Quadra ${c.quadra}${c.bloco ? ` Bloco ${c.bloco}` : ""}. Avalie e descubra comércios de Brasília.`,
+    openGraph: {
+      title: `${c.nome} 🦫 ${c.capivaras.toFixed(1).replace(".", ",")}`,
+      description: `${c.categoria} · Quadra ${c.quadra} ${c.asa} · Brasília`,
+      images: c.fotoUrl
+        ? [{ url: c.fotoUrl, width: 1200, height: 630 }]
+        : [],
+      locale: "pt_BR",
+      type: "website",
+    },
   };
 }
 
@@ -92,7 +104,9 @@ export default async function ComercioPage({
   const local = `Quadra ${c.quadra} ${asaSigla(c.asa)}`;
   const googleFraco =
     c.presencaGoogle === "fraca" || c.presencaGoogle === "ausente";
-  const aberto = estaAbertoAgora(c.horarioFuncionamento);
+  const temHorario =
+    Array.isArray(c.horarioFuncionamento) &&
+    c.horarioFuncionamento.length > 0;
 
   return (
     <div className="flex min-h-dvh flex-col">
@@ -141,23 +155,11 @@ export default async function ComercioPage({
               </div>
             )}
             <div className="rounded-2xl border border-linha bg-branco p-6 sm:p-8">
-              {aberto !== null && (
-                <span
-                  className={`mb-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${
-                    aberto
-                      ? "bg-verde/10 text-verde-escuro"
-                      : "bg-aviso/10 text-aviso"
-                  }`}
-                >
-                  <span
-                    className={`h-1.5 w-1.5 rounded-full ${
-                      aberto ? "bg-verde" : "bg-aviso"
-                    }`}
-                    aria-hidden
-                  />
-                  {aberto ? "Aberto agora" : "Fechado"}
-                </span>
-              )}
+              <EstadoAberto
+                horario={c.horarioFuncionamento}
+                variant="inline"
+                className="mb-4"
+              />
               <div className="flex items-start gap-4">
                 <span
                   aria-hidden
@@ -169,9 +171,15 @@ export default async function ComercioPage({
                   <p className="text-xs font-semibold uppercase tracking-wide text-verde">
                     {c.categoria}
                   </p>
-                  <h1 className="mt-1 qc-display text-2xl text-concreto sm:text-3xl">
-                    {c.nome}
-                  </h1>
+                  <div className="mt-1 flex flex-wrap items-center gap-2">
+                    <h1 className="qc-display text-2xl text-concreto sm:text-3xl">
+                      {c.nome}
+                    </h1>
+                    <FolhaCapivara
+                      verificado={c.presencaGoogle === "forte"}
+                      size="md"
+                    />
+                  </div>
                   <p className="mt-2 text-sm text-concreto-claro">
                     {c.bloco ? (
                       <span className="font-semibold text-concreto">
@@ -203,22 +211,39 @@ export default async function ComercioPage({
                   </p>
                 </div>
               )}
-
-              {c.horarioFuncionamento && c.horarioFuncionamento.length > 0 && (
-                <div className="mt-6 border-t border-linha pt-5">
-                  <p className="text-sm font-semibold text-concreto">
-                    Horário de funcionamento
-                  </p>
-                  <ul className="mt-2 grid gap-1 text-sm text-concreto-claro">
-                    {c.horarioFuncionamento.map((linha, i) => (
-                      <li key={i}>{linha}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
             </div>
 
-            {/* lead-gen MRP — destaque quando a presença no Google é fraca */}
+            {/* 2. HORÁRIO DE FUNCIONAMENTO — 7 dias, hoje em verde */}
+            {temHorario && (
+              <div className="mt-6 rounded-2xl border border-linha bg-branco p-6 sm:p-8">
+                <p className="qc-display text-lg text-concreto">
+                  Horário de funcionamento
+                </p>
+                <div className="mt-4">
+                  <HorarioSemana horario={c.horarioFuncionamento!} />
+                </div>
+              </div>
+            )}
+
+            {/* 3. AVALIAÇÕES da comunidade (membros logados) */}
+            <AvaliacaoForm slug={c.id} />
+
+            {/* 4. REIVINDICAÇÃO por membro logado */}
+            <div className="mt-6 rounded-2xl border border-linha bg-branco p-6 sm:p-8">
+              <p className="qc-brand text-sm text-verde">Sou o dono</p>
+              <h2 className="mt-1 qc-display text-xl text-concreto">
+                Gerencie este negócio
+              </h2>
+              <p className="mt-2 text-sm text-concreto-claro">
+                Reivindique com sua conta para editar informações e acessar o
+                painel do dono.
+              </p>
+              <div className="mt-5">
+                <ClaimNegocio slug={c.id} />
+              </div>
+            </div>
+
+            {/* 5. lead-gen MRP — destaque quando a presença no Google é fraca */}
             <div
               className={`mt-6 rounded-2xl border p-6 sm:p-8 ${
                 googleFraco
@@ -226,9 +251,7 @@ export default async function ComercioPage({
                   : "border-linha bg-branco"
               }`}
             >
-              <p className="qc-brand text-sm text-verde">
-                Presença digital
-              </p>
+              <p className="qc-brand text-sm text-verde">Presença digital</p>
               <h2 className="mt-1 qc-display text-xl text-concreto">
                 {googleFraco
                   ? "Este comércio quase não aparece no Google."
@@ -243,30 +266,11 @@ export default async function ComercioPage({
                 <ClaimForm slug={c.id} variant="lead_mrp" />
               </div>
             </div>
-
-            {/* avaliações da comunidade (membros logados) */}
-            <AvaliacaoForm slug={c.id} />
           </div>
 
-          {/* coluna lateral — reivindicar */}
+          {/* coluna lateral — contato do prospect (sem login) */}
           <aside className="qc-rise lg:sticky lg:top-6 lg:self-start">
-            {/* reivindicação por membro logado (vincula a conta ao comércio) */}
             <div className="rounded-2xl border border-linha bg-branco p-6">
-              <p className="qc-brand text-sm text-verde">Sou o dono</p>
-              <h2 className="mt-1 qc-display text-xl text-concreto">
-                Gerencie este negócio
-              </h2>
-              <p className="mt-2 text-sm text-concreto-claro">
-                Reivindique com sua conta para editar informações e acessar o
-                painel do dono.
-              </p>
-              <div className="mt-5">
-                <ClaimNegocio slug={c.id} />
-              </div>
-            </div>
-
-            {/* lead-gen: contato sem login (prospect) */}
-            <div className="mt-6 rounded-2xl border border-linha bg-branco p-6">
               <p className="qc-brand text-sm text-verde">É o seu comércio?</p>
               <h2 className="mt-1 qc-display text-xl text-concreto">
                 Prefere que a gente entre em contato?

@@ -59,6 +59,23 @@ function agoraBrasilia(): { dia: number; minutos: number } {
   return { dia: map[wd] ?? 0, minutos: (hour % 24) * 60 + minute };
 }
 
+/** Dia da semana atual em Brasília (0 = domingo … 6 = sábado). */
+export function diaSemanaBrasilia(): number {
+  return agoraBrasilia().dia;
+}
+
+/**
+ * Dado o array de weekday descriptions do Google, devolve o índice (0..n-1) da
+ * linha que corresponde ao dia de hoje em Brasília. -1 se não encontrar.
+ */
+export function indiceDiaAtual(weekday: string[] | undefined): number {
+  if (!weekday || weekday.length === 0) return -1;
+  const nomeDia = DIAS_PT[agoraBrasilia().dia];
+  return weekday.findIndex((l) =>
+    normalizar(l).startsWith(normalizar(nomeDia)),
+  );
+}
+
 /**
  * Retorna true (aberto), false (fechado) ou null (não foi possível determinar).
  */

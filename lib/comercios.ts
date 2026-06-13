@@ -1,9 +1,9 @@
 import "server-only";
 import { createPublicClient } from "./supabase";
 import { SEED_BUSINESSES } from "./seed";
-import type { Asa, Business } from "./data";
+import type { Asa, Business, PresencaGoogle } from "./data";
 
-export type PresencaGoogle = "forte" | "fraca" | "ausente" | "desconhecida";
+export type { PresencaGoogle } from "./data";
 
 /** Perfil completo de um comércio (página /comercio/[slug]). */
 export type ComercioDetalhe = Business & {
@@ -13,8 +13,6 @@ export type ComercioDetalhe = Business & {
   site?: string;
   website?: string;
   descricao?: string;
-  fotoUrl?: string;
-  horarioFuncionamento?: string[];
   presencaGoogle: PresencaGoogle;
 };
 
@@ -28,6 +26,9 @@ type ComercioRow = {
   capivaras: number | string | null;
   avaliacoes: number | null;
   whatsapp: string | null;
+  foto_url: string | null;
+  horario_funcionamento: string[] | null;
+  presenca_google: string | null;
 };
 
 type ComercioDetalheRow = ComercioRow & {
@@ -37,9 +38,6 @@ type ComercioDetalheRow = ComercioRow & {
   site: string | null;
   website: string | null;
   descricao: string | null;
-  foto_url: string | null;
-  horario_funcionamento: string[] | null;
-  presenca_google: string | null;
 };
 
 function mapRow(r: ComercioRow): Business {
@@ -53,6 +51,11 @@ function mapRow(r: ComercioRow): Business {
     capivaras: Number(r.capivaras ?? 0),
     avaliacoes: r.avaliacoes ?? 0,
     whatsapp: r.whatsapp ?? undefined,
+    fotoUrl: r.foto_url ?? undefined,
+    horarioFuncionamento: Array.isArray(r.horario_funcionamento)
+      ? r.horario_funcionamento
+      : undefined,
+    presencaGoogle: (r.presenca_google ?? "desconhecida") as PresencaGoogle,
   };
 }
 
@@ -65,10 +68,6 @@ function mapDetalhe(r: ComercioDetalheRow): ComercioDetalhe {
     site: r.site ?? undefined,
     website: r.website ?? undefined,
     descricao: r.descricao ?? undefined,
-    fotoUrl: r.foto_url ?? undefined,
-    horarioFuncionamento: Array.isArray(r.horario_funcionamento)
-      ? r.horario_funcionamento
-      : undefined,
     presencaGoogle: (r.presenca_google ?? "desconhecida") as PresencaGoogle,
   };
 }
@@ -91,7 +90,9 @@ export async function getComercios(): Promise<Business[]> {
     const supabase = createPublicClient();
     const { data, error } = await supabase
       .from("comercios")
-      .select("slug,nome,categoria,asa,quadra,bloco,capivaras,avaliacoes,whatsapp")
+      .select(
+        "slug,nome,categoria,asa,quadra,bloco,capivaras,avaliacoes,whatsapp,foto_url,horario_funcionamento,presenca_google",
+      )
       .eq("ativo", true)
       .order("asa", { ascending: true })
       .order("quadra", { ascending: true })

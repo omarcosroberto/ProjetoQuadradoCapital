@@ -10,9 +10,10 @@ import {
   contagemPorCategoria,
   type Business,
 } from "@/lib/data";
-import { BusinessCard } from "./business-card";
 import { CapivaraMascote } from "./capivara-mascote";
 import { LogoQC } from "./logo-qc";
+import { FiltrosResultados } from "./filtros-resultados";
+import { MapaQuadras } from "./mapa-quadras";
 
 const EXEMPLOS = ["Academias", "409 Sul", "Restaurantes", "513 Sul", "Cafeterias", "408 Norte"];
 const QUADRAS_POPULARES = ["409 Sul", "410 Sul", "513 Sul", "408 Norte", "410 Norte"];
@@ -43,6 +44,21 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
     [businesses],
   );
   const stats = useMemo(() => computeStats(businesses), [businesses]);
+
+  // Estado vazio inteligente: quando a busca não acha nada, decidimos a sugestão
+  // a partir do formato da query (parece quadra? parece categoria?).
+  const sugestao = useMemo(() => {
+    const q = query.trim();
+    const num = q.match(/\b(\d{3})\b/);
+    if (num) {
+      const alvo = Number(num[1]);
+      const quadras = Array.from(
+        new Set(businesses.map((b) => b.quadra)),
+      ).sort((a, b) => Math.abs(a - alvo) - Math.abs(b - alvo));
+      return { tipo: "quadra" as const, quadras: quadras.slice(0, 3) };
+    }
+    return { tipo: "categoria" as const };
+  }, [query, businesses]);
 
   return (
     <>
@@ -160,6 +176,19 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
               <CapivaraMascote className="qc-float h-72 w-auto" />
             </div>
           </div>
+
+          {/* explorar por quadra — mapa */}
+          <div className="mt-10 rounded-2xl border border-branco/10 bg-branco/[0.04] p-5">
+            <p className="qc-brand text-sm text-verde-suave">
+              Explorar por quadra
+            </p>
+            <p className="mt-1 text-sm text-branco/60">
+              Toque numa superquadra pra ver os comércios dela.
+            </p>
+            <div className="mt-4 rounded-xl bg-branco p-4">
+              <MapaQuadras businesses={businesses} onSelecionar={setQuery} />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -204,9 +233,57 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
             <CapivaraMascote className="mx-auto h-24 w-auto opacity-80" />
             <p className="mt-4 text-concreto-claro">
               Nada encontrado para{" "}
-              <strong className="text-concreto">&ldquo;{res.titulo}&rdquo;</strong>.
-              Tenta outro tema ou quadra.
+              <strong className="text-concreto">
+                &ldquo;{res.titulo}&rdquo;
+              </strong>
+              .
             </p>
+
+            {sugestao.tipo === "quadra" && sugestao.quadras.length > 0 ? (
+              <div className="mt-6">
+                <p className="text-sm font-semibold text-concreto">
+                  Quadras mais próximas com comércio:
+                </p>
+                <div className="mt-3 flex flex-wrap justify-center gap-2">
+                  {sugestao.quadras.map((qd) => (
+                    <button
+                      key={qd}
+                      type="button"
+                      onClick={() => setQuery(String(qd))}
+                      className="rounded-full bg-verde px-3.5 py-1.5 text-sm font-semibold text-branco transition-colors hover:bg-verde-escuro"
+                    >
+                      Quadra {qd}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div className="mt-6">
+                <p className="text-sm font-semibold text-concreto">
+                  Procure por uma categoria:
+                </p>
+                <div className="mt-3 flex flex-wrap justify-center gap-2">
+                  {categorias.slice(0, 8).map(({ categoria }) => (
+                    <button
+                      key={categoria}
+                      type="button"
+                      onClick={() => setQuery(categoria)}
+                      className="rounded-full border border-linha bg-branco px-3.5 py-1.5 text-sm font-semibold text-concreto-claro transition-colors hover:border-verde/40"
+                    >
+                      {categoriaEmoji(categoria)} {categoria}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <button
+              type="button"
+              onClick={() => setQuery("")}
+              className="mt-7 text-sm font-semibold text-verde underline-offset-2 hover:underline"
+            >
+              Ver todos os comércios
+            </button>
           </div>
         ) : (
           <div className="qc-rise">
@@ -217,27 +294,10 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
               · <strong className="text-concreto">{res.total}</strong>{" "}
               encontrado(s)
             </p>
-            <div className="space-y-10">
-              {res.grupos.map((g) => (
-                <div key={g.key}>
-                  <div className="mb-4 flex items-center gap-3">
-                    <span className="rounded-lg bg-verde/10 px-3 py-1.5 qc-brand text-sm text-verde">
-                      {g.label}
-                    </span>
-                    <span className="h-px flex-1 bg-linha" />
-                    <span className="rounded-full bg-ar px-2.5 py-0.5 text-xs font-semibold text-concreto-claro">
-                      {g.items.length}{" "}
-                      {g.items.length === 1 ? "comércio" : "comércios"}
-                    </span>
-                  </div>
-                  <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                    {g.items.map((b) => (
-                      <BusinessCard key={b.id} b={b} />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
+            <FiltrosResultados
+              itens={res.grupos.flatMap((g) => g.items)}
+              modoQuadra={res.mode === "quadra"}
+            />
           </div>
         )}
       </section>
