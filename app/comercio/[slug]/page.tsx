@@ -10,7 +10,9 @@ import {
   type ComercioDetalhe,
 } from "@/lib/comercios";
 import { ClaimForm } from "./claim-form";
+import { ClaimNegocio } from "@/components/claim-negocio";
 import { AvaliacaoForm } from "@/components/avaliacao-form";
+import { estaAbertoAgora } from "@/lib/horario";
 
 export const revalidate = 300;
 export const dynamicParams = true;
@@ -90,6 +92,7 @@ export default async function ComercioPage({
   const local = `Quadra ${c.quadra} ${asaSigla(c.asa)}`;
   const googleFraco =
     c.presencaGoogle === "fraca" || c.presencaGoogle === "ausente";
+  const aberto = estaAbertoAgora(c.horarioFuncionamento);
 
   return (
     <div className="flex min-h-dvh flex-col">
@@ -127,7 +130,34 @@ export default async function ComercioPage({
         <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr]">
           {/* coluna principal */}
           <div className="qc-rise">
+            {c.fotoUrl && (
+              <div className="mb-6 overflow-hidden rounded-2xl border border-linha bg-branco">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={c.fotoUrl}
+                  alt={`Foto de ${c.nome}`}
+                  className="h-56 w-full object-cover sm:h-72"
+                />
+              </div>
+            )}
             <div className="rounded-2xl border border-linha bg-branco p-6 sm:p-8">
+              {aberto !== null && (
+                <span
+                  className={`mb-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${
+                    aberto
+                      ? "bg-verde/10 text-verde-escuro"
+                      : "bg-aviso/10 text-aviso"
+                  }`}
+                >
+                  <span
+                    className={`h-1.5 w-1.5 rounded-full ${
+                      aberto ? "bg-verde" : "bg-aviso"
+                    }`}
+                    aria-hidden
+                  />
+                  {aberto ? "Aberto agora" : "Fechado"}
+                </span>
+              )}
               <div className="flex items-start gap-4">
                 <span
                   aria-hidden
@@ -165,6 +195,27 @@ export default async function ComercioPage({
               </div>
 
               <Contato c={c} />
+
+              {c.descricao && (
+                <div className="mt-6 border-t border-linha pt-5">
+                  <p className="text-sm whitespace-pre-line text-concreto-claro">
+                    {c.descricao}
+                  </p>
+                </div>
+              )}
+
+              {c.horarioFuncionamento && c.horarioFuncionamento.length > 0 && (
+                <div className="mt-6 border-t border-linha pt-5">
+                  <p className="text-sm font-semibold text-concreto">
+                    Horário de funcionamento
+                  </p>
+                  <ul className="mt-2 grid gap-1 text-sm text-concreto-claro">
+                    {c.horarioFuncionamento.map((linha, i) => (
+                      <li key={i}>{linha}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
 
             {/* lead-gen MRP — destaque quando a presença no Google é fraca */}
@@ -198,15 +249,30 @@ export default async function ComercioPage({
           </div>
 
           {/* coluna lateral — reivindicar */}
-          <aside className="qc-rise">
-            <div className="rounded-2xl border border-linha bg-branco p-6 lg:sticky lg:top-6">
-              <p className="qc-brand text-sm text-verde">É o seu comércio?</p>
+          <aside className="qc-rise lg:sticky lg:top-6 lg:self-start">
+            {/* reivindicação por membro logado (vincula a conta ao comércio) */}
+            <div className="rounded-2xl border border-linha bg-branco p-6">
+              <p className="qc-brand text-sm text-verde">Sou o dono</p>
               <h2 className="mt-1 qc-display text-xl text-concreto">
-                Reivindique este perfil
+                Gerencie este negócio
               </h2>
               <p className="mt-2 text-sm text-concreto-claro">
-                Confirme que é o dono para manter as informações sempre certas e
-                responder a quem busca pela sua quadra.
+                Reivindique com sua conta para editar informações e acessar o
+                painel do dono.
+              </p>
+              <div className="mt-5">
+                <ClaimNegocio slug={c.id} />
+              </div>
+            </div>
+
+            {/* lead-gen: contato sem login (prospect) */}
+            <div className="mt-6 rounded-2xl border border-linha bg-branco p-6">
+              <p className="qc-brand text-sm text-verde">É o seu comércio?</p>
+              <h2 className="mt-1 qc-display text-xl text-concreto">
+                Prefere que a gente entre em contato?
+              </h2>
+              <p className="mt-2 text-sm text-concreto-claro">
+                Deixe seu contato e confirmamos que o perfil é seu.
               </p>
               <div className="mt-5">
                 <ClaimForm slug={c.id} variant="reivindicacao" />

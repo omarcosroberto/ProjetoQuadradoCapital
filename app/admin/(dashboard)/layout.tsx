@@ -46,6 +46,12 @@ export default async function DashboardLayout({
           >
             + Novo comércio
           </Link>
+          <Link
+            href="/admin/reivindicacoes"
+            className="rounded-lg px-3 py-2 text-sm text-branco/80 transition-colors hover:bg-white/10 hover:text-branco"
+          >
+            Reivindicações
+          </Link>
         </nav>
         <div className="border-t border-white/10 p-3">
           <Link

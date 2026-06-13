@@ -11,6 +11,10 @@ export type ComercioDetalhe = Business & {
   telefone?: string;
   instagram?: string;
   site?: string;
+  website?: string;
+  descricao?: string;
+  fotoUrl?: string;
+  horarioFuncionamento?: string[];
   presencaGoogle: PresencaGoogle;
 };
 
@@ -31,6 +35,10 @@ type ComercioDetalheRow = ComercioRow & {
   telefone: string | null;
   instagram: string | null;
   site: string | null;
+  website: string | null;
+  descricao: string | null;
+  foto_url: string | null;
+  horario_funcionamento: string[] | null;
   presenca_google: string | null;
 };
 
@@ -55,6 +63,12 @@ function mapDetalhe(r: ComercioDetalheRow): ComercioDetalhe {
     telefone: r.telefone ?? undefined,
     instagram: r.instagram ?? undefined,
     site: r.site ?? undefined,
+    website: r.website ?? undefined,
+    descricao: r.descricao ?? undefined,
+    fotoUrl: r.foto_url ?? undefined,
+    horarioFuncionamento: Array.isArray(r.horario_funcionamento)
+      ? r.horario_funcionamento
+      : undefined,
     presencaGoogle: (r.presenca_google ?? "desconhecida") as PresencaGoogle,
   };
 }
@@ -110,7 +124,7 @@ export async function getComercioBySlug(
     const { data, error } = await supabase
       .from("comercios")
       .select(
-        "slug,nome,categoria,asa,quadra,bloco,capivaras,avaliacoes,whatsapp,endereco,telefone,instagram,site,presenca_google",
+        "slug,nome,categoria,asa,quadra,bloco,capivaras,avaliacoes,whatsapp,endereco,telefone,instagram,site,website,descricao,foto_url,horario_funcionamento,presenca_google",
       )
       .eq("ativo", true)
       .eq("slug", slug)

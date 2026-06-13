@@ -62,9 +62,13 @@ type AvaliacaoPublica = {
   user_id: string;
   nota: number;
   comentario: string | null;
+  fotos: string[];
   created_at: string;
   apelido: string | null;
 };
+
+const MAX_FOTOS = 3;
+const MAX_FOTO_BYTES = 5 * 1024 * 1024; // 5 MB
 
 function formatarData(iso: string): string {
   try {
@@ -89,17 +93,24 @@ export function AvaliacaoForm({ slug }: { slug: string }) {
   const [erro, setErro] = useState<string | null>(null);
   const [salvo, setSalvo] = useState(false);
 
+  // Fotos: URLs públicas já aprovadas + estado de upload.
+  const [fotos, setFotos] = useState<string[]>([]);
+  const [uploadando, setUploadando] = useState(false);
+
   const [lista, setLista] = useState<AvaliacaoPublica[]>([]);
 
   const carregarLista = useCallback(async () => {
     const supabase = createAuthClient();
     const { data: avals } = await supabase
       .from("qc_avaliacoes")
-      .select("id,user_id,nota,comentario,created_at")
+      .select("id,user_id,nota,comentario,fotos,created_at")
       .eq("comercio_slug", slug)
       .order("created_at", { ascending: false });
 
-    const linhas = (avals ?? []) as Omit<AvaliacaoPublica, "apelido">[];
+    const linhas = (avals ?? []).map((l) => ({
+      ...l,
+      fotos: (l.fotos ?? []) as string[],
+    })) as Omit<AvaliacaoPublica, "apelido">[];
 
     // qc_avaliacoes e qc_perfis apontam ambos para auth.users (sem FK direta
     // entre si), então não dá pra usar join embedado do PostgREST. Buscamos os
@@ -143,12 +154,87 @@ export function AvaliacaoForm({ slug }: { slug: string }) {
     if (minha) {
       setNota(minha.nota);
       setComentario(minha.comentario ?? "");
+      setFotos(minha.fotos ?? []);
     }
   }, [user, lista]);
 
   useEffect(() => {
     carregarLista();
   }, [carregarLista]);
+
+  async function adicionarFoto(file: File) {
+    if (!user) return;
+    setErro(null);
+
+    if (fotos.length >= MAX_FOTOS) {
+      setErro(`Você pode enviar no máximo ${MAX_FOTOS} fotos.`);
+      return;
+    }
+    if (!file.type.startsWith("image/")) {
+      setErro("Envie apenas arquivos de imagem.");
+      return;
+    }
+    if (file.size > MAX_FOTO_BYTES) {
+      setErro("Cada foto pode ter no máximo 5 MB.");
+      return;
+    }
+
+    setUploadando(true);
+    const supabase = createAuthClient();
+    const ext = (file.name.split(".").pop() || "jpg").toLowerCase();
+    const path = `${user.id}/${crypto.randomUUID()}.${ext}`;
+
+    try {
+      const { error: upErr } = await supabase.storage
+        .from("qc-avaliacoes")
+        .upload(path, file, { contentType: file.type, upsert: false });
+      if (upErr) {
+        setErro("Não foi possível enviar a foto. Tente de novo.");
+        return;
+      }
+
+      const {
+        data: { publicUrl },
+      } = supabase.storage.from("qc-avaliacoes").getPublicUrl(path);
+
+      // Moderação SafeSearch antes de aceitar a URL.
+      const res = await fetch("/api/moderar-imagem", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ imageUrl: publicUrl }),
+      });
+      const mod = (await res.json()) as { aprovado: boolean; motivo?: string };
+
+      if (!mod.aprovado) {
+        // Remove a foto reprovada do Storage.
+        await supabase.storage.from("qc-avaliacoes").remove([path]);
+        setErro(mod.motivo ?? "Esta imagem não pode ser publicada.");
+        return;
+      }
+
+      setFotos((prev) => [...prev, publicUrl]);
+    } catch {
+      setErro("Erro ao enviar a foto. Tente de novo em instantes.");
+    } finally {
+      setUploadando(false);
+    }
+  }
+
+  async function removerFoto(url: string) {
+    setFotos((prev) => prev.filter((f) => f !== url));
+    // Best-effort: apaga do Storage o objeto da própria pasta do usuário.
+    try {
+      const supabase = createAuthClient();
+      const marker = "/qc-avaliacoes/";
+      const idx = url.indexOf(marker);
+      if (idx !== -1) {
+        const path = url.slice(idx + marker.length);
+        await supabase.storage.from("qc-avaliacoes").remove([path]);
+      }
+    } catch {
+      /* ignore — a foto já saiu da avaliação */
+    }
+  }
 
   async function enviar(e: React.FormEvent) {
     e.preventDefault();
@@ -165,6 +251,23 @@ export function AvaliacaoForm({ slug }: { slug: string }) {
 
     setPending(true);
     try {
+      // Moderação do texto antes de salvar (blocklist server-side).
+      if (comentarioLimpo) {
+        const res = await fetch("/api/moderar-texto", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ texto: comentarioLimpo }),
+        });
+        const mod = (await res.json()) as {
+          aprovado: boolean;
+          motivo?: string;
+        };
+        if (!mod.aprovado) {
+          setErro(mod.motivo ?? "Conteúdo inadequado no comentário.");
+          return;
+        }
+      }
+
       const supabase = createAuthClient();
       const { error } = await supabase.from("qc_avaliacoes").upsert(
         {
@@ -172,6 +275,7 @@ export function AvaliacaoForm({ slug }: { slug: string }) {
           comercio_slug: slug,
           nota,
           comentario: comentarioLimpo || null,
+          fotos,
           updated_at: new Date().toISOString(),
         },
         { onConflict: "user_id,comercio_slug" },
@@ -249,6 +353,67 @@ export function AvaliacaoForm({ slug }: { slug: string }) {
             </p>
           </div>
 
+          {/* fotos (até 3) */}
+          <div>
+            <p className="text-sm font-medium text-concreto">
+              Fotos (opcional)
+            </p>
+            <p className="mt-0.5 text-xs text-concreto-claro">
+              Até {MAX_FOTOS} fotos, 5 MB cada. Imagens passam por moderação.
+            </p>
+            <div className="mt-2 flex flex-wrap gap-3">
+              {fotos.map((url) => (
+                <div
+                  key={url}
+                  className="relative h-20 w-20 overflow-hidden rounded-lg border border-linha"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={url}
+                    alt="Foto da avaliação"
+                    className="h-full w-full object-cover"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => removerFoto(url)}
+                    aria-label="Remover foto"
+                    className="absolute right-1 top-1 flex h-5 w-5 items-center justify-center rounded-full bg-concreto/80 text-xs leading-none text-branco hover:bg-concreto"
+                  >
+                    ×
+                  </button>
+                </div>
+              ))}
+
+              {fotos.length < MAX_FOTOS && (
+                <label
+                  className={`flex h-20 w-20 cursor-pointer flex-col items-center justify-center rounded-lg border border-dashed border-linha text-center text-xs text-concreto-claro transition-colors hover:border-verde hover:text-verde ${
+                    uploadando ? "pointer-events-none opacity-60" : ""
+                  }`}
+                >
+                  {uploadando ? (
+                    <span>Enviando…</span>
+                  ) : (
+                    <>
+                      <span className="text-lg leading-none">＋</span>
+                      <span className="mt-1">Adicionar</span>
+                    </>
+                  )}
+                  <input
+                    type="file"
+                    accept="image/*"
+                    className="hidden"
+                    disabled={uploadando}
+                    onChange={(e) => {
+                      const file = e.target.files?.[0];
+                      if (file) adicionarFoto(file);
+                      e.target.value = ""; // permite re-selecionar o mesmo arquivo
+                    }}
+                  />
+                </label>
+              )}
+            </div>
+          </div>
+
           {erro && (
             <p className="rounded-lg bg-aviso/10 px-3 py-2 text-sm font-medium text-aviso">
               {erro}
@@ -262,7 +427,7 @@ export function AvaliacaoForm({ slug }: { slug: string }) {
 
           <button
             type="submit"
-            disabled={pending}
+            disabled={pending || uploadando}
             className="justify-self-start rounded-lg bg-verde px-5 py-2.5 text-sm font-semibold text-branco transition-colors hover:bg-verde-escuro disabled:opacity-60"
           >
             {pending ? "Salvando…" : "Enviar avaliação"}
@@ -321,6 +486,26 @@ export function AvaliacaoForm({ slug }: { slug: string }) {
                   <p className="mt-2 text-sm text-concreto-claro">
                     {a.comentario}
                   </p>
+                )}
+                {a.fotos.length > 0 && (
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {a.fotos.map((url) => (
+                      <a
+                        key={url}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block h-16 w-16 overflow-hidden rounded-lg border border-linha"
+                      >
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={url}
+                          alt="Foto da avaliação"
+                          className="h-full w-full object-cover"
+                        />
+                      </a>
+                    ))}
+                  </div>
                 )}
               </li>
             ))}
