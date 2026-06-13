@@ -24,13 +24,16 @@ const fredoka = Fredoka({
 });
 
 export const metadata: Metadata = {
-  title: "Quadrado Capital — comércios de Brasília por quadra",
+  metadataBase: new URL("https://quadradocapital.com.br"),
+  title: "Quadrado Capital — Comércios de Brasília por Quadra e Bloco",
   description:
     "Encontre lojas e serviços da Asa Sul e Asa Norte de Brasília organizados por QUADRA e BLOCO. Avaliados em capivaras 🦫.",
+  alternates: { canonical: "https://quadradocapital.com.br" },
   openGraph: {
     title: "Quadrado Capital",
     description:
       "O Google te mostra um pino. O Quadrado Capital te mostra a quadra. Comércios de Brasília por quadra e bloco, avaliados em capivaras.",
+    siteName: "Quadrado Capital",
     locale: "pt_BR",
     type: "website",
   },
@@ -44,6 +47,13 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${poppins.variable} ${inter.variable} ${fredoka.variable}`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
+      </head>
       <body className="min-h-dvh">{children}</body>
     </html>
   );
