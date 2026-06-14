@@ -17,6 +17,17 @@ const DIAS_PT = [
   "sábado",
 ];
 
+// Dias em inglês (retorno da API sem languageCode=pt-BR).
+const DIAS_EN = [
+  "sunday",
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday",
+];
+
 function normalizar(s: string): string {
   return s
     .toLowerCase()
@@ -70,29 +81,37 @@ export function diaSemanaBrasilia(): number {
  */
 export function indiceDiaAtual(weekday: string[] | undefined): number {
   if (!weekday || weekday.length === 0) return -1;
-  const nomeDia = DIAS_PT[agoraBrasilia().dia];
-  return weekday.findIndex((l) =>
-    normalizar(l).startsWith(normalizar(nomeDia)),
-  );
+  const idx = agoraBrasilia().dia;
+  const nomePT = DIAS_PT[idx];
+  const nomeEN = DIAS_EN[idx];
+  return weekday.findIndex((l) => {
+    const n = normalizar(l);
+    return n.startsWith(normalizar(nomePT)) || n.startsWith(nomeEN);
+  });
 }
 
 /**
  * Retorna true (aberto), false (fechado) ou null (não foi possível determinar).
+ * Suporta descrições em português e inglês (Google Places API).
  */
 export function estaAbertoAgora(weekday: string[] | undefined): boolean | null {
   if (!weekday || weekday.length === 0) return null;
 
   const { dia, minutos } = agoraBrasilia();
-  const nomeDia = DIAS_PT[dia];
+  const nomePT = DIAS_PT[dia];
+  const nomeEN = DIAS_EN[dia];
 
-  // Acha a linha do dia atual.
-  const linha = weekday.find((l) => normalizar(l).startsWith(normalizar(nomeDia)));
+  // Acha a linha do dia atual (PT ou EN).
+  const linha = weekday.find((l) => {
+    const n = normalizar(l);
+    return n.startsWith(normalizar(nomePT)) || n.startsWith(nomeEN);
+  });
   if (!linha) return null;
 
   const norm = normalizar(linha);
 
   if (norm.includes("fechado") || norm.includes("closed")) return false;
-  if (norm.includes("24 horas") || norm.includes("aberto 24")) return true;
+  if (norm.includes("24 horas") || norm.includes("aberto 24") || norm.includes("open 24")) return true;
 
   // Extrai pares HH:MM – HH:MM (pode haver vários intervalos no dia).
   const horas = linha.match(/\d{1,2}:\d{2}/g);

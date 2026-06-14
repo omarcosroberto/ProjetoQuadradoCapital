@@ -49,25 +49,37 @@ const FIELD_MASK = [
 
 async function getPlaceDetails(placeId) {
   const key = proximaChave();
-  const res = await fetch(`https://places.googleapis.com/v1/places/${placeId}`, {
-    headers: {
-      "X-Goog-Api-Key": key,
-      "X-Goog-FieldMask": FIELD_MASK,
-    },
-  });
+  const res = await fetch(
+    `https://places.googleapis.com/v1/places/${placeId}?languageCode=pt-BR`,
+    {
+      headers: {
+        "X-Goog-Api-Key": key,
+        "X-Goog-FieldMask": FIELD_MASK,
+      },
+    }
+  );
   if (res.status === 429) throw new Error(`QUOTA_EXCEEDED (chave ${keyIndex + 1})`);
   if (!res.ok) throw new Error(`HTTP ${res.status}: ${(await res.text()).slice(0, 200)}`);
   return res.json();
 }
 
 async function getPhotoUrl(photoName) {
-  const key = API_KEYS[keyIndex]; // reutiliza a mesma chave do details
+  const key = API_KEYS[keyIndex];
+  // Tenta com skipHttpRedirect=true (retorna JSON com photoUri).
+  // Se a chave não permitir, faz o redirect direto.
   const res = await fetch(
     `https://places.googleapis.com/v1/${photoName}/media?maxWidthPx=800&skipHttpRedirect=true&key=${key}`
   );
   if (!res.ok) return null;
-  const data = await res.json();
-  return data.photoUri ?? null;
+  const contentType = res.headers.get("content-type") ?? "";
+  if (contentType.includes("application/json")) {
+    const data = await res.json();
+    return data.photoUri ?? null;
+  }
+  // Caso o endpoint faça redirect direto para a imagem (content-type image/*),
+  // a URL final é acessível via res.url.
+  if (contentType.startsWith("image/")) return res.url;
+  return null;
 }
 
 // Busca todos os slugs com google_place_id via Supabase REST

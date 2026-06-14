@@ -336,22 +336,25 @@ async function main() {
   const ts = new Date().toISOString().replace(/\D/g, "").slice(0, 14);
   const linhas = resultados
     .map(
-      ({ slug, nome, categoria, asa, quadra, bloco, endereco, fonte }) =>
-        `  ('${slug}', '${escapeSql(nome)}', '${escapeSql(categoria)}', '${asa}', ${quadra}, '${bloco}', 5.0, 0, '${escapeSql(endereco)}', '${escapeSql(fonte)}', true)`
+      ({ slug, nome, categoria, asa, quadra, bloco, endereco, place_id }) => {
+        const placeId = place_id ? escapeSql(place_id) : null;
+        const placeIdSql = placeId ? `'${placeId}'` : "null";
+        return `  ('${slug}', '${escapeSql(nome)}', '${escapeSql(categoria)}', '${asa}', ${quadra}, '${bloco}', 5.0, 0, '${escapeSql(endereco)}', 'forte', ${placeIdSql}, true)`;
+      }
     )
     .join(",\n");
 
   const sql = `-- Gerado por scripts/seed-places.mjs em ${new Date().toISOString()}
 -- ${resultados.length} comércios encontrados via Google Places API
 
-insert into public.comercios (slug, nome, categoria, asa, quadra, bloco, capivaras, avaliacoes, endereco, presenca_google, ativo)
+insert into public.comercios (slug, nome, categoria, asa, quadra, bloco, capivaras, avaliacoes, endereco, presenca_google, google_place_id, ativo)
 values
 ${linhas}
 on conflict (slug) do update set
   nome=excluded.nome, categoria=excluded.categoria, asa=excluded.asa,
   quadra=excluded.quadra, bloco=excluded.bloco, capivaras=excluded.capivaras,
   avaliacoes=excluded.avaliacoes, endereco=excluded.endereco,
-  presenca_google=excluded.presenca_google, updated_at=now();
+  presenca_google=excluded.presenca_google, google_place_id=excluded.google_place_id, updated_at=now();
 `;
 
   writeFileSync(OUT_SQL, sql);
