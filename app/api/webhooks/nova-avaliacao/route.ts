@@ -100,7 +100,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Quadrado Capital <noreply@quadradocapital.com.br>",
+        from: "Quadrado Capital <onboarding@resend.dev>",
         to: [user.email],
         subject: `Nova avaliação no ${nomeComercio}`,
         html,
