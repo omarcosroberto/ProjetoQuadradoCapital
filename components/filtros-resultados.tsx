@@ -84,6 +84,7 @@ export function FiltrosResultados({
   const [soVerificado, setSoVerificado] = useState(false);
   const [soAberto, setSoAberto] = useState(false);
   const [soComFoto, setSoComFoto] = useState(false);
+  const [busca, setBusca] = useState("");
   const [ordem, setOrdem] = useState<Ordenacao>("melhores");
   const [pagina, setPagina] = useState(1);
   const [perPage, setPerPage] = useState(6);
@@ -94,6 +95,14 @@ export function FiltrosResultados({
 
   const filtrados = useMemo(() => {
     let lista = itens;
+    if (busca.trim()) {
+      const q = busca.toLowerCase();
+      lista = lista.filter(
+        (b) =>
+          b.nome.toLowerCase().includes(q) ||
+          b.categoria.toLowerCase().includes(q),
+      );
+    }
     if (soVerificado) lista = lista.filter((b) => isVerificado(b));
     if (soAberto) lista = lista.filter((b) => estaAbertoAgora(b.horarioFuncionamento) === true);
     if (soComFoto) lista = lista.filter((b) => !!b.fotoUrl);
@@ -105,7 +114,7 @@ export function FiltrosResultados({
     };
 
     return [...lista].sort(cmp[ordem]);
-  }, [itens, soVerificado, soAberto, soComFoto, ordem]);
+  }, [itens, busca, soVerificado, soAberto, soComFoto, ordem]);
 
   const total = filtrados.length;
   const totalPaginas = Math.ceil(total / perPage);
@@ -114,6 +123,17 @@ export function FiltrosResultados({
 
   return (
     <div>
+      {/* Campo de busca */}
+      <div className="mb-4">
+        <input
+          type="search"
+          value={busca}
+          onChange={(e) => { setBusca(e.target.value); resetPagina(); }}
+          placeholder="Buscar por nome ou categoria…"
+          className="w-full rounded-xl border border-linha bg-branco px-4 py-2.5 text-sm text-concreto placeholder:text-concreto-claro focus:border-verde focus:outline-none"
+        />
+      </div>
+
       {/* Filtros + ordenação */}
       <div className="mb-6 flex flex-wrap items-center gap-2">
         <FiltroPill ativo={soAberto} onClick={() => { setSoAberto((v) => !v); resetPagina(); }}>
@@ -150,10 +170,10 @@ export function FiltrosResultados({
             {soAberto && "Pode ser que estejam fechados agora. "}
             Tente remover algum filtro ou buscar por outra quadra.
           </p>
-          {(soAberto || soVerificado || soComFoto) && (
+          {(soAberto || soVerificado || soComFoto || busca) && (
             <button
               type="button"
-              onClick={() => { setSoAberto(false); setSoVerificado(false); setSoComFoto(false); resetPagina(); }}
+              onClick={() => { setSoAberto(false); setSoVerificado(false); setSoComFoto(false); setBusca(""); resetPagina(); }}
               className="rounded-full bg-verde/10 px-4 py-1.5 text-xs font-semibold text-verde hover:bg-verde/20 transition-colors"
             >
               Limpar filtros
