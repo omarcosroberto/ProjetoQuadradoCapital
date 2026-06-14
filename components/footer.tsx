@@ -9,7 +9,7 @@ export function Footer() {
           <div className="flex items-center gap-4">
             {/* Logo QC */}
             <Image
-              src="/qc-logo.png"
+              src="/logo2.png"
               alt="Quadrado Capital"
               width={56}
               height={56}
