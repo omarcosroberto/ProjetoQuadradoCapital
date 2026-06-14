@@ -21,7 +21,7 @@ const COPY: Record<
     placeholderMsg: "O que você gostaria de melhorar? (opcional)",
     cta: "Quero aparecer melhor no Google",
     sucesso:
-      "Show! A Plano Piloto Digital vai te chamar para mostrar como melhorar sua presença online.",
+      "Show! A Marcos Roberto PRO vai te chamar para mostrar como melhorar sua presença online.",
   },
 };
 

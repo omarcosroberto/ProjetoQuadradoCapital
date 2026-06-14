@@ -2,6 +2,7 @@ import Link from "next/link";
 import { asaSigla, categoriaEmoji, isVerificado, type Business } from "@/lib/data";
 import { EstadoAberto } from "./estado-aberto";
 import { FolhaCapivara } from "./folha-capivara";
+import { BandeiraReivindicado } from "./bandeira-reivindicado";
 
 export function BusinessCard({ b }: { b: Business }) {
   const verificado = isVerificado(b);
@@ -9,10 +10,10 @@ export function BusinessCard({ b }: { b: Business }) {
   return (
     <Link
       href={`/comercio/${b.id}`}
-      className="group relative flex flex-col overflow-hidden rounded-xl border border-linha bg-branco transition-all duration-200 hover:-translate-y-1 hover:border-verde/40 hover:shadow-lg"
+      className="group relative flex flex-col overflow-hidden rounded-xl border border-linha bg-branco transition-all duration-200 hover:-translate-y-1 hover:border-verde/30 hover:shadow-lg hover:shadow-ceu/10"
     >
-      {/* FOTO (ou fallback de emoji sobre fundo ar) */}
-      <div className="relative aspect-[16/10] w-full overflow-hidden bg-ar">
+      {/* FOTO (ou fallback de emoji sobre fundo planalto) */}
+      <div className="relative aspect-[16/10] w-full overflow-hidden bg-planalto">
         {b.fotoUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -53,11 +54,12 @@ export function BusinessCard({ b }: { b: Business }) {
 
       {/* CORPO */}
       <div className="flex flex-1 flex-col p-4">
-        <div className="flex items-start gap-2">
+        <div className="flex flex-wrap items-start gap-1.5">
           <h3 className="qc-display text-lg leading-tight text-concreto">
             {b.nome}
           </h3>
           <FolhaCapivara verificado={verificado} />
+          <BandeiraReivindicado reivindicado={b.reivindicado ?? false} />
         </div>
         <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-verde">
           {b.categoria}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import type { User } from "@supabase/supabase-js";
 import { createAuthClient } from "@/lib/supabase";
@@ -63,6 +64,7 @@ type AvaliacaoPublica = {
   nota: number;
   comentario: string | null;
   fotos: string[];
+  via_qr: boolean;
   created_at: string;
   apelido: string | null;
 };
@@ -83,12 +85,17 @@ function formatarData(iso: string): string {
 }
 
 export function AvaliacaoForm({ slug }: { slug: string }) {
+  const searchParams = useSearchParams();
+  const viaQr = searchParams.get("via_qr") === "1";
+
   const [user, setUser] = useState<User | null>(null);
   const [carregandoAuth, setCarregandoAuth] = useState(true);
 
   const [nota, setNota] = useState(0);
   const [hover, setHover] = useState(0);
   const [comentario, setComentario] = useState("");
+  const [nfNumero, setNfNumero] = useState("");
+  const [nfData, setNfData] = useState("");
   const [pending, setPending] = useState(false);
   const [erro, setErro] = useState<string | null>(null);
   const [salvo, setSalvo] = useState(false);
@@ -103,13 +110,14 @@ export function AvaliacaoForm({ slug }: { slug: string }) {
     const supabase = createAuthClient();
     const { data: avals } = await supabase
       .from("qc_avaliacoes")
-      .select("id,user_id,nota,comentario,fotos,created_at")
+      .select("id,user_id,nota,comentario,fotos,via_qr,created_at")
       .eq("comercio_slug", slug)
       .order("created_at", { ascending: false });
 
     const linhas = (avals ?? []).map((l) => ({
       ...l,
       fotos: (l.fotos ?? []) as string[],
+      via_qr: l.via_qr ?? false,
     })) as Omit<AvaliacaoPublica, "apelido">[];
 
     // qc_avaliacoes e qc_perfis apontam ambos para auth.users (sem FK direta
@@ -247,6 +255,18 @@ export function AvaliacaoForm({ slug }: { slug: string }) {
       return;
     }
 
+    // Campos obrigatórios para avaliações via QR
+    if (viaQr) {
+      if (!nfNumero.trim()) {
+        setErro("Informe o número da nota fiscal.");
+        return;
+      }
+      if (!nfData) {
+        setErro("Informe a data da nota fiscal.");
+        return;
+      }
+    }
+
     const comentarioLimpo = sanitizeComentario(comentario);
 
     setPending(true);
@@ -276,6 +296,9 @@ export function AvaliacaoForm({ slug }: { slug: string }) {
           nota,
           comentario: comentarioLimpo || null,
           fotos,
+          via_qr: viaQr,
+          nf_numero: viaQr ? nfNumero.trim() || null : null,
+          nf_data: viaQr ? nfData || null : null,
           updated_at: new Date().toISOString(),
         },
         { onConflict: "user_id,comercio_slug" },
@@ -301,6 +324,25 @@ export function AvaliacaoForm({ slug }: { slug: string }) {
       <h2 className="mt-1 qc-display text-xl text-concreto">
         Avalie em capivaras 🦫
       </h2>
+
+      {/* Banner QR — aparece somente quando o usuário veio por um QR code */}
+      {viaQr && (
+        <div className="mt-4 flex items-center gap-3 rounded-xl border border-verde/40 bg-verde/8 px-4 py-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5 shrink-0 text-verde">
+            <rect x="3" y="3" width="7" height="7" rx="1" />
+            <rect x="14" y="3" width="7" height="7" rx="1" />
+            <rect x="3" y="14" width="7" height="7" rx="1" />
+            <rect x="14" y="14" width="3" height="3" />
+            <rect x="19" y="14" width="2" height="2" />
+            <rect x="14" y="19" width="2" height="2" />
+            <rect x="19" y="19" width="2" height="2" />
+          </svg>
+          <div>
+            <p className="text-sm font-semibold text-verde-escuro">Avaliação verificada por QR</p>
+            <p className="text-xs text-concreto-claro">Sua avaliação vale 10× mais porque veio de uma visita presencial confirmada.</p>
+          </div>
+        </div>
+      )}
 
       {carregandoAuth ? (
         <p className="mt-4 text-sm text-concreto-claro">Carregando…</p>
@@ -336,6 +378,38 @@ export function AvaliacaoForm({ slug }: { slug: string }) {
               </span>
             )}
           </div>
+
+          {/* Nota fiscal — obrigatório somente para avaliações via QR */}
+          {viaQr && (
+            <div className="grid gap-3 sm:grid-cols-2">
+              <div>
+                <label className="block text-xs font-semibold text-concreto mb-1">
+                  Número da nota fiscal <span className="text-aviso">*</span>
+                </label>
+                <input
+                  type="text"
+                  value={nfNumero}
+                  onChange={(e) => setNfNumero(e.target.value)}
+                  placeholder="Ex.: 000123456"
+                  required
+                  className="w-full rounded-lg border border-linha bg-branco px-3.5 py-2.5 text-sm text-concreto placeholder:text-concreto-claro focus:border-verde focus:outline-none"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-semibold text-concreto mb-1">
+                  Data da nota fiscal <span className="text-aviso">*</span>
+                </label>
+                <input
+                  type="date"
+                  value={nfData}
+                  onChange={(e) => setNfData(e.target.value)}
+                  max={new Date().toISOString().slice(0, 10)}
+                  required
+                  className="w-full rounded-lg border border-linha bg-branco px-3.5 py-2.5 text-sm text-concreto focus:border-verde focus:outline-none"
+                />
+              </div>
+            </div>
+          )}
 
           <div>
             <textarea
@@ -445,10 +519,20 @@ export function AvaliacaoForm({ slug }: { slug: string }) {
             {lista.map((a) => (
               <li key={a.id} className="border-b border-linha pb-4 last:border-0">
                 <div className="flex items-center justify-between gap-3">
-                  <span className="qc-brand text-sm text-concreto">
-                    {a.apelido ?? "Membro"}
-                  </span>
-                  <span className="text-xs text-concreto-claro">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="qc-brand text-sm text-concreto">
+                      {a.apelido ?? "Membro"}
+                    </span>
+                    {a.via_qr && (
+                      <span className="shrink-0 inline-flex items-center gap-1 rounded-full bg-verde/10 px-2 py-0.5 text-[10px] font-semibold text-verde-escuro">
+                        <svg viewBox="0 0 16 16" fill="currentColor" className="h-2.5 w-2.5">
+                          <path fillRule="evenodd" d="M8 .5L1.5 3v4.5c0 3.5 2.7 6.6 6.5 7.5 3.8-.9 6.5-4 6.5-7.5V3L8 .5zm-1.3 9.9L4.5 8.2 5.6 7l1.1 1.1 3.7-3.7 1.1 1.1-4.8 4.9z" clipRule="evenodd" />
+                        </svg>
+                        QR verificado
+                      </span>
+                    )}
+                  </div>
+                  <span className="shrink-0 text-xs text-concreto-claro">
                     {formatarData(a.created_at)}
                   </span>
                 </div>

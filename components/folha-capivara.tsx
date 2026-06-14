@@ -1,9 +1,3 @@
-/**
- * Folha verde = verificado pelo QC (presença forte no Google).
- * Folha cinza com sombra = ainda não verificado.
- * Símbolo escolhido porque a capivara é herbívora — come folhas.
- */
-
 export function FolhaCapivara({
   verificado,
   size = "sm",
@@ -16,7 +10,7 @@ export function FolhaCapivara({
     <span
       title={
         verificado
-          ? "Comércio verificado pelo Quadrado Capital 🌿"
+          ? "Comércio verificado pelo Quadrado Capital"
           : "Ainda não verificado — em análise"
       }
       aria-label={verificado ? "Verificado" : "Não verificado"}
@@ -28,28 +22,27 @@ export function FolhaCapivara({
           : "bg-concreto/8 text-concreto/30",
       ].join(" ")}
     >
+      {/* Ícone de escudo com check — verificação */}
       <svg
-        viewBox="0 0 24 24"
-        className={[
-          isMd ? "h-4 w-4" : "h-3.5 w-3.5",
-          !verificado &&
-            "drop-shadow-[0_1px_1px_rgba(0,0,0,0.12)]",
-        ]
-          .filter(Boolean)
-          .join(" ")}
+        viewBox="0 0 20 20"
+        className={isMd ? "h-3.5 w-3.5" : "h-3 w-3"}
         fill="currentColor"
         aria-hidden
       >
-        {/* Haste */}
-        <path
-          d="M12 21 C12 21 11 14 9 10"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.4"
-          strokeLinecap="round"
-        />
-        {/* Folha */}
-        <path d="M9.5 10.5 C6 8 4 4 9 3 C14 2 17 6 15 9.5 C13.5 12 10.5 12 9.5 10.5 Z" />
+        {verificado ? (
+          <>
+            <path
+              fillRule="evenodd"
+              d="M10 1.5L3 4.5v5c0 4 3.1 7.5 7 8.5 3.9-1 7-4.5 7-8.5v-5L10 1.5zm-.75 9.28L7.22 8.75l-1.06 1.06 3.09 3.09 5.59-5.59-1.06-1.06-4.53 4.53z"
+            />
+          </>
+        ) : (
+          <path
+            fillRule="evenodd"
+            d="M10 1.5L3 4.5v5c0 4 3.1 7.5 7 8.5 3.9-1 7-4.5 7-8.5v-5L10 1.5zm0 12.8c-2.9-.9-5-3.7-5-6.3V6.1l5-2.2 5 2.2v1.9c0 2.6-2.1 5.4-5 6.3z"
+            opacity={0.5}
+          />
+        )}
       </svg>
       {verificado ? "Verificado" : "Não verificado"}
     </span>

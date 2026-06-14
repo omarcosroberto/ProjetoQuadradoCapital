@@ -22,6 +22,7 @@ export type Business = {
   fotoUrl?: string;
   horarioFuncionamento?: string[]; // weekday descriptions do Google
   presencaGoogle?: PresencaGoogle; // "forte" => comércio verificado
+  reivindicado?: boolean; // true quando proprietário aprovou reivindicação
 };
 
 /** Verdadeiro quando a presença no Google é forte (selo "Verificado"). */

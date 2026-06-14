@@ -188,6 +188,31 @@ export default async function MeuNegocioPage({
           </div>
         </section>
 
+        {/* QR code para avaliações verificadas */}
+        <section className="mt-8 rounded-2xl border border-verde/30 bg-verde/5 p-6 sm:p-8">
+          <p className="qc-brand text-sm text-verde">Avaliações verificadas</p>
+          <h2 className="mt-1 qc-display text-xl text-concreto">
+            QR Code para clientes
+          </h2>
+          <p className="mt-2 text-sm text-concreto-claro">
+            Imprima ou exiba este QR code no seu estabelecimento. Avaliações
+            feitas por ele valem{" "}
+            <strong className="text-concreto">10× mais</strong> na sua nota,
+            pois confirmam uma visita presencial.
+          </p>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(`https://quadradocapital.com.br/qr/${slug}`)}&size=180x180&format=png&margin=8&color=1c2823&bgcolor=ffffff`}
+            alt={`QR code para avaliar ${slug}`}
+            width={180}
+            height={180}
+            className="mt-4 rounded-xl border border-linha bg-branco p-2"
+          />
+          <p className="mt-3 text-xs font-mono text-concreto-claro break-all">
+            quadradocapital.com.br/qr/{slug}
+          </p>
+        </section>
+
         {/* oferta GMN — Marcos Roberto PRO */}
         <div className="mt-8 rounded-2xl border-2 border-verde/30 bg-verde/5 p-6">
           <div className="flex items-start gap-4">

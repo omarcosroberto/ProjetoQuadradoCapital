@@ -9,12 +9,19 @@
   --qc-verde: #2d8659;
   --qc-verde-suave: #5da582;
   --qc-verde-escuro: #1e5c40;
-  --qc-ceu: #87ceeb;
+  /* Azul Lago Paranoá — mais rico e profundo que o céu antigo */
+  --qc-ceu: #5b9ed8;
+  --qc-ceu-suave: #87ceeb;
   --qc-concreto: #2f3435;
   --qc-concreto-claro: #5a6162;
-  --qc-ar: #f5f7f6;
+  /* Fundo mais claro e luminoso (creme-branco) */
+  --qc-ar: #fafbfc;
+  /* Azul-branco do Planalto Central — para seções suaves e o hero */
+  --qc-planalto: #f0f5fa;
+  /* Terra vermelha do cerrado — acento quente */
+  --qc-cerrado: #c4622d;
   --qc-branco: #ffffff;
-  --qc-linha: #d9dedb;
+  --qc-linha: #e3e8e6;
   --qc-capivara: #8b6f47;
   --qc-aviso: #f5a623;
 }
@@ -24,6 +31,9 @@
   --color-verde-suave: var(--qc-verde-suave);
   --color-verde-escuro: var(--qc-verde-escuro);
   --color-ceu: var(--qc-ceu);
+  --color-ceu-suave: var(--qc-ceu-suave);
+  --color-planalto: var(--qc-planalto);
+  --color-cerrado: var(--qc-cerrado);
   --color-concreto: var(--qc-concreto);
   --color-concreto-claro: var(--qc-concreto-claro);
   --color-ar: var(--qc-ar);
@@ -60,6 +70,22 @@ body {
 .qc-brand {
   font-family: var(--font-brand);
   letter-spacing: 0.01em;
+}
+
+/* Linha arquitetônica fina estilo Niemeyer — divisor horizontal decorativo.
+   Começa transparente, ganha cor no centro e some — como um traço de planta. */
+.qc-niemeyer-line {
+  height: 1px;
+  width: 100%;
+  border: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--qc-linha) 12%,
+    var(--qc-ceu) 50%,
+    var(--qc-linha) 88%,
+    transparent
+  );
 }
 
 @keyframes qc-float {

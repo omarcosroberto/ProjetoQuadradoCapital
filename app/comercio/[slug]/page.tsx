@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { CapivaraRating } from "@/components/capivara";
 import { Footer } from "@/components/footer";
 import { FolhaCapivara } from "@/components/folha-capivara";
+import { BandeiraReivindicado } from "@/components/bandeira-reivindicado";
 import { asaSigla, categoriaEmoji } from "@/lib/data";
 import {
   getComercioBySlug,
@@ -15,6 +16,7 @@ import { ClaimNegocio } from "@/components/claim-negocio";
 import { AvaliacaoForm } from "@/components/avaliacao-form";
 import { EstadoAberto } from "@/components/estado-aberto";
 import { HorarioSemana } from "@/components/horario-semana";
+import { createServerSupabase } from "@/lib/supabase-server";
 
 export const revalidate = 300;
 export const dynamicParams = true;
@@ -98,8 +100,23 @@ export default async function ComercioPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const c = await getComercioBySlug(slug);
+  const [c, supabase] = await Promise.all([
+    getComercioBySlug(slug),
+    createServerSupabase(),
+  ]);
   if (!c) notFound();
+
+  // Verifica se o usuário logado tem perfil empresarial
+  const { data: { user } } = await supabase.auth.getUser();
+  let perfilEmpresarial = false;
+  if (user) {
+    const { data: perfil } = await supabase
+      .from("qc_perfis")
+      .select("tipo_perfil")
+      .eq("id", user.id)
+      .maybeSingle();
+    perfilEmpresarial = perfil?.tipo_perfil === "empresarial";
+  }
 
   const local = `Quadra ${c.quadra} ${asaSigla(c.asa)}`;
   const googleFraco =
@@ -141,7 +158,7 @@ export default async function ComercioPage({
           <span className="text-concreto">{c.nome}</span>
         </nav>
 
-        <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr]">
+        <div className={`grid gap-8 ${perfilEmpresarial ? "lg:grid-cols-[1.4fr_1fr]" : ""}`}>
           {/* coluna principal */}
           <div className="qc-rise">
             {c.fotoUrl && (
@@ -179,6 +196,10 @@ export default async function ComercioPage({
                       verificado={c.presencaGoogle === "forte"}
                       size="md"
                     />
+                    <BandeiraReivindicado
+                      reivindicado={c.reivindicado ?? false}
+                      size="md"
+                    />
                   </div>
                   <p className="mt-2 text-sm text-concreto-claro">
                     {c.bloco ? (
@@ -197,7 +218,7 @@ export default async function ComercioPage({
               <div className="mt-6 border-t border-linha pt-5">
                 <CapivaraRating value={c.capivaras} count={c.avaliacoes} />
                 <p className="mt-2 text-xs text-concreto-claro">
-                  Nota em capivaras 🦫 — a régua de qualidade do Quadrado
+                  Avaliação em Capivaras 🦫 — a régua de qualidade do Quadrado
                   Capital.
                 </p>
               </div>
@@ -228,61 +249,67 @@ export default async function ComercioPage({
             {/* 3. AVALIAÇÕES da comunidade (membros logados) */}
             <AvaliacaoForm slug={c.id} />
 
-            {/* 4. REIVINDICAÇÃO por membro logado */}
-            <div className="mt-6 rounded-2xl border border-linha bg-branco p-6 sm:p-8">
-              <p className="qc-brand text-sm text-verde">Sou o dono</p>
-              <h2 className="mt-1 qc-display text-xl text-concreto">
-                Gerencie este negócio
-              </h2>
-              <p className="mt-2 text-sm text-concreto-claro">
-                Reivindique com sua conta para editar informações e acessar o
-                painel do dono.
-              </p>
-              <div className="mt-5">
-                <ClaimNegocio slug={c.id} />
+            {/* 4. REIVINDICAÇÃO — apenas perfis empresariais logados */}
+            {perfilEmpresarial && (
+              <div className="mt-6 rounded-2xl border border-linha bg-branco p-6 sm:p-8">
+                <p className="qc-brand text-sm text-verde">Sou o dono</p>
+                <h2 className="mt-1 qc-display text-xl text-concreto">
+                  Gerencie este negócio
+                </h2>
+                <p className="mt-2 text-sm text-concreto-claro">
+                  Reivindique com seu perfil empresarial para editar informações
+                  e acessar o painel do dono.
+                </p>
+                <div className="mt-5">
+                  <ClaimNegocio slug={c.id} />
+                </div>
               </div>
-            </div>
+            )}
 
-            {/* 5. lead-gen MRP — destaque quando a presença no Google é fraca */}
-            <div
-              className={`mt-6 rounded-2xl border p-6 sm:p-8 ${
-                googleFraco
-                  ? "border-aviso/40 bg-aviso/5"
-                  : "border-linha bg-branco"
-              }`}
-            >
-              <p className="qc-brand text-sm text-verde">Presença digital</p>
-              <h2 className="mt-1 qc-display text-xl text-concreto">
-                {googleFraco
-                  ? "Este comércio quase não aparece no Google."
-                  : "Quer atrair mais clientes da sua quadra?"}
-              </h2>
-              <p className="mt-2 max-w-prose text-sm text-concreto-claro">
-                {googleFraco
-                  ? "Quem busca por perto não está te encontrando. A Plano Piloto Digital coloca seu comércio no mapa: Google Meu Negócio, avaliações e presença online que vira cliente na porta."
-                  : "A Plano Piloto Digital cuida da sua presença online — Google Meu Negócio, avaliações e mais visibilidade na sua região."}
-              </p>
-              <div className="mt-5">
-                <ClaimForm slug={c.id} variant="lead_mrp" />
+            {/* 5. PRESENÇA DIGITAL — visível apenas para perfis empresariais logados */}
+            {perfilEmpresarial && (
+              <div
+                className={`mt-6 rounded-2xl border p-6 sm:p-8 ${
+                  googleFraco
+                    ? "border-aviso/40 bg-aviso/5"
+                    : "border-linha bg-branco"
+                }`}
+              >
+                <p className="qc-brand text-sm text-verde">Presença digital</p>
+                <h2 className="mt-1 qc-display text-xl text-concreto">
+                  {googleFraco
+                    ? "Este comércio quase não aparece no Google."
+                    : "Quer atrair mais clientes da sua quadra?"}
+                </h2>
+                <p className="mt-2 max-w-prose text-sm text-concreto-claro">
+                  {googleFraco
+                    ? "Quem busca por perto não está te encontrando. A Marcos Roberto PRO coloca seu comércio no mapa: Google Meu Negócio, avaliações e presença online que vira cliente na porta."
+                    : "A Marcos Roberto PRO cuida da sua presença online — Google Meu Negócio, avaliações e mais visibilidade na sua região."}
+                </p>
+                <div className="mt-5">
+                  <ClaimForm slug={c.id} variant="lead_mrp" />
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
-          {/* coluna lateral — contato do prospect (sem login) */}
-          <aside className="qc-rise lg:sticky lg:top-6 lg:self-start">
-            <div className="rounded-2xl border border-linha bg-branco p-6">
-              <p className="qc-brand text-sm text-verde">É o seu comércio?</p>
-              <h2 className="mt-1 qc-display text-xl text-concreto">
-                Prefere que a gente entre em contato?
-              </h2>
-              <p className="mt-2 text-sm text-concreto-claro">
-                Deixe seu contato e confirmamos que o perfil é seu.
-              </p>
-              <div className="mt-5">
-                <ClaimForm slug={c.id} variant="reivindicacao" />
+          {/* coluna lateral — apenas para perfis empresariais */}
+          {perfilEmpresarial && (
+            <aside className="qc-rise lg:sticky lg:top-6 lg:self-start">
+              <div className="rounded-2xl border border-linha bg-branco p-6">
+                <p className="qc-brand text-sm text-verde">É o seu comércio?</p>
+                <h2 className="mt-1 qc-display text-xl text-concreto">
+                  Prefere que a gente entre em contato?
+                </h2>
+                <p className="mt-2 text-sm text-concreto-claro">
+                  Deixe seu contato e confirmamos que o perfil é seu.
+                </p>
+                <div className="mt-5">
+                  <ClaimForm slug={c.id} variant="reivindicacao" />
+                </div>
               </div>
-            </div>
-          </aside>
+            </aside>
+          )}
         </div>
       </main>
 

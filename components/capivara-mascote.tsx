@@ -61,19 +61,9 @@ export function CapivaraMascote({
         strokeLinecap="round"
       />
 
-      {/* folhinha (jardim da quadra) */}
-      <path
-        d="M126 40 q14 -10 22 2 q-14 10 -22 -2 Z"
-        fill="#2d8659"
-        opacity="0.9"
-      />
-      <path
-        d="M126 40 q9 -3 19 0"
-        stroke="#1e5c40"
-        strokeWidth="1.6"
-        fill="none"
-        strokeLinecap="round"
-      />
+      {/* detalhe orelha interna mais clara */}
+      <ellipse cx="52" cy="28" rx="4" ry="3" fill="#a07850" />
+      <ellipse cx="118" cy="28" rx="4" ry="3" fill="#a07850" />
     </svg>
   );
 }

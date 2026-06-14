@@ -88,20 +88,34 @@ export async function getComercios(): Promise<Business[]> {
 
   try {
     const supabase = createPublicClient();
-    const { data, error } = await supabase
-      .from("comercios")
-      .select(
-        "slug,nome,categoria,asa,quadra,bloco,capivaras,avaliacoes,whatsapp,foto_url,horario_funcionamento,presenca_google",
-      )
-      .eq("ativo", true)
-      .order("asa", { ascending: true })
-      .order("quadra", { ascending: true })
-      .order("bloco", { ascending: true });
+    const [comerciosRes, claimsRes] = await Promise.all([
+      supabase
+        .from("comercios")
+        .select(
+          "slug,nome,categoria,asa,quadra,bloco,capivaras,avaliacoes,whatsapp,foto_url,horario_funcionamento,presenca_google",
+        )
+        .eq("ativo", true)
+        .order("asa", { ascending: true })
+        .order("quadra", { ascending: true })
+        .order("bloco", { ascending: true }),
+      supabase
+        .from("qc_reivindicacoes")
+        .select("comercio_slug")
+        .eq("status", "aprovada"),
+    ]);
 
-    if (error) throw error;
-    if (!data || data.length === 0) return SEED_BUSINESSES;
+    if (comerciosRes.error) throw comerciosRes.error;
+    if (!comerciosRes.data || comerciosRes.data.length === 0)
+      return SEED_BUSINESSES;
 
-    return (data as ComercioRow[]).map(mapRow);
+    const claimedSet = new Set<string>(
+      (claimsRes.data ?? []).map((r) => r.comercio_slug as string),
+    );
+
+    return (comerciosRes.data as ComercioRow[]).map((r) => ({
+      ...mapRow(r),
+      reivindicado: claimedSet.has(r.slug),
+    }));
   } catch (err) {
     console.error("[QC] Falha ao carregar comércios do Supabase:", err);
     return SEED_BUSINESSES;
@@ -122,18 +136,30 @@ export async function getComercioBySlug(
 
   try {
     const supabase = createPublicClient();
-    const { data, error } = await supabase
-      .from("comercios")
-      .select(
-        "slug,nome,categoria,asa,quadra,bloco,capivaras,avaliacoes,whatsapp,endereco,telefone,instagram,site,website,descricao,foto_url,horario_funcionamento,presenca_google",
-      )
-      .eq("ativo", true)
-      .eq("slug", slug)
-      .maybeSingle();
+    const [comercioRes, claimRes] = await Promise.all([
+      supabase
+        .from("comercios")
+        .select(
+          "slug,nome,categoria,asa,quadra,bloco,capivaras,avaliacoes,whatsapp,endereco,telefone,instagram,site,website,descricao,foto_url,horario_funcionamento,presenca_google",
+        )
+        .eq("ativo", true)
+        .eq("slug", slug)
+        .maybeSingle(),
+      supabase
+        .from("qc_reivindicacoes")
+        .select("comercio_slug")
+        .eq("comercio_slug", slug)
+        .eq("status", "aprovada")
+        .maybeSingle(),
+    ]);
 
-    if (error) throw error;
-    if (!data) return null;
-    return mapDetalhe(data as ComercioDetalheRow);
+    if (comercioRes.error) throw comercioRes.error;
+    if (!comercioRes.data) return null;
+
+    return {
+      ...mapDetalhe(comercioRes.data as ComercioDetalheRow),
+      reivindicado: !!claimRes.data,
+    };
   } catch (err) {
     console.error("[QC] Falha ao carregar comércio:", err);
     const seed = SEED_BUSINESSES.find((b) => b.id === slug);

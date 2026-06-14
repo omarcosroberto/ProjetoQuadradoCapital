@@ -10,10 +10,11 @@ import {
 } from "@/lib/data";
 import { BusinessCard } from "./business-card";
 
-type Ordenacao = "melhores" | "mais" | "az";
+type Ordenacao = "melhores" | "visitados" | "mais" | "az";
 
 const ORDENS: { value: Ordenacao; label: string }[] = [
   { value: "melhores", label: "Mais bem avaliados" },
+  { value: "visitados", label: "Mais visitados" },
   { value: "mais", label: "Mais avaliados" },
   { value: "az", label: "A–Z" },
 ];
@@ -119,6 +120,9 @@ export function FiltrosResultados({
     const cmp = {
       melhores: (a: Business, b: Business) =>
         b.capivaras - a.capivaras || b.avaliacoes - a.avaliacoes,
+      // "Mais visitados": usamos nº de avaliações como proxy de tráfego.
+      visitados: (a: Business, b: Business) =>
+        b.avaliacoes - a.avaliacoes || b.capivaras - a.capivaras,
       mais: (a: Business, b: Business) =>
         b.avaliacoes - a.avaliacoes || b.capivaras - a.capivaras,
       az: (a: Business, b: Business) => a.nome.localeCompare(b.nome, "pt-BR"),
@@ -137,7 +141,7 @@ export function FiltrosResultados({
   return (
     <div>
       {/* barra de filtros */}
-      <div className="mb-6 flex flex-wrap items-center gap-2">
+      <div className="mb-4 flex flex-wrap items-center gap-2">
         <FiltroPill ativo={soAberto} onClick={() => setSoAberto((v) => !v)}>
           Aberto agora
         </FiltroPill>
@@ -150,24 +154,26 @@ export function FiltrosResultados({
         <FiltroPill ativo={soFoto} onClick={() => setSoFoto((v) => !v)}>
           Com foto
         </FiltroPill>
+      </div>
 
-        <div className="ml-auto flex items-center gap-2">
-          <label htmlFor="ordenar" className="text-sm text-concreto-claro">
-            Ordenar:
-          </label>
-          <select
-            id="ordenar"
-            value={ordem}
-            onChange={(e) => setOrdem(e.target.value as Ordenacao)}
-            className="rounded-full border border-linha bg-branco px-3 py-1.5 text-sm font-semibold text-concreto focus:border-verde focus:outline-none"
+      {/* ordenação — pills clicáveis (em vez de <select>) */}
+      <div
+        role="group"
+        aria-label="Ordenar resultados"
+        className="mb-6 flex flex-wrap items-center gap-2"
+      >
+        <span className="text-xs font-semibold uppercase tracking-wide text-concreto-claro">
+          Ordenar
+        </span>
+        {ORDENS.map((o) => (
+          <FiltroPill
+            key={o.value}
+            ativo={ordem === o.value}
+            onClick={() => setOrdem(o.value)}
           >
-            {ORDENS.map((o) => (
-              <option key={o.value} value={o.value}>
-                {o.label}
-              </option>
-            ))}
-          </select>
-        </div>
+            {o.label}
+          </FiltroPill>
+        ))}
       </div>
 
       {total === 0 ? (
