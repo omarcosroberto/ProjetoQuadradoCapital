@@ -115,7 +115,43 @@ body {
   animation: qc-rise 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* Reveal scroll (gated em .js para SSR sem flash) */
+/* Entrada que toca no load (hero/above-the-fold) */
+@keyframes qc-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.qc-enter {
+  animation: qc-enter 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.qc-d1 { animation-delay: 0.08s; }
+.qc-d2 { animation-delay: 0.16s; }
+.qc-d3 { animation-delay: 0.24s; }
+.qc-d4 { animation-delay: 0.32s; }
+.qc-d5 { animation-delay: 0.40s; }
+.qc-d6 { animation-delay: 0.48s; }
+
+/* Scroll reveal (abaixo da dobra) — só esconde quando há JS */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(var(--reveal-y, 18px));
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.js [data-reveal][data-shown="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Retrocompatibilidade — class-based (legado) */
 .js .qc-reveal {
   opacity: 0;
   transform: translateY(var(--y, 18px));

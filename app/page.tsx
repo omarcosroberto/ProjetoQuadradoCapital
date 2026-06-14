@@ -1,5 +1,6 @@
 import { SearchExperience } from "@/components/search-experience";
 import { Footer } from "@/components/footer";
+import { Reveal } from "@/components/reveal";
 import { getComercios } from "@/lib/comercios";
 
 // Diretório muda raramente — ISR de 5 min mantém rápido (CDN) e fresco.
@@ -11,7 +12,9 @@ export default async function Home() {
   return (
     <div className="flex min-h-dvh flex-col">
       <SearchExperience businesses={businesses} />
-      <Footer />
+      <Reveal delay={150}>
+        <Footer />
+      </Reveal>
     </div>
   );
 }

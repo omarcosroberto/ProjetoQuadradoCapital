@@ -1,0 +1,36 @@
+-- =============================================================================
+-- DOCUMENTAÇÃO: Webhook de Nova Avaliação
+-- =============================================================================
+-- Este arquivo é apenas documentação — webhooks do Supabase NÃO são
+-- configuráveis por SQL. Use o Dashboard do Supabase para criar o webhook.
+--
+-- CONFIGURAÇÃO NO DASHBOARD SUPABASE
+-- ------------------------------------
+-- 1. Acesse: https://supabase.com/dashboard/project/dmhdwwajpzfzzvblphnq
+-- 2. Vá em: Database > Webhooks
+-- 3. Clique em "Create a new webhook"
+-- 4. Preencha:
+--
+--    Name:    nova-avaliacao
+--    Table:   qc_avaliacoes
+--    Events:  [x] INSERT
+--    Method:  POST
+--    URL:     https://quadradocapital.com.br/api/webhooks/nova-avaliacao
+--
+--    HTTP Headers (adicionar 1 header):
+--      Key:   x-webhook-secret
+--      Value: <valor de QC_WEBHOOK_SECRET — ver Vercel env vars>
+--
+-- VARIÁVEIS DE AMBIENTE NECESSÁRIAS
+-- -----------------------------------
+-- Adicionar no Vercel (vercel env add) e localmente em .env.local:
+--
+--   QC_WEBHOOK_SECRET   = string aleatória longa (ex: openssl rand -hex 32)
+--   RESEND_API_KEY      = chave da API do Resend (https://resend.com/api-keys)
+--
+-- DOMÍNIO VERIFICADO NO RESEND
+-- ------------------------------
+-- Para enviar de noreply@quadradocapital.com.br, adicionar o domínio
+-- quadradocapital.com.br no Resend e configurar os registros DNS na Hostinger.
+-- Enquanto não verificado, usar o domínio de sandbox do Resend.
+-- =============================================================================

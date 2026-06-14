@@ -14,6 +14,7 @@ import { CapivaraMascote } from "./capivara-mascote";
 import { LogoQC } from "./logo-qc";
 import { FiltrosResultados } from "./filtros-resultados";
 import { MapaQuadras } from "./mapa-quadras";
+import { Reveal } from "./reveal";
 
 
 function LupaIcon() {
@@ -321,19 +322,22 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
           <hr className="qc-niemeyer-line mt-10" />
 
           {/* explorar por quadra — mapa */}
-          <div className="mt-8 rounded-2xl border border-linha bg-branco/60 p-5 shadow-sm shadow-ceu/5">
-            <p className="qc-brand text-sm text-verde">Explorar por quadra</p>
-            <p className="mt-1 text-sm text-concreto-claro">
-              Toque numa superquadra pra ver os comércios dela.
-            </p>
-            <div className="mt-4 rounded-xl bg-branco p-4 shadow-sm">
-              <MapaQuadras businesses={businesses} onSelecionar={setQuery} />
+          <Reveal delay={100}>
+            <div className="mt-8 rounded-2xl border border-linha bg-branco/60 p-5 shadow-sm shadow-ceu/5">
+              <p className="qc-brand text-sm text-verde">Explorar por quadra</p>
+              <p className="mt-1 text-sm text-concreto-claro">
+                Toque numa superquadra pra ver os comércios dela.
+              </p>
+              <div className="mt-4 rounded-xl bg-branco p-4 shadow-sm">
+                <MapaQuadras businesses={businesses} onSelecionar={setQuery} />
+              </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* RESULTADOS */}
+      <Reveal>
       <section className="mx-auto max-w-[1100px] px-6 py-12">
         {res.mode === "vazio" ? (
           <div className="qc-rise">
@@ -438,6 +442,7 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
           </div>
         )}
       </section>
+      </Reveal>
     </>
   );
 }
