@@ -1,3 +1,836 @@
 Sun Jun 14 00:15:00 MDT 2026 — Iniciando seed das quadras vazias
 Sun Jun 14 00:15:00 MDT 2026 — sul 101
 /Users/marcosrobertoss/projeto3/quadrado-capital/scripts/seed-quadras-vazias.sh: line 16: node: command not found
+Sun Jun 14 03:23:01 MDT 2026 — Iniciando seed das quadras rascunho (<3 comércios)
+Sun Jun 14 03:23:01 MDT 2026 — sul 106
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  106–106
+
+
+📍 CLS 106 — Sul
+  ✅ 106s-a-2 — A Festiva 106 Sul - Artigos para Festas (Restaurante)
+  ✅ 106s-a-3 — Giraffas 106 Sul (Restaurante)
+  ✅ 106s-a-4 — Sky's Burger 106 Sul (Restaurante)
+  ✅ 106s-c-1 — Swift - Asa Sul (Açougue)
+  ✅ 106s-a-5 — Casa Lotérica 106 Sul (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (5 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409230210_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:23:02 MDT 2026 — sul 310
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  310–310
+
+
+📍 CLS 310 — Sul
+  ✅ 310s-d-1 — Contato PRO (Loja de Eletrônicos)
+  ✅ 310s-a-1 — Ultra Som Eletronica, Brasilia (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (2 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409230310_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:23:04 MDT 2026 — sul 313
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  313–313
+
+
+📍 CLS 313 — Sul
+  ✅ 313s-b-1 — 313 Drink Bar (Bar)
+
+💾 JSON salvo em scripts/resultado-places.json (1 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409230410_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:23:05 MDT 2026 — sul 403
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  403–403
+
+
+📍 SCLS 403 — Sul
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:23:06 MDT 2026 — sul 506
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  506–506
+
+
+📍 SCLS 506 — Sul
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:23:07 MDT 2026 — sul 509
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  509–509
+
+
+📍 SCLS 509 — Sul
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:23:08 MDT 2026 — sul 513
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  513–513
+
+
+📍 SCLS 513 — Sul
+  ✅ 513s-c-1 — Arte e Cores (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (1 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409230910_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:23:09 MDT 2026 — norte 102
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  102–102
+
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:23:10 MDT 2026 — norte 109
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  109–109
+
+
+📍 CLN 109 — Norte
+  ✅ 109n-a-1 — Avanzzo 109 Norte (Loja de Roupas)
+  ✅ 109n-a-2 — Apartamento Verde Real (Restaurante)
+  ✅ 109n-a-3 — Express Distribuidora, Conveniência e Mercearia (Mercado)
+  ✅ 109n-a-4 — Mercearia Alto Parnaíba (Restaurante)
+  ✅ 109n-a-5 — Cantinho da Batata Brasilia (Restaurante)
+  ✅ 109n-b-1 — The Plant - Asa Norte (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (6 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409231110_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:23:11 MDT 2026 — norte 201
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  201–201
+
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:23:12 MDT 2026 — norte 214
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  214–214
+
+
+📍 CLN 214 — Norte
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:23:13 MDT 2026 — norte 303
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  303–303
+
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:23:13 MDT 2026 — norte 403
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  403–403
+
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:23:14 MDT 2026 — norte 404
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  404–404
+
+
+📍 SCLN 404 — Norte
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:23:15 MDT 2026 — norte 410
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  410–410
+
+
+📍 SCLN 410 — Norte
+  ✅ 410n-a-1 — 410/411 norte (Restaurante)
+  ✅ 410n-a-2 — Rebras Uti dos Reparos 410 norte (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (2 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409231610_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:23:16 MDT 2026 — norte 411
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  411–411
+
+
+📍 SCLN 411 — Norte
+  ✅ 411n-a-1 — Restaurante O Kilão (Restaurante)
+  ✅ 411n-a-2 — Restaurante Careca (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (2 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409231710_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:23:17 MDT 2026 — norte 412
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  412–412
+
+
+📍 SCLN 412 — Norte
+  ✅ 412n-a-1 — Blend Boucherie (Restaurante)
+  ✅ 412n-a-2 — Mercearia Colaborativa Asa Norte (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (2 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409231810_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:23:18 MDT 2026 — Seed rascunho concluído
+Sun Jun 14 03:24:24 MDT 2026 — Iniciando seed acumulado
+Sun Jun 14 03:24:24 MDT 2026 — sul 106
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  106–106
+
+
+📍 CLS 106 — Sul
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:24:26 MDT 2026 — sul 310
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  310–310
+
+
+📍 CLS 310 — Sul
+  ✅ 310s-d-1 — Contato PRO (Loja de Eletrônicos)
+  ✅ 310s-a-1 — Ultra Som Eletronica, Brasilia (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (2 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409242610_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:24:27 MDT 2026 — sul 313
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  313–313
+
+
+📍 CLS 313 — Sul
+  ✅ 313s-b-1 — 313 Drink Bar (Bar)
+
+💾 JSON salvo em scripts/resultado-places.json (1 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409242710_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:24:28 MDT 2026 — sul 403
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  403–403
+
+
+📍 SCLS 403 — Sul
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:24:29 MDT 2026 — sul 506
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  506–506
+
+
+📍 SCLS 506 — Sul
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:24:30 MDT 2026 — sul 509
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  509–509
+
+
+📍 SCLS 509 — Sul
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:24:31 MDT 2026 — sul 513
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  513–513
+
+
+📍 SCLS 513 — Sul
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:24:32 MDT 2026 — norte 102
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  102–102
+
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:24:33 MDT 2026 — norte 109
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  109–109
+
+
+📍 CLN 109 — Norte
+  ✅ 109n-a-1 — Avanzzo 109 Norte (Loja de Roupas)
+  ✅ 109n-a-2 — Apartamento Verde Real (Restaurante)
+  ✅ 109n-a-3 — Express Distribuidora, Conveniência e Mercearia (Mercado)
+  ✅ 109n-a-4 — Mercearia Alto Parnaíba (Restaurante)
+  ✅ 109n-a-5 — Cantinho da Batata Brasilia (Restaurante)
+  ✅ 109n-b-1 — The Plant - Asa Norte (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (6 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409243310_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:24:34 MDT 2026 — norte 201
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  201–201
+
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:24:34 MDT 2026 — norte 214
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  214–214
+
+
+📍 CLN 214 — Norte
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:24:36 MDT 2026 — norte 303
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  303–303
+
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:24:36 MDT 2026 — norte 403
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  403–403
+
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:24:37 MDT 2026 — norte 404
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  404–404
+
+
+📍 SCLN 404 — Norte
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:24:38 MDT 2026 — norte 410
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  410–410
+
+
+📍 SCLN 410 — Norte
+  ✅ 410n-a-1 — 410/411 norte (Restaurante)
+  ✅ 410n-a-2 — Rebras Uti dos Reparos 410 norte (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (2 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409243810_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:24:39 MDT 2026 — norte 411
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  411–411
+
+
+📍 SCLN 411 — Norte
+  ✅ 411n-a-1 — Restaurante O Kilão (Restaurante)
+  ✅ 411n-a-2 — Restaurante Careca (Restaurante)
+  ✅ 411n-a-3 — Posto Petrobras (Mercado)
+
+💾 JSON salvo em scripts/resultado-places.json (3 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409243910_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:24:40 MDT 2026 — norte 412
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  412–412
+
+
+📍 SCLN 412 — Norte
+  ✅ 412n-a-1 — Mercearia Colaborativa Asa Norte (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (1 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409244010_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:24:41 MDT 2026 — Seed acumulado concluído. SQL em: /Users/marcosrobertoss/projeto3/quadrado-capital/scripts/resultado-acumulado.sql
+Sun Jun 14 03:26:01 MDT 2026 — Iniciando seed acumulado
+Sun Jun 14 03:26:01 MDT 2026 — sul 106
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  106–106
+
+
+📍 CLS 106 — Sul
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:26:02 MDT 2026 — sul 310
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  310–310
+
+
+📍 CLS 310 — Sul
+  ✅ 310s-d-1 — Contato PRO (Loja de Eletrônicos)
+  ✅ 310s-a-1 — Ultra Som Eletronica, Brasilia (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (2 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409260310_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:26:03 MDT 2026 — sul 313
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  313–313
+
+
+📍 CLS 313 — Sul
+  ✅ 313s-b-1 — 313 Drink Bar (Bar)
+
+💾 JSON salvo em scripts/resultado-places.json (1 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409260410_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:26:04 MDT 2026 — sul 403
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  403–403
+
+
+📍 SCLS 403 — Sul
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:26:05 MDT 2026 — sul 506
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  506–506
+
+
+📍 SCLS 506 — Sul
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:26:06 MDT 2026 — sul 509
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  509–509
+
+
+📍 SCLS 509 — Sul
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:26:08 MDT 2026 — sul 513
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  513–513
+
+
+📍 SCLS 513 — Sul
+  ✅ 513s-c-1 — Arte e Cores (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (1 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409260810_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:26:09 MDT 2026 — norte 102
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  102–102
+
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:26:09 MDT 2026 — norte 109
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  109–109
+
+
+📍 CLN 109 — Norte
+  ✅ 109n-a-1 — Avanzzo 109 Norte (Loja de Roupas)
+  ✅ 109n-a-2 — Apartamento Verde Real (Restaurante)
+  ✅ 109n-a-3 — Express Distribuidora, Conveniência e Mercearia (Mercado)
+  ✅ 109n-a-4 — Mercearia Alto Parnaíba (Restaurante)
+  ✅ 109n-a-5 — Cantinho da Batata Brasilia (Restaurante)
+  ✅ 109n-b-1 — The Plant - Asa Norte (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (6 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409261010_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:26:10 MDT 2026 — norte 201
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  201–201
+
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:26:11 MDT 2026 — norte 214
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  214–214
+
+
+📍 CLN 214 — Norte
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:26:12 MDT 2026 — norte 303
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  303–303
+
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:26:13 MDT 2026 — norte 403
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  403–403
+
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:26:13 MDT 2026 — norte 404
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  404–404
+
+
+📍 SCLN 404 — Norte
+  ✅ 404n-a-1 — Barbearia 404 Norte (Barbearia)
+  ✅ 404n-a-2 — Espaço Aconchego Brasília (Academia)
+
+💾 JSON salvo em scripts/resultado-places.json (2 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409261410_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:26:14 MDT 2026 — norte 410
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  410–410
+
+
+📍 SCLN 410 — Norte
+  ✅ 410n-a-1 — 410/411 norte (Restaurante)
+  ✅ 410n-a-2 — Rebras Uti dos Reparos 410 norte (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (2 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409261510_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:26:15 MDT 2026 — norte 411
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  411–411
+
+
+📍 SCLN 411 — Norte
+  ✅ 411n-a-1 — Restaurante O Kilão (Restaurante)
+  ✅ 411n-a-2 — Restaurante Careca (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (2 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409261610_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:26:16 MDT 2026 — norte 412
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  412–412
+
+
+📍 SCLN 412 — Norte
+  ✅ 412n-a-1 — Blend Boucherie (Restaurante)
+  ✅ 412n-a-2 — Mercearia Colaborativa Asa Norte (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (2 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409261710_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:26:18 MDT 2026 — Seed acumulado concluído. SQL em: /Users/marcosrobertoss/projeto3/quadrado-capital/scripts/resultado-acumulado.sql
+Sun Jun 14 03:26:52 MDT 2026 — Iniciando seed acumulado
+Sun Jun 14 03:26:52 MDT 2026 — sul 106
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  106–106
+
+
+📍 CLS 106 — Sul
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:26:53 MDT 2026 — sul 310
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  310–310
+
+
+📍 CLS 310 — Sul
+  ✅ 310s-d-1 — Contato PRO (Loja de Eletrônicos)
+  ✅ 310s-a-1 — Ultra Som Eletronica, Brasilia (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (2 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409265310_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:26:54 MDT 2026 — sul 313
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  313–313
+
+
+📍 CLS 313 — Sul
+  ✅ 313s-b-1 — 313 Drink Bar (Bar)
+
+💾 JSON salvo em scripts/resultado-places.json (1 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409265410_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:26:55 MDT 2026 — sul 403
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  403–403
+
+
+📍 SCLS 403 — Sul
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:26:56 MDT 2026 — sul 506
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  506–506
+
+
+📍 SCLS 506 — Sul
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:26:57 MDT 2026 — sul 509
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  509–509
+
+
+📍 SCLS 509 — Sul
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:26:58 MDT 2026 — sul 513
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=sul  513–513
+
+
+📍 SCLS 513 — Sul
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:26:59 MDT 2026 — norte 102
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  102–102
+
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:27:00 MDT 2026 — norte 109
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  109–109
+
+
+📍 CLN 109 — Norte
+  ✅ 109n-a-1 — Avanzzo 109 Norte (Loja de Roupas)
+  ✅ 109n-a-2 — Apartamento Verde Real (Restaurante)
+  ✅ 109n-a-3 — Express Distribuidora, Conveniência e Mercearia (Mercado)
+  ✅ 109n-a-4 — Mercearia Alto Parnaíba (Restaurante)
+  ✅ 109n-a-5 — Cantinho da Batata Brasilia (Restaurante)
+  ✅ 109n-b-1 — The Plant - Asa Norte (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (6 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409270110_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:27:01 MDT 2026 — norte 201
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  201–201
+
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:27:02 MDT 2026 — norte 214
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  214–214
+
+
+📍 CLN 214 — Norte
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:27:03 MDT 2026 — norte 303
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  303–303
+
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:27:03 MDT 2026 — norte 403
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  403–403
+
+
+💾 JSON salvo em scripts/resultado-places.json (0 registros)
+ℹ️  Nenhum resultado novo — SQL não gerado.
+Sun Jun 14 03:27:04 MDT 2026 — norte 404
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  404–404
+
+
+📍 SCLN 404 — Norte
+  ✅ 404n-a-1 — Barbearia 404 Norte (Barbearia)
+  ✅ 404n-a-2 — Espaço Aconchego Brasília (Academia)
+
+💾 JSON salvo em scripts/resultado-places.json (2 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409270410_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:27:05 MDT 2026 — norte 410
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  410–410
+
+
+📍 SCLN 410 — Norte
+  ✅ 410n-a-1 — 410/411 norte (Restaurante)
+  ✅ 410n-a-2 — Rebras Uti dos Reparos 410 norte (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (2 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409270610_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:27:06 MDT 2026 — norte 411
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  411–411
+
+
+📍 SCLN 411 — Norte
+  ✅ 411n-a-1 — Restaurante O Kilão (Restaurante)
+  ✅ 411n-a-2 — Restaurante Careca (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (2 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409270710_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:27:07 MDT 2026 — norte 412
+🗺️  Quadrado Capital — Google Places Seeder
+   DRY_RUN=false  ASA=norte  412–412
+
+
+📍 SCLN 412 — Norte
+  ✅ 412n-a-1 — Blend Boucherie (Restaurante)
+  ✅ 412n-a-2 — Mercearia Colaborativa Asa Norte (Restaurante)
+
+💾 JSON salvo em scripts/resultado-places.json (2 registros)
+
+✅ SQL gerado em scripts/resultado-places.sql
+
+📋 Próximos passos:
+   1. Revise scripts/resultado-places.json para conferir os resultados
+   2. Copie scripts/resultado-places.sql para marcos-roberto-pro/supabase/migrations/2026061409270810_comercios_places.sql
+   3. cd ../marcos-roberto-pro && supabase db push --include-all
+Sun Jun 14 03:27:08 MDT 2026 — Seed acumulado concluído. SQL em: /Users/marcosrobertoss/projeto3/quadrado-capital/scripts/resultado-acumulado.sql
