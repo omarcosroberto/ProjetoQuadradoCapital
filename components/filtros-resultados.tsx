@@ -7,6 +7,7 @@ import {
   type Asa,
   type Business,
 } from "@/lib/data";
+import { estaAbertoAgora } from "@/lib/horario";
 import { BusinessCard } from "./business-card";
 
 type Ordenacao = "melhores" | "visitados" | "az";
@@ -81,6 +82,8 @@ export function FiltrosResultados({
   modoQuadra: boolean;
 }) {
   const [soVerificado, setSoVerificado] = useState(false);
+  const [soAberto, setSoAberto] = useState(false);
+  const [soComFoto, setSoComFoto] = useState(false);
   const [ordem, setOrdem] = useState<Ordenacao>("melhores");
   const [pagina, setPagina] = useState(1);
   const [perPage, setPerPage] = useState(6);
@@ -92,6 +95,8 @@ export function FiltrosResultados({
   const filtrados = useMemo(() => {
     let lista = itens;
     if (soVerificado) lista = lista.filter((b) => isVerificado(b));
+    if (soAberto) lista = lista.filter((b) => estaAbertoAgora(b.horarioFuncionamento) === true);
+    if (soComFoto) lista = lista.filter((b) => !!b.fotoUrl);
 
     const cmp: Record<Ordenacao, (a: Business, b: Business) => number> = {
       melhores: (a, b) => b.capivaras - a.capivaras || b.avaliacoes - a.avaliacoes,
@@ -100,7 +105,7 @@ export function FiltrosResultados({
     };
 
     return [...lista].sort(cmp[ordem]);
-  }, [itens, soVerificado, ordem]);
+  }, [itens, soVerificado, soAberto, soComFoto, ordem]);
 
   const total = filtrados.length;
   const totalPaginas = Math.ceil(total / perPage);
@@ -109,10 +114,16 @@ export function FiltrosResultados({
 
   return (
     <div>
-      {/* Filtros + ordenação — linha única, enxuta */}
+      {/* Filtros + ordenação */}
       <div className="mb-6 flex flex-wrap items-center gap-2">
+        <FiltroPill ativo={soAberto} onClick={() => { setSoAberto((v) => !v); resetPagina(); }}>
+          🟢 Aberto agora
+        </FiltroPill>
         <FiltroPill ativo={soVerificado} onClick={() => { setSoVerificado((v) => !v); resetPagina(); }}>
           Verificados
+        </FiltroPill>
+        <FiltroPill ativo={soComFoto} onClick={() => { setSoComFoto((v) => !v); resetPagina(); }}>
+          Com foto
         </FiltroPill>
 
         <span aria-hidden className="mx-1 h-4 w-px bg-linha" />
@@ -132,9 +143,23 @@ export function FiltrosResultados({
       </div>
 
       {total === 0 ? (
-        <p className="rounded-xl border border-linha bg-branco p-6 text-center text-sm text-concreto-claro">
-          Nenhum comércio bate com esses filtros. Tente afrouxar a seleção.
-        </p>
+        <div className="rounded-xl border border-linha bg-branco p-8 text-center">
+          <p className="text-2xl mb-2">🦫</p>
+          <p className="text-sm font-semibold text-concreto mb-1">Nenhum comércio encontrado</p>
+          <p className="text-xs text-concreto-claro mb-4">
+            {soAberto && "Pode ser que estejam fechados agora. "}
+            Tente remover algum filtro ou buscar por outra quadra.
+          </p>
+          {(soAberto || soVerificado || soComFoto) && (
+            <button
+              type="button"
+              onClick={() => { setSoAberto(false); setSoVerificado(false); setSoComFoto(false); resetPagina(); }}
+              className="rounded-full bg-verde/10 px-4 py-1.5 text-xs font-semibold text-verde hover:bg-verde/20 transition-colors"
+            >
+              Limpar filtros
+            </button>
+          )}
+        </div>
       ) : (
         <>
           {/* Resultados agrupados por quadra */}
