@@ -21,6 +21,14 @@ async function atualizarStatus(
   if (!id) return;
 
   const supabase = createAdminClient();
+
+  // Busca o user_id e slug antes de atualizar para poder setar dono no comércio.
+  const { data: claim } = await supabase
+    .from("qc_reivindicacoes")
+    .select("user_id,comercio_slug")
+    .eq("id", id)
+    .maybeSingle();
+
   const { error } = await supabase
     .from("qc_reivindicacoes")
     .update({ status })
@@ -29,6 +37,14 @@ async function atualizarStatus(
   if (error) {
     console.error("[QC admin] Falha ao atualizar reivindicação:", error);
     throw new Error("Não foi possível atualizar a reivindicação.");
+  }
+
+  // Ao aprovar, marca o comércio como reivindicado e registra o dono.
+  if (status === "aprovada" && claim?.user_id && claim?.comercio_slug) {
+    await supabase
+      .from("comercios")
+      .update({ reivindicado: true, dono_id: claim.user_id })
+      .eq("slug", claim.comercio_slug);
   }
 
   revalidatePath("/admin/reivindicacoes");
