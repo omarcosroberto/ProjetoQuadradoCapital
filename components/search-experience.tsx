@@ -337,7 +337,6 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
       </section>
 
       {/* RESULTADOS */}
-      <Reveal>
       <section className="mx-auto max-w-[1100px] px-6 py-12">
         {res.mode === "vazio" ? (
           <div className="qc-rise">
@@ -442,7 +441,6 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
           </div>
         )}
       </section>
-      </Reveal>
     </>
   );
 }
