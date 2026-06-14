@@ -7,16 +7,26 @@ export default function Icon() {
   return new ImageResponse(
     <div
       style={{
-        fontSize: 24,
-        background: "transparent",
-        width: "100%",
-        height: "100%",
+        width: 32,
+        height: 32,
+        borderRadius: 6,
+        background: "#2d8659",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
       }}
     >
-      🦫
+      <span
+        style={{
+          fontSize: 20,
+          fontWeight: 800,
+          color: "white",
+          fontFamily: "Arial, sans-serif",
+          lineHeight: 1,
+        }}
+      >
+        Q
+      </span>
     </div>,
     { ...size },
   );

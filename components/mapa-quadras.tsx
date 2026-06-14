@@ -5,13 +5,13 @@ import type { Business } from "@/lib/data";
 
 // ─── Grade ───────────────────────────────────────────────────────────────────
 const N   = 16;   // posições 0–15 → quadras 101–116
-const CW  = 32;   // largura célula
-const CH  = 40;   // altura célula
-const GW  = 2;
-const GH  = 4;
+const CW  = 46;   // largura célula
+const CH  = 54;   // altura célula
+const GW  = 3;
+const GH  = 5;
 
-const PAD_X  = 8;
-const PAD_Y  = 8;
+const PAD_X  = 10;
+const PAD_Y  = 10;
 
 const ASA_W = N * (CW + GW) - GW;
 const SVG_W = PAD_X + ASA_W + PAD_X;
@@ -105,10 +105,10 @@ export function MapaQuadras({
         ))}
       </div>
 
-      <div className="overflow-x-auto">
+      <div className="flex justify-center overflow-x-auto">
         <svg
           viewBox={`0 0 ${SVG_W} ${SVG_H}`}
-          className="h-auto w-full max-w-[600px]"
+          className="h-auto w-full max-w-[820px]"
           role="img"
           aria-label={`Mapa das quadras — Asa ${asa}`}
         >
@@ -159,7 +159,7 @@ export function MapaQuadras({
                       <text
                         x={cx + CW / 2} y={ry + CH / 2}
                         textAnchor="middle" dominantBaseline="central"
-                        fontSize="10" fontWeight={700}
+                        fontSize="13" fontWeight={700}
                         fill={textColor(n, maxN, impar)}
                       >
                         {q}
