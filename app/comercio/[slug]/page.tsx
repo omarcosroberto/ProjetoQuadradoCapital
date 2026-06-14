@@ -16,6 +16,7 @@ import { ClaimNegocio } from "@/components/claim-negocio";
 import { AvaliacaoForm } from "@/components/avaliacao-form";
 import { EstadoAberto } from "@/components/estado-aberto";
 import { HorarioSemana } from "@/components/horario-semana";
+import { ShareButton } from "@/components/share-button";
 import { createServerSupabase } from "@/lib/supabase-server";
 
 export const revalidate = 300;
@@ -34,17 +35,27 @@ export async function generateMetadata({
   const { slug } = await params;
   const c = await getComercioBySlug(slug);
   if (!c) return { title: "Comércio não encontrado — Quadrado Capital" };
+  const BASE = "https://quadradocapital.com.br";
   const asaNome = c.asa === "Sul" ? "Asa Sul" : "Asa Norte";
-  const local = `Quadra ${c.quadra} ${asaSigla(c.asa)}${c.bloco ? `, Bloco ${c.bloco}` : ""}`;
+  const blocoStr = c.bloco ? ` Bloco ${c.bloco}` : "";
+  const canonicalUrl = `${BASE}/comercio/${slug}`;
   return {
-    title: `${c.nome} — Quadrado Capital`,
-    description: `${c.categoria} na ${asaNome}, Quadra ${c.quadra}${c.bloco ? ` Bloco ${c.bloco}` : ""}. Avalie e descubra comércios de Brasília.`,
+    title: `${c.nome} na Quadra ${c.quadra} ${asaNome} — Quadrado Capital`,
+    description: `${c.categoria} no${blocoStr ? blocoStr + "," : ""} Quadra ${c.quadra} ${asaNome} de Brasília. Avaliações reais, horário e contato.`,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
-      title: `${c.nome} 🦫 ${c.capivaras.toFixed(1).replace(".", ",")}`,
+      title: `${c.nome} na Quadra ${c.quadra} ${asaNome} — Quadrado Capital`,
       description: `${c.categoria} · Quadra ${c.quadra} ${c.asa} · Brasília`,
+      url: canonicalUrl,
       images: c.fotoUrl
-        ? [{ url: c.fotoUrl, width: 1200, height: 630 }]
-        : [],
+        ? [{ url: c.fotoUrl, width: 1200, height: 630, alt: c.nome }]
+        : [{ url: `${BASE}/og-image.png`, width: 1200, height: 630, alt: "Quadrado Capital" }],
       locale: "pt_BR",
       type: "website",
     },
@@ -118,14 +129,52 @@ export default async function ComercioPage({
     perfilEmpresarial = perfil?.tipo_perfil === "empresarial";
   }
 
+  const BASE = "https://quadradocapital.com.br";
   const local = `Quadra ${c.quadra} ${asaSigla(c.asa)}`;
+  const asaNome = c.asa === "Sul" ? "Asa Sul" : "Asa Norte";
+  const canonicalUrl = `${BASE}/comercio/${slug}`;
   const googleFraco =
     c.presencaGoogle === "fraca" || c.presencaGoogle === "ausente";
   const temHorario =
     Array.isArray(c.horarioFuncionamento) &&
     c.horarioFuncionamento.length > 0;
 
+  // JSON-LD LocalBusiness
+  const jsonLd: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: c.nome,
+    description: c.descricao ?? `${c.categoria} na ${asaNome}, Quadra ${c.quadra}${c.bloco ? ` Bloco ${c.bloco}` : ""} de Brasília.`,
+    url: canonicalUrl,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Brasília",
+      addressRegion: "DF",
+      addressCountry: "BR",
+      ...(c.endereco ? { streetAddress: c.endereco } : {}),
+    },
+    ...(c.telefone ? { telephone: c.telefone } : {}),
+    ...(c.fotoUrl ? { image: c.fotoUrl } : {}),
+    ...(temHorario ? { openingHours: c.horarioFuncionamento } : {}),
+    ...(c.avaliacoes > 0
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: c.capivaras.toFixed(1),
+            reviewCount: String(c.avaliacoes),
+            bestRating: "5",
+            worstRating: "1",
+          },
+        }
+      : {}),
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     <div className="flex min-h-dvh flex-col">
       {/* topo */}
       <header className="bg-concreto text-branco">
@@ -225,6 +274,10 @@ export default async function ComercioPage({
 
               <Contato c={c} />
 
+              <div className="mt-3">
+                <ShareButton title={`${c.nome} — Quadrado Capital`} url={canonicalUrl} />
+              </div>
+
               {c.descricao && (
                 <div className="mt-6 border-t border-linha pt-5">
                   <p className="text-sm whitespace-pre-line text-concreto-claro">
@@ -315,5 +368,6 @@ export default async function ComercioPage({
 
       <Footer />
     </div>
+    </>
   );
 }

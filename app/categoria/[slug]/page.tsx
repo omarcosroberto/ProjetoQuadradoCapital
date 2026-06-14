@@ -31,9 +31,26 @@ export async function generateMetadata({
   if (!categoria) {
     return { title: "Categoria não encontrada — Quadrado Capital" };
   }
+  const BASE = "https://quadradocapital.com.br";
+  const canonicalUrl = `${BASE}/categoria/${slug}`;
   return {
-    title: `${categoria} em Brasília — Asa Sul e Norte | Quadrado Capital`,
-    description: `Os melhores ${categoria.toLowerCase()} da Asa Sul e Asa Norte de Brasília, organizados por quadra e bloco e avaliados em capivaras 🦫.`,
+    title: `${categoria} em Brasília — Quadrado Capital`,
+    description: `Encontre ${categoria.toLowerCase()} na Asa Sul e Asa Norte por superquadra e bloco. Avaliações em capivaras pela comunidade.`,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    openGraph: {
+      title: `${categoria} em Brasília — Quadrado Capital`,
+      description: `Encontre ${categoria.toLowerCase()} na Asa Sul e Asa Norte por superquadra e bloco. Avaliações em capivaras pela comunidade.`,
+      url: canonicalUrl,
+      images: [{ url: `${BASE}/og-image.png`, width: 1200, height: 630, alt: "Quadrado Capital" }],
+      locale: "pt_BR",
+      type: "website",
+    },
   };
 }
 
