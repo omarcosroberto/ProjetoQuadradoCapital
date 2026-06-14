@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState, useEffect, useRef } from "react";
+import { useMemo, useState, useRef } from "react";
 import {
   buscar,
   categoriaEmoji,
@@ -180,12 +180,11 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
   const res = buscar(query, businesses);
   const resultsRef = useRef<HTMLElement>(null);
 
-  // Scroll automático para os resultados quando o usuário pesquisa
-  useEffect(() => {
-    if (query.trim() && resultsRef.current) {
+  function scrollToResults() {
+    if (resultsRef.current) {
       resultsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, [query]);
+  }
 
   const categorias = useMemo(
     () => contagemPorCategoria(businesses),
@@ -272,6 +271,9 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
                 <input
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") scrollToResults();
+                  }}
                   placeholder='Busque um tema ("academias") ou uma quadra ("409 sul")'
                   className="w-full rounded-xl border-2 border-verde/30 bg-branco py-3.5 pl-12 pr-4 text-base text-concreto shadow-lg shadow-ceu/10 placeholder:text-concreto-claro focus:border-verde focus:shadow-verde/15 focus:outline-none"
                   autoFocus
