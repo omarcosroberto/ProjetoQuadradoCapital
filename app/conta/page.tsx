@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import { CapivaraRating } from "@/components/capivara";
 import { createServerSupabase } from "@/lib/supabase-server";
 import { SairButton } from "./sair-button";
+import { VerificarCelular } from "@/components/verificar-celular";
 
 export const metadata: Metadata = {
   title: "Minha conta — Quadrado Capital",
@@ -24,6 +25,7 @@ type PerfilRow = {
   apelido: string | null;
   tipo_perfil: string | null;
   celular: string | null;
+  celular_verificado: boolean | null;
 };
 
 export default async function ContaPage() {
@@ -37,7 +39,7 @@ export default async function ContaPage() {
   const [perfilRes, avaliacoesRes] = await Promise.all([
     supabase
       .from("qc_perfis")
-      .select("apelido,tipo_perfil,celular")
+      .select("apelido,tipo_perfil,celular,celular_verificado")
       .eq("id", user.id)
       .maybeSingle(),
     supabase
@@ -78,9 +80,12 @@ export default async function ContaPage() {
               </h1>
               <p className="mt-1 text-sm text-concreto-claro">{user.email}</p>
               {perfil?.celular && (
-                <p className="mt-0.5 text-sm text-concreto-claro">
-                  {perfil.celular}
-                </p>
+                <div className="mt-1.5">
+                  <VerificarCelular
+                    celular={perfil.celular}
+                    celularVerificado={perfil.celular_verificado ?? false}
+                  />
+                </div>
               )}
               <div className="mt-3 flex flex-wrap gap-2">
                 <span
