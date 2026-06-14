@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { estaAbertoAgora } from "@/lib/horario";
+import { useMemo, useState } from "react";
 import {
   isVerificado,
   quadraLabel,
@@ -10,14 +9,15 @@ import {
 } from "@/lib/data";
 import { BusinessCard } from "./business-card";
 
-type Ordenacao = "melhores" | "visitados" | "mais" | "az";
+type Ordenacao = "melhores" | "visitados" | "az";
 
 const ORDENS: { value: Ordenacao; label: string }[] = [
   { value: "melhores", label: "Mais bem avaliados" },
-  { value: "visitados", label: "Mais visitados" },
-  { value: "mais", label: "Mais avaliados" },
+  { value: "visitados", label: "Mais avaliados" },
   { value: "az", label: "A–Z" },
 ];
+
+const POR_PAGINA_OPCOES = [6, 12, 24];
 
 function FiltroPill({
   ativo,
@@ -54,30 +54,15 @@ type Grupo = {
 
 function reagrupar(items: Business[], modoQuadra: boolean): Grupo[] {
   if (modoQuadra) {
-    // Modo quadra: lista única ordenada por bloco já vem do filtro/ordem.
     if (items.length === 0) return [];
     const b = items[0];
-    return [
-      {
-        key: `${b.asa}|${b.quadra}`,
-        label: quadraLabel(b),
-        asa: b.asa,
-        quadra: b.quadra,
-        items,
-      },
-    ];
+    return [{ key: `${b.asa}|${b.quadra}`, label: quadraLabel(b), asa: b.asa, quadra: b.quadra, items }];
   }
   const mapa = new Map<string, Grupo>();
   for (const b of items) {
     const key = `${b.asa}|${b.quadra}`;
     if (!mapa.has(key)) {
-      mapa.set(key, {
-        key,
-        label: quadraLabel(b),
-        asa: b.asa,
-        quadra: b.quadra,
-        items: [],
-      });
+      mapa.set(key, { key, label: quadraLabel(b), asa: b.asa, quadra: b.quadra, items: [] });
     }
     mapa.get(key)!.items.push(b);
   }
@@ -95,73 +80,43 @@ export function FiltrosResultados({
   itens: Business[];
   modoQuadra: boolean;
 }) {
-  const [soAberto, setSoAberto] = useState(false);
   const [soVerificado, setSoVerificado] = useState(false);
-  const [soFoto, setSoFoto] = useState(false);
   const [ordem, setOrdem] = useState<Ordenacao>("melhores");
+  const [pagina, setPagina] = useState(1);
+  const [perPage, setPerPage] = useState(6);
 
-  // "Aberto agora" depende do relógio do cliente — recalculado no mount.
-  // Guardamos um set de ids abertos para filtrar sem chamar a função por render.
-  const [abertosIds, setAbertosIds] = useState<Set<string>>(new Set());
-  useEffect(() => {
-    const s = new Set<string>();
-    for (const b of itens) {
-      if (estaAbertoAgora(b.horarioFuncionamento) === true) s.add(b.id);
-    }
-    setAbertosIds(s);
-  }, [itens]);
+  function resetPagina() {
+    setPagina(1);
+  }
 
   const filtrados = useMemo(() => {
     let lista = itens;
-    if (soAberto) lista = lista.filter((b) => abertosIds.has(b.id));
     if (soVerificado) lista = lista.filter((b) => isVerificado(b));
-    if (soFoto) lista = lista.filter((b) => Boolean(b.fotoUrl));
 
-    const cmp = {
-      melhores: (a: Business, b: Business) =>
-        b.capivaras - a.capivaras || b.avaliacoes - a.avaliacoes,
-      // "Mais visitados": usamos nº de avaliações como proxy de tráfego.
-      visitados: (a: Business, b: Business) =>
-        b.avaliacoes - a.avaliacoes || b.capivaras - a.capivaras,
-      mais: (a: Business, b: Business) =>
-        b.avaliacoes - a.avaliacoes || b.capivaras - a.capivaras,
-      az: (a: Business, b: Business) => a.nome.localeCompare(b.nome, "pt-BR"),
-    }[ordem];
+    const cmp: Record<Ordenacao, (a: Business, b: Business) => number> = {
+      melhores: (a, b) => b.capivaras - a.capivaras || b.avaliacoes - a.avaliacoes,
+      visitados: (a, b) => b.avaliacoes - a.avaliacoes || b.capivaras - a.capivaras,
+      az: (a, b) => a.nome.localeCompare(b.nome, "pt-BR"),
+    };
 
-    return [...lista].sort(cmp);
-  }, [itens, soAberto, soVerificado, soFoto, ordem, abertosIds]);
-
-  const grupos = useMemo(
-    () => reagrupar(filtrados, modoQuadra),
-    [filtrados, modoQuadra],
-  );
+    return [...lista].sort(cmp[ordem]);
+  }, [itens, soVerificado, ordem]);
 
   const total = filtrados.length;
+  const totalPaginas = Math.ceil(total / perPage);
+  const paginados = filtrados.slice((pagina - 1) * perPage, pagina * perPage);
+  const grupos = useMemo(() => reagrupar(paginados, modoQuadra), [paginados, modoQuadra]);
 
   return (
     <div>
-      {/* barra de filtros */}
-      <div className="mb-4 flex flex-wrap items-center gap-2">
-        <FiltroPill ativo={soAberto} onClick={() => setSoAberto((v) => !v)}>
-          Aberto agora
-        </FiltroPill>
-        <FiltroPill
-          ativo={soVerificado}
-          onClick={() => setSoVerificado((v) => !v)}
-        >
+      {/* Filtros + ordenação — linha única, enxuta */}
+      <div className="mb-6 flex flex-wrap items-center gap-2">
+        <FiltroPill ativo={soVerificado} onClick={() => { setSoVerificado((v) => !v); resetPagina(); }}>
           Verificados
         </FiltroPill>
-        <FiltroPill ativo={soFoto} onClick={() => setSoFoto((v) => !v)}>
-          Com foto
-        </FiltroPill>
-      </div>
 
-      {/* ordenação — pills clicáveis (em vez de <select>) */}
-      <div
-        role="group"
-        aria-label="Ordenar resultados"
-        className="mb-6 flex flex-wrap items-center gap-2"
-      >
+        <span aria-hidden className="mx-1 h-4 w-px bg-linha" />
+
         <span className="text-xs font-semibold uppercase tracking-wide text-concreto-claro">
           Ordenar
         </span>
@@ -169,7 +124,7 @@ export function FiltrosResultados({
           <FiltroPill
             key={o.value}
             ativo={ordem === o.value}
-            onClick={() => setOrdem(o.value)}
+            onClick={() => { setOrdem(o.value); resetPagina(); }}
           >
             {o.label}
           </FiltroPill>
@@ -181,27 +136,75 @@ export function FiltrosResultados({
           Nenhum comércio bate com esses filtros. Tente afrouxar a seleção.
         </p>
       ) : (
-        <div className="space-y-10">
-          {grupos.map((g) => (
-            <div key={g.key}>
-              <div className="mb-4 flex items-center gap-3">
-                <span className="rounded-lg bg-verde/10 px-3 py-1.5 qc-brand text-sm text-verde">
-                  {g.label}
-                </span>
-                <span className="h-px flex-1 bg-linha" />
-                <span className="rounded-full bg-ar px-2.5 py-0.5 text-xs font-semibold text-concreto-claro">
-                  {g.items.length}{" "}
-                  {g.items.length === 1 ? "comércio" : "comércios"}
-                </span>
+        <>
+          {/* Resultados agrupados por quadra */}
+          <div className="space-y-10">
+            {grupos.map((g) => (
+              <div key={g.key}>
+                <div className="mb-4 flex items-center gap-3">
+                  <span className="rounded-lg bg-verde/10 px-3 py-1.5 qc-brand text-sm text-verde">
+                    {g.label}
+                  </span>
+                  <span className="h-px flex-1 bg-linha" />
+                  <span className="rounded-full bg-ar px-2.5 py-0.5 text-xs font-semibold text-concreto-claro">
+                    {g.items.length}{" "}
+                    {g.items.length === 1 ? "comércio" : "comércios"}
+                  </span>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {g.items.map((b) => (
+                    <BusinessCard key={b.id} b={b} />
+                  ))}
+                </div>
               </div>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {g.items.map((b) => (
-                  <BusinessCard key={b.id} b={b} />
-                ))}
-              </div>
+            ))}
+          </div>
+
+          {/* Paginação */}
+          <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-linha pt-6">
+            {/* Navegação de páginas */}
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => setPagina((p) => Math.max(1, p - 1))}
+                disabled={pagina === 1}
+                className="rounded-full border border-linha bg-branco px-4 py-1.5 text-sm font-semibold text-concreto-claro transition-colors hover:border-verde/40 disabled:opacity-30 disabled:cursor-not-allowed"
+              >
+                ← Anterior
+              </button>
+              <span className="text-sm text-concreto-claro">
+                {pagina} / {totalPaginas}
+              </span>
+              <button
+                type="button"
+                onClick={() => setPagina((p) => Math.min(totalPaginas, p + 1))}
+                disabled={pagina === totalPaginas}
+                className="rounded-full border border-linha bg-branco px-4 py-1.5 text-sm font-semibold text-concreto-claro transition-colors hover:border-verde/40 disabled:opacity-30 disabled:cursor-not-allowed"
+              >
+                Próxima →
+              </button>
             </div>
-          ))}
-        </div>
+
+            {/* Itens por página */}
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-concreto-claro">Por página:</span>
+              {POR_PAGINA_OPCOES.map((n) => (
+                <button
+                  key={n}
+                  type="button"
+                  onClick={() => { setPerPage(n); setPagina(1); }}
+                  className={
+                    n === perPage
+                      ? "rounded-full bg-verde px-3 py-1 text-xs font-bold text-branco"
+                      : "rounded-full border border-linha bg-branco px-3 py-1 text-xs font-semibold text-concreto-claro hover:border-verde/40 transition-colors"
+                  }
+                >
+                  {n}
+                </button>
+              ))}
+            </div>
+          </div>
+        </>
       )}
     </div>
   );
