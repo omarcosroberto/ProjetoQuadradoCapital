@@ -87,8 +87,8 @@ export function MapaQuadras({
 
   return (
     <div className="space-y-3">
-      {/* Toggle Sul / Norte */}
-      <div className="flex gap-2">
+      {/* Toggle Sul / Norte — centralizado */}
+      <div className="flex justify-center gap-2">
         {(["Sul", "Norte"] as const).map((a) => (
           <button
             key={a}

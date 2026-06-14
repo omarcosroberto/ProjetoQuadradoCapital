@@ -240,106 +240,65 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
           className="pointer-events-none absolute -right-24 -top-28 h-96 w-96 rounded-full bg-ceu/15 blur-3xl"
         />
 
-        <div className="relative mx-auto max-w-[1100px] px-6 py-12 md:py-16">
-          {/* Marca */}
-          <LogoQC variant="default" href={null} />
+        <div className="relative mx-auto max-w-[860px] px-6 py-12 md:py-16">
+          {/* Marca centralizada */}
+          <div className="flex justify-center">
+            <LogoQC variant="default" href={null} />
+          </div>
 
-          <div className="mt-8 grid items-center gap-8 lg:grid-cols-[1.2fr_1fr]">
-            <div>
-              {/* mascote no mobile */}
-              <div className="mb-5 flex lg:hidden">
-                <CapivaraMascote className="qc-float h-24 w-auto" />
-              </div>
+          {/* mascote */}
+          <div className="mt-6 flex justify-center">
+            <CapivaraMascote className="qc-float h-20 w-auto" />
+          </div>
 
-              <h1 className="qc-display max-w-2xl text-3xl text-concreto md:text-5xl">
-                Encontre tudo na sua{" "}
-                <span className="text-verde">quadra</span>.
-              </h1>
-              <p className="mt-4 max-w-xl text-lg leading-relaxed text-concreto-claro">
-                Aqui você encontra os comércios locais das Quadras{" "}
-                <strong className="text-concreto">Asa Sul e Asa Norte</strong>{" "}
-                do Plano Piloto e ainda pode avaliar quantas{" "}
-                <strong className="text-concreto">capivaras 🦫</strong> eles
-                merecem.
-              </p>
+          <h1 className="qc-display mt-6 text-center text-3xl text-concreto md:text-5xl">
+            Encontre tudo na sua{" "}
+            <span className="text-verde">quadra</span>.
+          </h1>
 
-              {/* busca — branca, borda verde, sombra suave */}
-              <div className="relative mt-7 max-w-2xl">
-                <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-verde">
-                  <LupaIcon />
-                </span>
-                <input
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") scrollToResults();
-                  }}
-                  placeholder='Busque um tema ("academias") ou uma quadra ("409 sul")'
-                  className="w-full rounded-xl border-2 border-verde/30 bg-branco py-3.5 pl-12 pr-4 text-base text-concreto shadow-lg shadow-ceu/10 placeholder:text-concreto-claro focus:border-verde focus:shadow-verde/15 focus:outline-none"
-                  autoFocus
-                />
-              </div>
+          {/* busca centralizada — estilo Google */}
+          <div className="relative mt-8 mx-auto max-w-2xl">
+            <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-verde">
+              <LupaIcon />
+            </span>
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") scrollToResults();
+              }}
+              placeholder='Busque um tema ("academias") ou uma quadra ("409 sul")'
+              className="w-full rounded-2xl border-2 border-verde/30 bg-branco py-4 pl-12 pr-4 text-base text-concreto shadow-xl shadow-ceu/10 placeholder:text-concreto-claro focus:border-verde focus:shadow-verde/15 focus:outline-none"
+              autoFocus
+            />
+          </div>
 
-              {/* quadras populares — computadas dinamicamente (mais avaliações × melhor nota) */}
-              {quadrasPopulares.length > 0 && (
-                <div className="mt-5 flex flex-wrap items-center gap-2">
-                  <span className="text-xs font-semibold uppercase tracking-wide text-concreto-claro">
-                    Quadras em destaque
-                  </span>
-                  {quadrasPopulares.map((q) => (
-                    <button
-                      key={q}
-                      type="button"
-                      onClick={() => setQuery(q)}
-                      className="rounded-full bg-verde/10 px-3 py-1 text-sm font-semibold text-verde transition-colors hover:bg-verde hover:text-branco"
-                    >
-                      {q}
-                    </button>
-                  ))}
-                </div>
-              )}
-
-              {/* stats */}
-              <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-concreto-claro">
-                <span>
-                  <strong className="qc-display text-base text-concreto">
-                    {stats.comercios}
-                  </strong>{" "}
-                  comércios
-                </span>
-                <span aria-hidden className="text-linha">
-                  ·
-                </span>
-                <span>
-                  <strong className="qc-display text-base text-concreto">
-                    {stats.quadras}
-                  </strong>{" "}
-                  quadras mapeadas
-                </span>
-                <span aria-hidden className="text-linha">
-                  ·
-                </span>
-                <span>Avaliação em Capivaras 🦫</span>
-              </div>
-            </div>
-
-            {/* skyline de Brasília no desktop — peça central do redesign */}
-            <div className="hidden lg:block">
-              <SkylineBrasilia className="qc-float h-auto w-full" />
-            </div>
+          {/* stats centralizadas */}
+          <div className="mt-6 flex flex-wrap justify-center items-center gap-x-5 gap-y-2 text-sm text-concreto-claro">
+            <span>
+              <strong className="qc-display text-base text-concreto">
+                {stats.comercios}
+              </strong>{" "}
+              comércios
+            </span>
+            <span aria-hidden className="text-linha">·</span>
+            <span>
+              <strong className="qc-display text-base text-concreto">
+                {stats.quadras}
+              </strong>{" "}
+              quadras mapeadas
+            </span>
+            <span aria-hidden className="text-linha">·</span>
+            <span>Avaliação em Capivaras 🦫</span>
           </div>
 
           {/* divisor arquitetônico estilo Niemeyer */}
           <hr className="qc-niemeyer-line mt-10" />
 
-          {/* explorar por quadra — mapa */}
+          {/* mapa de quadras */}
           <Reveal delay={100}>
             <div className="mt-8 rounded-2xl border border-linha bg-branco/60 p-5 shadow-sm shadow-ceu/5">
-              <p className="qc-brand text-sm text-verde">Explorar por quadra</p>
-              <p className="mt-1 text-sm text-concreto-claro">
-                Toque numa superquadra pra ver os comércios dela.
-              </p>
-              <div className="mt-4 rounded-xl bg-branco p-4 shadow-sm">
+              <div className="rounded-xl bg-branco p-4 shadow-sm">
                 <MapaQuadras businesses={businesses} onSelecionar={setQuery} />
               </div>
             </div>
