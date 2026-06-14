@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect, useRef } from "react";
 import {
   buscar,
   categoriaEmoji,
@@ -178,6 +178,15 @@ function SkylineBrasilia({ className }: { className?: string }) {
 export function SearchExperience({ businesses }: { businesses: Business[] }) {
   const [query, setQuery] = useState("");
   const res = buscar(query, businesses);
+  const resultsRef = useRef<HTMLElement>(null);
+
+  // Scroll automático para os resultados quando o usuário pesquisa
+  useEffect(() => {
+    if (query.trim() && resultsRef.current) {
+      resultsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [query]);
+
   const categorias = useMemo(
     () => contagemPorCategoria(businesses),
     [businesses],
@@ -337,7 +346,7 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
       </section>
 
       {/* RESULTADOS */}
-      <section className="mx-auto max-w-[1100px] px-6 py-12">
+      <section ref={resultsRef} className="mx-auto max-w-[1100px] px-6 py-12">
         {res.mode === "vazio" ? (
           <div className="qc-rise">
             <p className="qc-brand mb-4 text-sm text-verde">
