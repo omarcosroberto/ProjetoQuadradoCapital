@@ -1,17 +1,28 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
     <footer className="mt-auto bg-concreto text-branco">
       <div className="mx-auto flex max-w-[1100px] flex-col gap-8 px-6 py-12">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
-          <div>
-            <p className="qc-brand text-lg text-branco">
-              Quadrado <span className="text-verde-suave">Capital</span>
-            </p>
-            <p className="mt-1 text-sm text-branco/55">
-              Comércios de Brasília, por quadra.
-            </p>
+          <div className="flex items-center gap-4">
+            {/* Logo QC */}
+            <Image
+              src="/qc-logo.png"
+              alt="Quadrado Capital"
+              width={56}
+              height={56}
+              className="h-14 w-14 rounded-lg object-contain"
+            />
+            <div>
+              <p className="qc-brand text-lg text-branco">
+                Quadrado <span className="text-verde-suave">Capital</span>
+              </p>
+              <p className="mt-1 text-sm text-branco/55">
+                Comércios de Brasília, por quadra.
+              </p>
+            </div>
           </div>
 
           {/* navegação legal + conta */}

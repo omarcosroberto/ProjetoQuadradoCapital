@@ -15,8 +15,6 @@ import { LogoQC } from "./logo-qc";
 import { FiltrosResultados } from "./filtros-resultados";
 import { MapaQuadras } from "./mapa-quadras";
 
-const EXEMPLOS = ["Academias", "409 Sul", "Restaurantes", "513 Sul", "Cafeterias", "408 Norte"];
-const QUADRAS_POPULARES = ["409 Sul", "410 Sul", "513 Sul", "408 Norte", "410 Norte"];
 
 function LupaIcon() {
   return (
@@ -36,6 +34,146 @@ function LupaIcon() {
   );
 }
 
+/**
+ * Skyline de Brasília — linha de horizonte minimalista desenhada à mão.
+ * Da esquerda pra direita: Palácio da Alvorada (pilotis curvos), Catedral
+ * Metropolitana (hiperboloide / coroa), Congresso Nacional (duas torres +
+ * cúpula do Senado + tigela da Câmara) e a Torre de TV.
+ * Reflexo no Lago Paranoá embaixo. Cores vêm dos tokens via currentColor.
+ */
+function SkylineBrasilia({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 520 300"
+      role="img"
+      aria-label="Horizonte de Brasília com o Palácio da Alvorada, a Catedral Metropolitana, o Congresso Nacional e a Torre de TV"
+      className={className}
+      fill="none"
+    >
+      {/* Sol / planalto — disco suave atrás dos monumentos */}
+      <circle cx="270" cy="92" r="64" fill="var(--qc-planalto)" />
+      <circle cx="270" cy="92" r="64" fill="var(--qc-ceu)" opacity="0.10" />
+
+      {/* chão / linha do horizonte */}
+      <line
+        x1="0"
+        y1="210"
+        x2="520"
+        y2="210"
+        stroke="var(--qc-linha)"
+        strokeWidth="2"
+      />
+
+      {/* === GRUPO MONUMENTOS (traço concreto) === */}
+      <g
+        stroke="var(--qc-concreto)"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        {/* --- Palácio da Alvorada: pilotis em arcos invertidos --- */}
+        {/* laje superior */}
+        <line x1="22" y1="158" x2="118" y2="158" />
+        {/* laje da base */}
+        <line x1="22" y1="200" x2="118" y2="200" />
+        {/* colunas curvas (tangentes que afinam no topo e na base) */}
+        <path d="M30 200 C 30 175, 40 165, 50 158" />
+        <path d="M52 200 C 52 175, 62 165, 72 158" />
+        <path d="M74 200 C 74 175, 84 165, 94 158" />
+        <path d="M96 200 C 96 175, 106 165, 112 158" />
+        {/* vidro do palácio (preenchimento leve) */}
+        <rect
+          x="40"
+          y="158"
+          width="60"
+          height="42"
+          fill="var(--qc-ceu)"
+          opacity="0.12"
+          stroke="none"
+        />
+
+        {/* --- Catedral Metropolitana: pilares curvos formando a coroa --- */}
+        {/* anel da base */}
+        <ellipse cx="170" cy="202" rx="40" ry="6" />
+        {/* 7 pilares hiperboloides que abrem no topo */}
+        <path d="M138 200 C 150 150, 160 130, 158 108" />
+        <path d="M150 200 C 158 152, 165 128, 167 106" />
+        <path d="M162 200 C 166 150, 170 126, 176 106" />
+        <path d="M170 200 C 170 150, 170 124, 170 104" />
+        <path d="M178 200 C 174 150, 170 126, 164 106" />
+        <path d="M190 200 C 182 152, 175 128, 173 106" />
+        <path d="M202 200 C 190 150, 180 130, 182 108" />
+
+        {/* --- Congresso Nacional --- */}
+        {/* plataforma / base larga */}
+        <line x1="250" y1="200" x2="430" y2="200" />
+        {/* duas torres slim gêmeas */}
+        <line x1="332" y1="200" x2="332" y2="96" />
+        <line x1="348" y1="200" x2="348" y2="96" />
+        {/* passarela ligando as torres */}
+        <line x1="332" y1="120" x2="348" y2="120" />
+        {/* tigela da Câmara (côncava, abre pra cima) à esquerda */}
+        <path d="M256 178 A 36 26 0 0 1 328 178" />
+        <line x1="256" y1="178" x2="328" y2="178" />
+        {/* cúpula do Senado (convexa) à direita */}
+        <path d="M352 178 A 36 26 0 0 0 424 178" />
+        <line x1="352" y1="178" x2="424" y2="178" />
+        {/* preenchimento sutil das torres */}
+        <rect
+          x="332"
+          y="96"
+          width="16"
+          height="104"
+          fill="var(--qc-concreto)"
+          opacity="0.06"
+          stroke="none"
+        />
+
+        {/* --- Torre de TV: mastro + plataforma de observação --- */}
+        {/* mastro */}
+        <line x1="476" y1="200" x2="476" y2="70" />
+        {/* base alargada */}
+        <path d="M468 200 L 476 184 L 484 200" />
+        {/* plataforma (mirante) */}
+        <line x1="462" y1="120" x2="490" y2="120" />
+        <line x1="462" y1="130" x2="490" y2="130" />
+        <line x1="462" y1="120" x2="462" y2="130" />
+        <line x1="490" y1="120" x2="490" y2="130" />
+        {/* antena no topo */}
+        <line x1="476" y1="70" x2="476" y2="52" strokeWidth="2" />
+      </g>
+
+      {/* === REFLEXO NO LAGO PARANOÁ (espelhado e esmaecido) === */}
+      <g
+        stroke="var(--qc-ceu)"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        opacity="0.28"
+      >
+        {/* reflexo das torres do Congresso */}
+        <line x1="332" y1="214" x2="332" y2="252" />
+        <line x1="348" y1="214" x2="348" y2="252" />
+        {/* reflexo da Torre de TV */}
+        <line x1="476" y1="214" x2="476" y2="258" />
+        {/* reflexo da catedral (traço único sugerido) */}
+        <line x1="170" y1="214" x2="170" y2="244" />
+        {/* ondulações da água */}
+        <line x1="60" y1="226" x2="120" y2="226" opacity="0.6" />
+        <line x1="240" y1="236" x2="320" y2="236" opacity="0.5" />
+        <line x1="400" y1="230" x2="460" y2="230" opacity="0.5" />
+      </g>
+
+      {/* toque de vegetação do cerrado na base */}
+      <g fill="var(--qc-verde)" opacity="0.85">
+        <circle cx="14" cy="206" r="5" />
+        <circle cx="226" cy="206" r="4" />
+        <circle cx="446" cy="206" r="5" />
+        <circle cx="506" cy="206" r="4" />
+      </g>
+    </svg>
+  );
+}
+
 export function SearchExperience({ businesses }: { businesses: Business[] }) {
   const [query, setQuery] = useState("");
   const res = buscar(query, businesses);
@@ -44,6 +182,19 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
     [businesses],
   );
   const stats = useMemo(() => computeStats(businesses), [businesses]);
+
+  // Top 5 quadras: score = soma(avaliacoes * capivaras) por quadra+asa, atualizado a cada render
+  const quadrasPopulares = useMemo(() => {
+    const scores = new Map<string, number>();
+    for (const b of businesses) {
+      const key = `${b.quadra} ${b.asa}`;
+      scores.set(key, (scores.get(key) ?? 0) + (b.avaliacoes ?? 0) * (b.capivaras ?? 0));
+    }
+    return [...scores.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 5)
+      .map(([key]) => key);
+  }, [businesses]);
 
   // Estado vazio inteligente: quando a busca não acha nada, decidimos a sugestão
   // a partir do formato da query (parece quadra? parece categoria?).
@@ -62,130 +213,120 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
 
   return (
     <>
-      {/* HERO */}
-      <section className="relative overflow-hidden bg-concreto text-branco">
-        {/* grade das superquadras */}
+      {/* HERO — claro e luminoso, temática Brasília */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-white to-planalto text-concreto">
+        {/* grade das superquadras (padrão Lúcio Costa) — bem sutil */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-[0.06]"
+          className="pointer-events-none absolute inset-0 opacity-[0.045]"
           style={{
             backgroundImage:
-              "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
+              "linear-gradient(var(--qc-concreto) 1px, transparent 1px), linear-gradient(90deg, var(--qc-concreto) 1px, transparent 1px)",
+            backgroundSize: "56px 56px",
           }}
         />
-        {/* brilho verde */}
+        {/* brilho azul Lago Paranoá no canto */}
         <div
           aria-hidden
-          className="pointer-events-none absolute -right-24 -top-28 h-96 w-96 rounded-full bg-verde/25 blur-3xl"
+          className="pointer-events-none absolute -right-24 -top-28 h-96 w-96 rounded-full bg-ceu/15 blur-3xl"
         />
 
         <div className="relative mx-auto max-w-[1100px] px-6 py-12 md:py-16">
           {/* Marca */}
-          <LogoQC variant="light" href={null} />
+          <LogoQC variant="default" href={null} />
 
-          <div className="mt-8 grid items-center gap-8 lg:grid-cols-[1.35fr_1fr]">
+          <div className="mt-8 grid items-center gap-8 lg:grid-cols-[1.2fr_1fr]">
             <div>
               {/* mascote no mobile */}
               <div className="mb-5 flex lg:hidden">
                 <CapivaraMascote className="qc-float h-24 w-auto" />
               </div>
 
-              <h1 className="qc-display max-w-2xl text-3xl md:text-5xl">
+              <h1 className="qc-display max-w-2xl text-3xl text-concreto md:text-5xl">
                 Encontre tudo na sua{" "}
-                <span className="text-verde-suave">quadra</span>.
+                <span className="text-verde">quadra</span>.
               </h1>
-              <p className="mt-4 max-w-xl text-lg leading-relaxed text-branco/70">
-                Comércios da Asa Sul e Asa Norte de Brasília, organizados por{" "}
-                <strong className="text-branco">quadra</strong> e{" "}
-                <strong className="text-branco">bloco</strong>. Avaliados em
-                capivaras 🦫.
+              <p className="mt-4 max-w-xl text-lg leading-relaxed text-concreto-claro">
+                Aqui você encontra os comércios locais das Quadras{" "}
+                <strong className="text-concreto">Asa Sul e Asa Norte</strong>{" "}
+                do Plano Piloto e ainda pode avaliar quantas{" "}
+                <strong className="text-concreto">capivaras 🦫</strong> eles
+                merecem.
               </p>
 
-              {/* busca */}
+              {/* busca — branca, borda verde, sombra suave */}
               <div className="relative mt-7 max-w-2xl">
-                <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-concreto-claro">
+                <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-verde">
                   <LupaIcon />
                 </span>
                 <input
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder='Busque um tema ("academias") ou uma quadra ("409 sul")'
-                  className="w-full rounded-xl border-2 border-transparent bg-branco py-3.5 pl-12 pr-4 text-base text-concreto shadow-lg shadow-black/20 placeholder:text-concreto-claro focus:border-verde focus:outline-none"
+                  className="w-full rounded-xl border-2 border-verde/30 bg-branco py-3.5 pl-12 pr-4 text-base text-concreto shadow-lg shadow-ceu/10 placeholder:text-concreto-claro focus:border-verde focus:shadow-verde/15 focus:outline-none"
                   autoFocus
                 />
               </div>
 
-              {/* exemplos */}
-              <div className="mt-4 flex flex-wrap gap-2">
-                {EXEMPLOS.map((ex) => (
-                  <button
-                    key={ex}
-                    type="button"
-                    onClick={() => setQuery(ex)}
-                    className="rounded-full border border-branco/20 px-3 py-1 text-sm text-branco/75 transition-colors hover:border-verde-suave hover:text-branco"
-                  >
-                    {ex}
-                  </button>
-                ))}
-              </div>
-
-              {/* quadras populares — atalho rápido */}
-              <div className="mt-3 flex flex-wrap items-center gap-2">
-                <span className="text-xs font-semibold uppercase tracking-wide text-branco/45">
-                  Quadras populares
-                </span>
-                {QUADRAS_POPULARES.map((q) => (
-                  <button
-                    key={q}
-                    type="button"
-                    onClick={() => setQuery(q)}
-                    className="rounded-full bg-verde/15 px-3 py-1 text-sm font-semibold text-verde-suave transition-colors hover:bg-verde/25 hover:text-branco"
-                  >
-                    {q}
-                  </button>
-                ))}
-              </div>
+              {/* quadras populares — computadas dinamicamente (mais avaliações × melhor nota) */}
+              {quadrasPopulares.length > 0 && (
+                <div className="mt-5 flex flex-wrap items-center gap-2">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-concreto-claro">
+                    Quadras em destaque
+                  </span>
+                  {quadrasPopulares.map((q) => (
+                    <button
+                      key={q}
+                      type="button"
+                      onClick={() => setQuery(q)}
+                      className="rounded-full bg-verde/10 px-3 py-1 text-sm font-semibold text-verde transition-colors hover:bg-verde hover:text-branco"
+                    >
+                      {q}
+                    </button>
+                  ))}
+                </div>
+              )}
 
               {/* stats */}
-              <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-branco/55">
+              <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-concreto-claro">
                 <span>
-                  <strong className="qc-display text-base text-branco">
+                  <strong className="qc-display text-base text-concreto">
                     {stats.comercios}
                   </strong>{" "}
                   comércios
                 </span>
-                <span aria-hidden className="text-branco/20">
+                <span aria-hidden className="text-linha">
                   ·
                 </span>
                 <span>
-                  <strong className="qc-display text-base text-branco">
+                  <strong className="qc-display text-base text-concreto">
                     {stats.quadras}
                   </strong>{" "}
                   quadras mapeadas
                 </span>
-                <span aria-hidden className="text-branco/20">
+                <span aria-hidden className="text-linha">
                   ·
                 </span>
-                <span>nota em capivaras 🦫</span>
+                <span>Avaliação em Capivaras 🦫</span>
               </div>
             </div>
 
-            {/* mascote no desktop */}
-            <div className="hidden justify-end lg:flex">
-              <CapivaraMascote className="qc-float h-72 w-auto" />
+            {/* skyline de Brasília no desktop — peça central do redesign */}
+            <div className="hidden lg:block">
+              <SkylineBrasilia className="qc-float h-auto w-full" />
             </div>
           </div>
 
+          {/* divisor arquitetônico estilo Niemeyer */}
+          <hr className="qc-niemeyer-line mt-10" />
+
           {/* explorar por quadra — mapa */}
-          <div className="mt-10 rounded-2xl border border-branco/10 bg-branco/[0.04] p-5">
-            <p className="qc-brand text-sm text-verde-suave">
-              Explorar por quadra
-            </p>
-            <p className="mt-1 text-sm text-branco/60">
+          <div className="mt-8 rounded-2xl border border-linha bg-branco/60 p-5 shadow-sm shadow-ceu/5">
+            <p className="qc-brand text-sm text-verde">Explorar por quadra</p>
+            <p className="mt-1 text-sm text-concreto-claro">
               Toque numa superquadra pra ver os comércios dela.
             </p>
-            <div className="mt-4 rounded-xl bg-branco p-4">
+            <div className="mt-4 rounded-xl bg-branco p-4 shadow-sm">
               <MapaQuadras businesses={businesses} onSelecionar={setQuery} />
             </div>
           </div>
@@ -204,11 +345,11 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
                 <Link
                   key={categoria}
                   href={`/categoria/${categoriaParaSlug(categoria)}`}
-                  className="group flex items-center gap-3 rounded-xl border border-linha bg-branco p-3 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-verde/40 hover:shadow-md"
+                  className="group flex items-center gap-3 rounded-xl border border-linha bg-branco p-3 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-verde/40 hover:shadow-md hover:shadow-ceu/10"
                 >
                   <span
                     aria-hidden
-                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-ar text-xl"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-planalto text-xl"
                   >
                     {categoriaEmoji(categoria)}
                   </span>
@@ -223,10 +364,6 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
                 </Link>
               ))}
             </div>
-            <p className="mt-8 max-w-lg text-sm text-concreto-claro">
-              Ou digite uma quadra específica (ex: <strong>409 Sul</strong>) pra
-              ver todos os comércios dela, em ordem por bloco A · B · C · D.
-            </p>
           </div>
         ) : res.total === 0 ? (
           <div className="qc-rise rounded-xl border border-linha bg-branco p-8 text-center">
