@@ -1,19 +1,6 @@
 [
   {
-    "slug": "412n-a-1",
-    "nome": "Blend Boucherie",
-    "categoria": "Restaurante",
-    "asa": "Norte",
-    "quadra": 412,
-    "bloco": "A",
-    "endereco": "SHCN CLN 412 - Asa Norte, Brasília - DF, 70867-520",
-    "place_id": "ChIJ9d6twRk7WpMRBhgzxx1nUHY",
-    "google_rating": 4.6,
-    "google_reviews": 1202,
-    "fonte": "google_places:ChIJ9d6twRk7WpMRBhgzxx1nUHY"
-  },
-  {
-    "slug": "412n-a-2",
+    "slug": "412n-a-3",
     "nome": "Mercearia Colaborativa Asa Norte",
     "categoria": "Restaurante",
     "asa": "Norte",
