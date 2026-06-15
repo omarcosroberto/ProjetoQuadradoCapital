@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { BusinessCard } from "@/components/business-card";
 import { Footer } from "@/components/footer";
+import { FiltrosResultados } from "@/components/filtros-resultados";
 import {
   categoriaEmoji,
   categoriaParaSlug,
@@ -121,11 +121,7 @@ export default async function CategoriaPage({
             Ainda não há comércios cadastrados nesta categoria.
           </p>
         ) : (
-          <div className="qc-rise grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {items.map((b) => (
-              <BusinessCard key={b.id} b={b} />
-            ))}
-          </div>
+          <FiltrosResultados itens={items} modoQuadra={false} />
         )}
       </main>
 
