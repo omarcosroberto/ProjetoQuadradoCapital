@@ -89,13 +89,35 @@ async function fetchComerciosComPlaceId() {
   if (!url || !key) throw new Error("Defina NEXT_PUBLIC_SUPABASE_URL e NEXT_PUBLIC_SUPABASE_ANON_KEY");
 
   const res = await fetch(
-    `${url}/rest/v1/comercios?google_place_id=not.is.null&google_place_id=neq.&select=slug,google_place_id&limit=2000`,
+    `${url}/rest/v1/qc_comercios?google_place_id=not.is.null&google_place_id=neq.&select=slug,google_place_id&limit=2000`,
     { headers: { apikey: key, Authorization: `Bearer ${key}` } }
   );
   if (!res.ok) throw new Error(`Supabase: ${await res.text()}`);
   const all = await res.json();
   // Filtra IDs que parecem válidos (ChIJ... tem pelo menos 20 chars)
   return all.filter(({ google_place_id }) => google_place_id && google_place_id.length > 15);
+}
+
+// Aplica o update direto via Supabase REST (PostgREST), usando a service role key
+// para passar por RLS. Sem isso, o SQL gerado fica parado em scripts/enrich-resultado.sql
+// e nada é atualizado de fato.
+async function aplicarUpdate(slug, sets) {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!serviceKey) return false;
+
+  const res = await fetch(`${url}/rest/v1/qc_comercios?slug=eq.${encodeURIComponent(slug)}`, {
+    method: "PATCH",
+    headers: {
+      apikey: serviceKey,
+      Authorization: `Bearer ${serviceKey}`,
+      "Content-Type": "application/json",
+      Prefer: "return=minimal",
+    },
+    body: JSON.stringify({ ...sets, updated_at: new Date().toISOString() }),
+  });
+  if (!res.ok) throw new Error(`PATCH ${slug}: ${(await res.text()).slice(0, 150)}`);
+  return true;
 }
 
 const resultados = [];
@@ -122,8 +144,21 @@ async function main() {
 
       if (telefone || horario || foto_url) {
         resultados.push({ slug, telefone, horario, foto_url });
+
+        const sets = {};
+        if (telefone) sets.telefone = telefone;
+        if (horario) sets.horario_funcionamento = horario;
+        if (foto_url) sets.foto_url = foto_url;
+
+        let aplicado = false;
+        try {
+          aplicado = await aplicarUpdate(slug, sets);
+        } catch (e) {
+          console.warn(`  ⚠️  PATCH falhou para ${slug}: ${e.message.slice(0, 100)}`);
+        }
+
         const info = [telefone ? "📞" : "", horario ? "🕐" : "", foto_url ? "📸" : ""].filter(Boolean).join(" ");
-        console.log(`  ✅ ${slug.padEnd(16)} ${info}`);
+        console.log(`  ✅ ${slug.padEnd(16)} ${info} ${aplicado ? "(aplicado)" : "(só no SQL/JSON gerado)"}`);
       } else {
         console.log(`  ○  ${slug.padEnd(16)} (sem dados extras)`);
       }
@@ -157,7 +192,7 @@ async function main() {
     if (horario) sets.push(`horario_funcionamento = '${JSON.stringify(horario).replace(/'/g, "''")}'::jsonb`);
     if (foto_url) sets.push(`foto_url = '${foto_url.replace(/'/g, "''")}'`);
     if (sets.length === 0) return null;
-    return `update public.comercios set ${sets.join(", ")}, updated_at = now() where slug = '${slug}';`;
+    return `update public.qc_comercios set ${sets.join(", ")}, updated_at = now() where slug = '${slug}';`;
   }).filter(Boolean);
 
   const sql = `-- Gerado por scripts/enrich-places.mjs

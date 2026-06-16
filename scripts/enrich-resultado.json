@@ -1,5 +1,67 @@
 [
   {
+    "slug": "109n-a-2",
+    "telefone": "(61) 99862-2441",
+    "horario": null,
+    "foto_url": null
+  },
+  {
+    "slug": "313s-a-1",
+    "telefone": "(61) 99680-3494",
+    "horario": [
+      "segunda-feira: 08:00 – 17:00",
+      "terça-feira: 08:00 – 17:00",
+      "quarta-feira: 08:00 – 17:00",
+      "quinta-feira: 08:00 – 17:00",
+      "sexta-feira: 08:00 – 17:00",
+      "sábado: 08:00 – 16:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "313s-a-2",
+    "telefone": "(61) 99405-3112",
+    "horario": [
+      "segunda-feira: 08:00 – 18:00",
+      "terça-feira: 08:00 – 18:00",
+      "quarta-feira: 08:00 – 18:00",
+      "quinta-feira: 08:00 – 18:00",
+      "sexta-feira: 08:00 – 18:00",
+      "sábado: 08:00 – 14:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "313s-b-3",
+    "telefone": "(61) 3526-6232",
+    "horario": [
+      "segunda-feira: 08:00 – 17:00",
+      "terça-feira: 08:00 – 17:00",
+      "quarta-feira: 08:00 – 17:00",
+      "quinta-feira: 08:00 – 17:00",
+      "sexta-feira: 08:00 – 17:00",
+      "sábado: 08:00 – 14:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "313s-a-3",
+    "telefone": "(61) 3245-1077",
+    "horario": [
+      "segunda-feira: 06:00 – 15:00",
+      "terça-feira: 06:00 – 15:00",
+      "quarta-feira: 06:00 – 15:00",
+      "quinta-feira: 06:00 – 15:00",
+      "sexta-feira: 06:00 – 15:00",
+      "sábado: 06:00 – 15:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
     "slug": "109n-a-1",
     "telefone": "(61) 3548-6208",
     "horario": [
@@ -14,9 +76,1699 @@
     "foto_url": null
   },
   {
-    "slug": "109n-a-2",
+    "slug": "109n-a-6",
+    "telefone": "(61) 3548-6208",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "109n-a-7",
     "telefone": "(61) 99862-2441",
     "horario": null,
+    "foto_url": null
+  },
+  {
+    "slug": "109n-a-8",
+    "telefone": "(61) 99131-5959",
+    "horario": [
+      "segunda-feira: 10:00 – 20:00",
+      "terça-feira: 10:00 – 23:00",
+      "quarta-feira: 10:00 – 23:00",
+      "quinta-feira: 10:00 – 23:00",
+      "sexta-feira: 10:00 – 00:00",
+      "sábado: 10:00 – 00:00",
+      "domingo: 10:00 – 20:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "109n-a-9",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 08:00 – 20:30",
+      "quarta-feira: 08:00 – 20:30",
+      "quinta-feira: 08:00 – 20:30",
+      "sexta-feira: 08:00 – 20:30",
+      "sábado: 08:00 – 20:30",
+      "domingo: 08:00 – 21:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "109n-a-10",
+    "telefone": "(61) 3033-2007",
+    "horario": [
+      "segunda-feira: 17:00 – 23:00",
+      "terça-feira: 17:00 – 23:00",
+      "quarta-feira: 17:00 – 23:00",
+      "quinta-feira: 17:00 – 23:00",
+      "sexta-feira: 17:00 – 23:00",
+      "sábado: 12:00 – 23:00",
+      "domingo: 12:00 – 23:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "109n-b-2",
+    "telefone": "(61) 3202-7423",
+    "horario": [
+      "segunda-feira: 11:00 – 22:30",
+      "terça-feira: 11:00 – 22:30",
+      "quarta-feira: 11:00 – 22:30",
+      "quinta-feira: 11:00 – 22:30",
+      "sexta-feira: 11:00 – 22:30",
+      "sábado: 11:00 – 22:30",
+      "domingo: 11:00 – 22:30"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "404n-a-3",
+    "telefone": "(61) 99431-0025",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 08:30 – 15:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "404n-a-4",
+    "telefone": "(61) 99249-2084",
+    "horario": null,
+    "foto_url": null
+  },
+  {
+    "slug": "404n-a-2",
+    "telefone": "(61) 99249-2084",
+    "horario": null,
+    "foto_url": null
+  },
+  {
+    "slug": "410n-a-3",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: 08:00 – 18:00",
+      "terça-feira: 08:00 – 18:00",
+      "quarta-feira: 08:00 – 18:00",
+      "quinta-feira: 08:00 – 18:00",
+      "sexta-feira: 08:00 – 18:00",
+      "sábado: 08:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "410n-a-4",
+    "telefone": "(61) 3340-4084",
+    "horario": [
+      "segunda-feira: 08:00 – 18:00",
+      "terça-feira: 08:00 – 18:00",
+      "quarta-feira: 08:00 – 18:00",
+      "quinta-feira: 08:00 – 18:00",
+      "sexta-feira: 08:00 – 18:00",
+      "sábado: 08:00 – 12:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "411n-a-3",
+    "telefone": "(61) 98447-5846",
+    "horario": [
+      "segunda-feira: 11:00 – 14:30",
+      "terça-feira: 11:00 – 14:30",
+      "quarta-feira: 11:00 – 14:30",
+      "quinta-feira: 11:00 – 14:30",
+      "sexta-feira: 11:00 – 14:30",
+      "sábado: 11:00 – 14:30",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "411n-a-4",
+    "telefone": "(61) 3274-9427",
+    "horario": [
+      "segunda-feira: 11:30 – 15:00, 18:00 – 22:00",
+      "terça-feira: 11:30 – 15:00, 18:00 – 22:00",
+      "quarta-feira: 11:30 – 15:00, 18:00 – 22:00",
+      "quinta-feira: 11:30 – 15:00, 18:00 – 22:00",
+      "sexta-feira: 11:30 – 15:00, 18:00 – 22:00",
+      "sábado: 11:30 – 16:00, 19:00 – 22:00",
+      "domingo: 11:30 – 16:00, 19:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "412n-a-3",
+    "telefone": "(61) 99936-1616",
+    "horario": [
+      "segunda-feira: 08:00 – 20:00",
+      "terça-feira: 08:00 – 20:00",
+      "quarta-feira: 08:00 – 20:00",
+      "quinta-feira: 08:00 – 20:00",
+      "sexta-feira: 08:00 – 20:00",
+      "sábado: 08:00 – 20:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "102s-a-1",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: 08:00 – 20:00",
+      "terça-feira: 08:00 – 20:00",
+      "quarta-feira: 08:00 – 20:00",
+      "quinta-feira: 08:00 – 20:00",
+      "sexta-feira: 08:00 – 20:00",
+      "sábado: 08:00 – 17:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "102s-a-2",
+    "telefone": "(61) 3225-8092",
+    "horario": null,
+    "foto_url": null
+  },
+  {
+    "slug": "113s-c-1",
+    "telefone": "(61) 3541-2714",
+    "horario": [
+      "segunda-feira: 08:30 – 19:30",
+      "terça-feira: 08:30 – 19:30",
+      "quarta-feira: 08:30 – 19:30",
+      "quinta-feira: 08:30 – 19:30",
+      "sexta-feira: 08:30 – 19:30",
+      "sábado: 08:30 – 19:30",
+      "domingo: 08:30 – 19:30"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "113s-d-1",
+    "telefone": "(61) 3345-0777",
+    "horario": [
+      "segunda-feira: 06:30 – 23:00",
+      "terça-feira: 06:30 – 23:00",
+      "quarta-feira: 06:30 – 23:00",
+      "quinta-feira: 06:30 – 23:00",
+      "sexta-feira: 06:30 – 23:00",
+      "sábado: 06:30 – 23:00",
+      "domingo: 07:00 – 23:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "113s-a-1",
+    "telefone": "(61) 99319-0290",
+    "horario": [
+      "segunda-feira: 12:00 – 20:45",
+      "terça-feira: 09:00 – 20:45",
+      "quarta-feira: 09:00 – 20:45",
+      "quinta-feira: 09:00 – 20:45",
+      "sexta-feira: 09:00 – 20:45",
+      "sábado: 09:00 – 20:45",
+      "domingo: 12:00 – 18:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "113s-a-2",
+    "telefone": "(61) 3526-7874",
+    "horario": [
+      "segunda-feira: 09:00 – 20:00",
+      "terça-feira: 09:00 – 20:00",
+      "quarta-feira: 09:00 – 20:00",
+      "quinta-feira: 09:00 – 20:00",
+      "sexta-feira: 09:00 – 20:00",
+      "sábado: 09:00 – 20:00",
+      "domingo: 10:00 – 16:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "113s-a-3",
+    "telefone": "(61) 3245-3031",
+    "horario": [
+      "segunda-feira: 16:00 – 00:00",
+      "terça-feira: 16:00 – 00:00",
+      "quarta-feira: 16:00 – 00:00",
+      "quinta-feira: 16:00 – 00:00",
+      "sexta-feira: 11:30 – 00:00",
+      "sábado: 11:30 – 16:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "113s-a-4",
+    "telefone": "(61) 3225-1685",
+    "horario": [
+      "segunda-feira: 10:00 – 20:00",
+      "terça-feira: 10:00 – 20:00",
+      "quarta-feira: 10:00 – 20:00",
+      "quinta-feira: 10:00 – 20:00",
+      "sexta-feira: 10:00 – 20:00",
+      "sábado: 10:00 – 20:00",
+      "domingo: 10:00 – 15:30"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "113s-a-5",
+    "telefone": "(61) 99179-2599",
+    "horario": [
+      "segunda-feira: 08:00 – 18:00",
+      "terça-feira: 08:00 – 18:00",
+      "quarta-feira: 08:00 – 18:00",
+      "quinta-feira: 08:00 – 18:00",
+      "sexta-feira: 08:00 – 18:00",
+      "sábado: 08:00 – 14:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "113s-c-2",
+    "telefone": "(61) 3548-7137",
+    "horario": [
+      "segunda-feira: 11:00 – 22:00",
+      "terça-feira: 11:00 – 22:00",
+      "quarta-feira: 11:00 – 22:00",
+      "quinta-feira: 11:00 – 22:00",
+      "sexta-feira: 11:00 – 22:00",
+      "sábado: 11:00 – 22:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "114s-a-1",
+    "telefone": "(61) 99197-9638",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 08:00 – 17:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "114s-a-2",
+    "telefone": "(61) 3546-1015",
+    "horario": [
+      "segunda-feira: 08:00 – 19:00",
+      "terça-feira: 08:00 – 19:00",
+      "quarta-feira: 08:00 – 19:00",
+      "quinta-feira: 08:00 – 19:00",
+      "sexta-feira: 08:00 – 19:00",
+      "sábado: 08:00 – 17:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "114s-a-3",
+    "telefone": "(61) 3554-9004",
+    "horario": [
+      "segunda-feira: 08:00 – 22:00",
+      "terça-feira: 08:00 – 22:00",
+      "quarta-feira: 08:00 – 22:00",
+      "quinta-feira: 08:00 – 22:00",
+      "sexta-feira: 08:00 – 22:00",
+      "sábado: 08:00 – 22:00",
+      "domingo: 08:00 – 21:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "114s-a-4",
+    "telefone": "(61) 3345-4366",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "114s-a-5",
+    "telefone": "(61) 3256-2187",
+    "horario": [
+      "segunda-feira: 12:00 – 16:00",
+      "terça-feira: 12:00 – 23:00",
+      "quarta-feira: 12:00 – 23:00",
+      "quinta-feira: 12:00 – 23:00",
+      "sexta-feira: 12:00 – 23:00",
+      "sábado: 12:00 – 23:00",
+      "domingo: 12:00 – 17:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "213s-a-1",
+    "telefone": "(61) 3263-8447",
+    "horario": [
+      "segunda-feira: 10:00 – 22:00",
+      "terça-feira: 10:00 – 22:00",
+      "quarta-feira: 10:00 – 22:00",
+      "quinta-feira: 10:00 – 22:00",
+      "sexta-feira: 10:00 – 22:00",
+      "sábado: 09:00 – 22:00",
+      "domingo: 09:00 – 18:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "213s-c-1",
+    "telefone": "(61) 3263-8424",
+    "horario": [
+      "segunda-feira: 11:30 – 22:45",
+      "terça-feira: 11:30 – 22:45",
+      "quarta-feira: 11:30 – 22:45",
+      "quinta-feira: 11:30 – 22:45",
+      "sexta-feira: 11:30 – 22:45",
+      "sábado: 11:30 – 22:45",
+      "domingo: 11:30 – 22:45"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "111s-a-1",
+    "telefone": "(61) 99618-9471",
+    "horario": [
+      "segunda-feira: 07:00 – 23:00",
+      "terça-feira: 07:00 – 23:00",
+      "quarta-feira: 07:00 – 23:00",
+      "quinta-feira: 07:00 – 23:00",
+      "sexta-feira: 07:00 – 23:00",
+      "sábado: 07:00 – 23:00",
+      "domingo: 08:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "111s-a-4",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: 11:00 – 21:00",
+      "terça-feira: 11:00 – 22:00",
+      "quarta-feira: 11:00 – 22:00",
+      "quinta-feira: 11:00 – 22:00",
+      "sexta-feira: 11:00 – 22:00",
+      "sábado: 11:00 – 22:00",
+      "domingo: 11:00 – 21:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "112s-a-1",
+    "telefone": "(61) 3445-2807",
+    "horario": [
+      "segunda-feira: 08:00 – 21:00",
+      "terça-feira: 08:00 – 21:00",
+      "quarta-feira: 08:00 – 21:00",
+      "quinta-feira: 08:00 – 21:00",
+      "sexta-feira: 08:00 – 21:00",
+      "sábado: 08:00 – 21:00",
+      "domingo: 08:00 – 20:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "112s-a-2",
+    "telefone": "(61) 3245-8159",
+    "horario": [
+      "segunda-feira: 12:00 – 00:00",
+      "terça-feira: 12:00 – 00:00",
+      "quarta-feira: 12:00 – 00:00",
+      "quinta-feira: 12:00 – 00:00",
+      "sexta-feira: 12:00 – 00:00",
+      "sábado: 12:00 – 00:00",
+      "domingo: 12:00 – 18:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "112s-c-1",
+    "telefone": "(61) 99217-6640",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 11:30 – 15:00",
+      "quarta-feira: 11:30 – 15:00",
+      "quinta-feira: 11:30 – 15:00",
+      "sexta-feira: 11:30 – 15:00",
+      "sábado: 11:30 – 15:30",
+      "domingo: 11:30 – 15:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "112s-c-2",
+    "telefone": "(61) 99366-9898",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "215s-a-5",
+    "telefone": "(61) 99159-2737",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 11:40 – 00:00",
+      "quarta-feira: 11:40 – 00:00",
+      "quinta-feira: 11:40 – 00:00",
+      "sexta-feira: 11:40 – 00:00",
+      "sábado: 11:40 – 00:00",
+      "domingo: 11:40 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "215s-c-2",
+    "telefone": "(61) 99312-1040",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 12:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "215s-a-6",
+    "telefone": "(61) 3346-5552",
+    "horario": [
+      "segunda-feira: 06:00 – 21:00",
+      "terça-feira: 06:00 – 21:00",
+      "quarta-feira: 06:00 – 21:00",
+      "quinta-feira: 06:00 – 21:00",
+      "sexta-feira: 06:00 – 21:00",
+      "sábado: 06:00 – 21:00",
+      "domingo: 08:00 – 14:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "215s-a-7",
+    "telefone": "(61) 3345-4571",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "215s-b-2",
+    "telefone": "(61) 99586-2419",
+    "horario": [
+      "segunda-feira: 11:00 – 18:00",
+      "terça-feira: 11:00 – 18:00",
+      "quarta-feira: 11:00 – 18:00",
+      "quinta-feira: 11:00 – 18:00",
+      "sexta-feira: 11:00 – 18:00",
+      "sábado: 11:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "216s-a-1",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: 06:00 – 22:00",
+      "terça-feira: 06:00 – 22:00",
+      "quarta-feira: 06:00 – 22:00",
+      "quinta-feira: 06:00 – 22:00",
+      "sexta-feira: 06:00 – 22:00",
+      "sábado: 06:00 – 22:00",
+      "domingo: 07:00 – 21:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "216s-b-2",
+    "telefone": "(61) 3026-0660",
+    "horario": [
+      "segunda-feira: 09:00 – 22:00",
+      "terça-feira: 09:00 – 22:00",
+      "quarta-feira: 09:00 – 22:00",
+      "quinta-feira: 09:00 – 22:00",
+      "sexta-feira: 09:00 – 22:00",
+      "sábado: 09:00 – 22:00",
+      "domingo: 09:00 – 18:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "216s-a-2",
+    "telefone": "(61) 3256-1968",
+    "horario": [
+      "segunda-feira: 09:00 – 20:00",
+      "terça-feira: 09:00 – 20:00",
+      "quarta-feira: 09:00 – 20:00",
+      "quinta-feira: 09:00 – 20:00",
+      "sexta-feira: 09:00 – 20:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "216s-a-3",
+    "telefone": "4000-1515",
+    "horario": [
+      "segunda-feira: 11:00 – 22:00",
+      "terça-feira: 11:00 – 22:00",
+      "quarta-feira: 11:00 – 22:00",
+      "quinta-feira: 11:00 – 22:00",
+      "sexta-feira: 11:00 – 22:00",
+      "sábado: 11:00 – 22:00",
+      "domingo: 11:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "302s-a-1",
+    "telefone": "(61) 3053-5757",
+    "horario": [
+      "segunda-feira: 08:00 – 22:00",
+      "terça-feira: 08:00 – 22:00",
+      "quarta-feira: 08:00 – 22:00",
+      "quinta-feira: 08:00 – 22:00",
+      "sexta-feira: 08:00 – 22:00",
+      "sábado: 08:00 – 22:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "302s-a-2",
+    "telefone": "(61) 3212-1000",
+    "horario": [
+      "segunda-feira: 07:00 – 23:00",
+      "terça-feira: 07:00 – 23:00",
+      "quarta-feira: 07:00 – 23:00",
+      "quinta-feira: 07:00 – 23:00",
+      "sexta-feira: 07:00 – 23:00",
+      "sábado: 07:00 – 22:00",
+      "domingo: 07:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "302s-b-1",
+    "telefone": "(61) 3212-1000",
+    "horario": [
+      "segunda-feira: 07:00 – 23:00",
+      "terça-feira: 07:00 – 23:00",
+      "quarta-feira: 07:00 – 23:00",
+      "quinta-feira: 07:00 – 23:00",
+      "sexta-feira: 07:00 – 23:00",
+      "sábado: 07:00 – 23:00",
+      "domingo: 07:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "302s-a-3",
+    "telefone": "(61) 3322-1717",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 16:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "302s-a-4",
+    "telefone": "(61) 98417-7560",
+    "horario": [
+      "segunda-feira: 08:00 – 19:00",
+      "terça-feira: 08:00 – 19:00",
+      "quarta-feira: 08:00 – 19:00",
+      "quinta-feira: 08:00 – 19:00",
+      "sexta-feira: 08:00 – 19:00",
+      "sábado: 08:00 – 13:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "211s-b-1",
+    "telefone": "(61) 3345-2929",
+    "horario": [
+      "segunda-feira: 07:30 – 22:00",
+      "terça-feira: 07:30 – 22:00",
+      "quarta-feira: 07:30 – 22:00",
+      "quinta-feira: 07:30 – 22:00",
+      "sexta-feira: 07:30 – 22:00",
+      "sábado: 07:30 – 22:00",
+      "domingo: 07:30 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "211s-a-3",
+    "telefone": "(61) 99168-9728",
+    "horario": [
+      "segunda-feira: 10:00 – 20:00",
+      "terça-feira: 10:00 – 20:00",
+      "quarta-feira: 10:00 – 20:00",
+      "quinta-feira: 10:00 – 20:00",
+      "sexta-feira: 10:00 – 20:00",
+      "sábado: 09:00 – 17:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "211s-a-4",
+    "telefone": "(61) 3345-3966",
+    "horario": [
+      "segunda-feira: 09:30 – 19:00",
+      "terça-feira: 09:30 – 19:00",
+      "quarta-feira: 09:30 – 19:00",
+      "quinta-feira: 09:30 – 19:00",
+      "sexta-feira: 09:30 – 19:00",
+      "sábado: 09:30 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "212s-a-1",
+    "telefone": "(61) 99165-4808",
+    "horario": [
+      "segunda-feira: 07:00 – 22:00",
+      "terça-feira: 07:00 – 22:00",
+      "quarta-feira: 07:00 – 22:00",
+      "quinta-feira: 07:00 – 22:00",
+      "sexta-feira: 07:00 – 22:00",
+      "sábado: 07:00 – 22:00",
+      "domingo: 07:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "212s-a-2",
+    "telefone": "(61) 98101-6405",
+    "horario": [
+      "segunda-feira: 07:00 – 23:00",
+      "terça-feira: 07:00 – 23:00",
+      "quarta-feira: 07:00 – 23:00",
+      "quinta-feira: 07:00 – 23:00",
+      "sexta-feira: 07:00 – 23:00",
+      "sábado: 07:00 – 23:00",
+      "domingo: 08:00 – 20:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "212s-c-1",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: 15:00 – 19:00",
+      "terça-feira: 15:00 – 19:00",
+      "quarta-feira: 15:00 – 19:00",
+      "quinta-feira: 15:00 – 19:00",
+      "sexta-feira: 15:00 – 19:00",
+      "sábado: 11:00 – 15:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "212s-b-2",
+    "telefone": "(61) 3546-0310",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "212s-a-3",
+    "telefone": "(61) 99645-1676",
+    "horario": [
+      "segunda-feira: 09:00 – 20:00",
+      "terça-feira: 09:00 – 20:00",
+      "quarta-feira: 09:00 – 22:00",
+      "quinta-feira: 09:00 – 22:00",
+      "sexta-feira: 09:00 – 22:00",
+      "sábado: 09:00 – 22:00",
+      "domingo: 10:00 – 17:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "212s-b-3",
+    "telefone": "(61) 99663-0299",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: Fechado",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "108s-a-5",
+    "telefone": "(61) 3443-8561",
+    "horario": [
+      "segunda-feira: 09:00 – 16:30",
+      "terça-feira: 09:30 – 16:30",
+      "quarta-feira: 09:30 – 16:30",
+      "quinta-feira: 09:30 – 16:30",
+      "sexta-feira: 09:30 – 16:30",
+      "sábado: 09:30 – 15:20",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "213s-a-2",
+    "telefone": "(61) 99326-3835",
+    "horario": [
+      "segunda-feira: 09:00 – 20:00",
+      "terça-feira: 09:00 – 20:00",
+      "quarta-feira: 09:00 – 20:00",
+      "quinta-feira: 09:00 – 20:00",
+      "sexta-feira: 09:00 – 20:00",
+      "sábado: 09:00 – 20:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "213s-a-3",
+    "telefone": "(61) 99981-1154",
+    "horario": [
+      "segunda-feira: Atendimento 24 horas",
+      "terça-feira: Atendimento 24 horas",
+      "quarta-feira: Atendimento 24 horas",
+      "quinta-feira: Atendimento 24 horas",
+      "sexta-feira: Atendimento 24 horas",
+      "sábado: Atendimento 24 horas",
+      "domingo: Atendimento 24 horas"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "215s-a-4",
+    "telefone": "(61) 3245-2862",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 08:00 – 19:00",
+      "domingo: 08:00 – 17:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "215s-c-1",
+    "telefone": "(61) 99282-7178",
+    "horario": [
+      "segunda-feira: 11:00 – 00:00",
+      "terça-feira: 11:00 – 00:00",
+      "quarta-feira: 11:00 – 00:00",
+      "quinta-feira: 11:00 – 00:00",
+      "sexta-feira: 11:00 – 00:00",
+      "sábado: 11:00 – 00:00",
+      "domingo: 11:00 – 00:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "302s-a-5",
+    "telefone": "(61) 99691-2725",
+    "horario": [
+      "segunda-feira: 07:30 – 20:00",
+      "terça-feira: 07:30 – 20:00",
+      "quarta-feira: 07:30 – 20:00",
+      "quinta-feira: 07:30 – 20:00",
+      "sexta-feira: 07:30 – 20:00",
+      "sábado: 08:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "302s-b-2",
+    "telefone": "(61) 3321-0294",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 13:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "303s-c-1",
+    "telefone": "(61) 3321-0617",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:30",
+      "sábado: 09:00 – 15:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "303s-a-1",
+    "telefone": "(61) 3224-0123",
+    "horario": [
+      "segunda-feira: 08:30 – 19:00",
+      "terça-feira: 08:30 – 19:00",
+      "quarta-feira: 08:30 – 19:00",
+      "quinta-feira: 08:30 – 19:00",
+      "sexta-feira: 08:30 – 19:00",
+      "sábado: 08:30 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "303s-d-1",
+    "telefone": "(61) 3225-5150",
+    "horario": [
+      "segunda-feira: 07:00 – 19:00",
+      "terça-feira: 07:00 – 19:00",
+      "quarta-feira: 07:00 – 19:00",
+      "quinta-feira: 07:00 – 19:00",
+      "sexta-feira: 07:00 – 19:00",
+      "sábado: 08:00 – 18:00",
+      "domingo: 08:00 – 14:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "304s-c-1",
+    "telefone": "(61) 3222-1724",
+    "horario": [
+      "segunda-feira: 10:00 – 18:30",
+      "terça-feira: 10:00 – 18:30",
+      "quarta-feira: 10:00 – 18:30",
+      "quinta-feira: 10:00 – 18:30",
+      "sexta-feira: 10:00 – 18:30",
+      "sábado: 09:30 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "211n-d-1",
+    "telefone": "(61) 3272-1722",
+    "horario": [
+      "segunda-feira: 07:00 – 22:00",
+      "terça-feira: 07:00 – 22:00",
+      "quarta-feira: 07:00 – 22:00",
+      "quinta-feira: 07:00 – 22:00",
+      "sexta-feira: 07:00 – 22:00",
+      "sábado: 07:00 – 22:00",
+      "domingo: 07:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "211n-a-3",
+    "telefone": "(61) 99295-3254",
+    "horario": [
+      "segunda-feira: 11:30 – 14:30",
+      "terça-feira: 11:30 – 14:30",
+      "quarta-feira: 11:30 – 14:30",
+      "quinta-feira: 11:30 – 14:30",
+      "sexta-feira: 11:30 – 14:30",
+      "sábado: 11:30 – 14:30",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "211n-a-4",
+    "telefone": "(61) 99944-4914",
+    "horario": [
+      "segunda-feira: Atendimento 24 horas",
+      "terça-feira: Atendimento 24 horas",
+      "quarta-feira: Atendimento 24 horas",
+      "quinta-feira: Atendimento 24 horas",
+      "sexta-feira: Atendimento 24 horas",
+      "sábado: Atendimento 24 horas",
+      "domingo: Atendimento 24 horas"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "212n-a-1",
+    "telefone": "(61) 99383-6390",
+    "horario": [
+      "segunda-feira: 12:00 – 23:00",
+      "terça-feira: 12:00 – 23:00",
+      "quarta-feira: 12:00 – 23:00",
+      "quinta-feira: 12:00 – 23:00",
+      "sexta-feira: 12:00 – 23:00",
+      "sábado: 12:00 – 23:00",
+      "domingo: 15:30 – 23:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "212n-c-1",
+    "telefone": "(61) 3349-6362",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 13:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "212n-a-2",
+    "telefone": "(61) 99676-9990",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 13:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "212n-a-3",
+    "telefone": "(61) 3253-4378",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "213n-a-1",
+    "telefone": "(61) 99240-3461",
+    "horario": [
+      "segunda-feira: 08:00 – 19:00",
+      "terça-feira: 08:00 – 19:00",
+      "quarta-feira: 08:00 – 19:00",
+      "quinta-feira: 08:00 – 19:00",
+      "sexta-feira: 08:00 – 19:00",
+      "sábado: 08:00 – 17:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "310n-a-2",
+    "telefone": "(61) 3348-4800",
+    "horario": [
+      "segunda-feira: 07:00 – 22:00",
+      "terça-feira: 07:00 – 22:00",
+      "quarta-feira: 07:00 – 22:00",
+      "quinta-feira: 07:00 – 22:00",
+      "sexta-feira: 07:00 – 22:00",
+      "sábado: 07:00 – 22:00",
+      "domingo: 07:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "310n-a-3",
+    "telefone": "(61) 99553-7385",
+    "horario": [
+      "segunda-feira: 08:00 – 22:00",
+      "terça-feira: 08:00 – 22:00",
+      "quarta-feira: 08:00 – 22:00",
+      "quinta-feira: 08:00 – 22:00",
+      "sexta-feira: 08:00 – 23:00",
+      "sábado: 08:00 – 22:30",
+      "domingo: 09:00 – 22:30"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "311n-a-1",
+    "telefone": "(61) 98286-5753",
+    "horario": [
+      "segunda-feira: 12:20 – 20:00",
+      "terça-feira: 12:20 – 20:00",
+      "quarta-feira: 12:20 – 20:00",
+      "quinta-feira: 12:20 – 20:00",
+      "sexta-feira: 12:20 – 20:00",
+      "sábado: 12:20 – 20:00",
+      "domingo: 12:20 – 20:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "311n-a-2",
+    "telefone": "(61) 99698-6289",
+    "horario": [
+      "segunda-feira: 07:00 – 23:00",
+      "terça-feira: 07:00 – 23:00",
+      "quarta-feira: 07:00 – 23:00",
+      "quinta-feira: 07:00 – 23:00",
+      "sexta-feira: 07:00 – 23:00",
+      "sábado: 07:00 – 23:00",
+      "domingo: 08:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "311n-a-3",
+    "telefone": "(61) 99314-1305",
+    "horario": [
+      "segunda-feira: 08:00 – 17:00",
+      "terça-feira: 08:00 – 17:00",
+      "quarta-feira: 08:00 – 17:00",
+      "quinta-feira: 08:00 – 17:00",
+      "sexta-feira: 08:00 – 17:00",
+      "sábado: 08:00 – 17:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "311n-a-4",
+    "telefone": "(61) 3037-2955",
+    "horario": [
+      "segunda-feira: 12:00 – 20:00",
+      "terça-feira: 12:00 – 20:00",
+      "quarta-feira: 12:00 – 20:00",
+      "quinta-feira: 12:00 – 20:00",
+      "sexta-feira: 12:00 – 20:00",
+      "sábado: 10:00 – 19:00",
+      "domingo: 10:00 – 19:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "311n-a-6",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "311n-a-7",
+    "telefone": "(61) 99461-5191",
+    "horario": null,
+    "foto_url": null
+  },
+  {
+    "slug": "311n-a-8",
+    "telefone": "(61) 99204-8876",
+    "horario": [
+      "segunda-feira: 11:00 – 23:00",
+      "terça-feira: 11:00 – 23:00",
+      "quarta-feira: 11:00 – 23:00",
+      "quinta-feira: 11:00 – 23:00",
+      "sexta-feira: 11:00 – 23:00",
+      "sábado: 11:00 – 23:00",
+      "domingo: 11:00 – 15:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "311n-a-9",
+    "telefone": "(61) 3447-1905",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 14:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "312n-a-1",
+    "telefone": "(61) 3710-3333",
+    "horario": [
+      "segunda-feira: 08:00 – 20:00",
+      "terça-feira: 08:00 – 20:00",
+      "quarta-feira: 08:00 – 20:00",
+      "quinta-feira: 08:00 – 20:00",
+      "sexta-feira: 08:00 – 20:00",
+      "sábado: 08:00 – 20:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "312n-a-2",
+    "telefone": "(61) 98123-4882",
+    "horario": [
+      "segunda-feira: 16:00 – 01:00",
+      "terça-feira: 16:00 – 01:00",
+      "quarta-feira: 16:00 – 01:00",
+      "quinta-feira: 16:00 – 03:00",
+      "sexta-feira: 16:00 – 03:00",
+      "sábado: 16:00 – 03:00",
+      "domingo: 16:00 – 01:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "312n-a-3",
+    "telefone": "(61) 99820-0336",
+    "horario": [
+      "segunda-feira: 07:00 – 22:00",
+      "terça-feira: 07:00 – 22:00",
+      "quarta-feira: 07:00 – 22:00",
+      "quinta-feira: 07:00 – 22:00",
+      "sexta-feira: 07:00 – 22:00",
+      "sábado: 07:00 – 22:00",
+      "domingo: 08:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "313n-a-1",
+    "telefone": "(61) 99524-9136",
+    "horario": [
+      "segunda-feira: 11:00 – 21:30",
+      "terça-feira: 11:00 – 21:30",
+      "quarta-feira: 11:00 – 21:30",
+      "quinta-feira: 11:00 – 21:30",
+      "sexta-feira: 11:00 – 21:30",
+      "sábado: 11:00 – 21:30",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "313n-a-2",
+    "telefone": "(61) 99875-4591",
+    "horario": [
+      "segunda-feira: 12:30 – 20:30",
+      "terça-feira: 12:30 – 20:30",
+      "quarta-feira: 12:30 – 20:30",
+      "quinta-feira: 12:30 – 20:30",
+      "sexta-feira: 12:30 – 20:30",
+      "sábado: 13:30 – 20:30",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "313n-a-3",
+    "telefone": "(61) 99961-1052",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "313n-a-4",
+    "telefone": "(61) 98107-5101",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: Fechado",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "313n-a-5",
+    "telefone": "(61) 3546-4114",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "316n-a-1",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "316n-b-1",
+    "telefone": "(61) 98601-2845",
+    "horario": [
+      "segunda-feira: 08:00 – 18:00",
+      "terça-feira: 08:00 – 18:00",
+      "quarta-feira: 08:00 – 18:00",
+      "quinta-feira: 08:00 – 18:00",
+      "sexta-feira: 08:00 – 18:00",
+      "sábado: 08:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "316n-a-3",
+    "telefone": "(61) 3003-0100",
+    "horario": [
+      "segunda-feira: 09:00 – 17:00",
+      "terça-feira: 09:00 – 17:00",
+      "quarta-feira: 09:00 – 17:00",
+      "quinta-feira: 09:00 – 17:00",
+      "sexta-feira: 09:00 – 17:00",
+      "sábado: Fechado",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "213n-a-3",
+    "telefone": "(61) 99149-5904",
+    "horario": [
+      "segunda-feira: 09:00 – 14:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "213n-a-4",
+    "telefone": "(61) 3246-4250",
+    "horario": [
+      "segunda-feira: 06:30 – 23:00",
+      "terça-feira: 06:30 – 23:00",
+      "quarta-feira: 06:30 – 23:00",
+      "quinta-feira: 06:30 – 23:00",
+      "sexta-feira: 06:30 – 23:00",
+      "sábado: 06:30 – 23:00",
+      "domingo: 06:30 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "213n-a-5",
+    "telefone": "(61) 99267-8702",
+    "horario": [
+      "segunda-feira: 08:00 – 19:00",
+      "terça-feira: 08:00 – 19:00",
+      "quarta-feira: 08:00 – 19:00",
+      "quinta-feira: 08:00 – 19:00",
+      "sexta-feira: 08:00 – 19:00",
+      "sábado: 08:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "213n-a-6",
+    "telefone": "(61) 99321-8842",
+    "horario": [
+      "segunda-feira: 08:00 – 17:00",
+      "terça-feira: Fechado",
+      "quarta-feira: 08:00 – 17:00",
+      "quinta-feira: 08:00 – 17:00",
+      "sexta-feira: 08:00 – 17:00",
+      "sábado: 08:00 – 17:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "213n-c-1",
+    "telefone": "(61) 98173-7572",
+    "horario": [
+      "segunda-feira: 08:00 – 18:00",
+      "terça-feira: 08:00 – 18:00",
+      "quarta-feira: 08:00 – 18:00",
+      "quinta-feira: 08:00 – 18:00",
+      "sexta-feira: 08:00 – 18:00",
+      "sábado: 08:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "213n-a-7",
+    "telefone": "(61) 3340-0576",
+    "horario": [
+      "segunda-feira: 07:00 – 23:00",
+      "terça-feira: 07:00 – 23:00",
+      "quarta-feira: 07:00 – 23:00",
+      "quinta-feira: 07:00 – 23:00",
+      "sexta-feira: 07:00 – 23:00",
+      "sábado: 07:00 – 23:00",
+      "domingo: 07:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "215n-c-1",
+    "telefone": "(61) 98161-1597",
+    "horario": [
+      "segunda-feira: 08:00 – 20:00",
+      "terça-feira: 08:00 – 20:00",
+      "quarta-feira: 08:00 – 20:00",
+      "quinta-feira: 08:00 – 20:00",
+      "sexta-feira: 08:00 – 18:00",
+      "sábado: 08:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "215n-a-1",
+    "telefone": "(61) 99810-8344",
+    "horario": [
+      "segunda-feira: 07:00 – 23:00",
+      "terça-feira: 07:00 – 23:00",
+      "quarta-feira: 07:00 – 23:00",
+      "quinta-feira: 07:00 – 23:00",
+      "sexta-feira: 07:00 – 23:00",
+      "sábado: 07:00 – 23:00",
+      "domingo: 08:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "215n-a-2",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: 08:30 – 19:00",
+      "terça-feira: 08:30 – 19:00",
+      "quarta-feira: 08:30 – 19:00",
+      "quinta-feira: 08:30 – 19:00",
+      "sexta-feira: 08:30 – 19:00",
+      "sábado: 08:30 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "215n-a-3",
+    "telefone": "(61) 98269-1732",
+    "horario": [
+      "segunda-feira: 11:00 – 18:30",
+      "terça-feira: 11:00 – 18:30",
+      "quarta-feira: 10:30 – 18:30",
+      "quinta-feira: 10:30 – 18:30",
+      "sexta-feira: 10:30 – 18:30",
+      "sábado: 10:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "215n-a-4",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: 07:00 – 23:00",
+      "terça-feira: 07:00 – 23:00",
+      "quarta-feira: 07:00 – 23:00",
+      "quinta-feira: 07:00 – 23:00",
+      "sexta-feira: 07:00 – 23:00",
+      "sábado: 07:00 – 23:00",
+      "domingo: 07:00 – 23:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "216n-a-1",
+    "telefone": "(61) 98323-1232",
+    "horario": [
+      "segunda-feira: 10:00 – 19:00",
+      "terça-feira: 10:00 – 19:00",
+      "quarta-feira: 10:00 – 19:00",
+      "quinta-feira: 10:00 – 19:00",
+      "sexta-feira: 10:00 – 19:00",
+      "sábado: 10:00 – 17:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "216n-a-2",
+    "telefone": "(61) 98138-8148",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 16:00 – 21:00",
+      "quarta-feira: 16:00 – 21:00",
+      "quinta-feira: 16:00 – 21:00",
+      "sexta-feira: 16:00 – 21:00",
+      "sábado: Fechado",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "216n-a-3",
+    "telefone": "(61) 98372-9678",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: Fechado",
+      "quarta-feira: 17:30 – 23:00",
+      "quinta-feira: 17:30 – 23:00",
+      "sexta-feira: 17:30 – 23:00",
+      "sábado: 10:30 – 20:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "216n-a-4",
+    "telefone": "(61) 99130-7774",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 10:00 – 20:00",
+      "quarta-feira: 10:00 – 20:00",
+      "quinta-feira: 10:00 – 20:00",
+      "sexta-feira: 10:00 – 20:00",
+      "sábado: 10:00 – 20:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "210n-a-1",
+    "telefone": "(61) 3037-7332",
+    "horario": [
+      "segunda-feira: 08:00 – 22:00",
+      "terça-feira: 08:00 – 22:00",
+      "quarta-feira: 08:00 – 22:00",
+      "quinta-feira: 08:00 – 22:00",
+      "sexta-feira: 08:00 – 00:00",
+      "sábado: 08:00 – 00:00",
+      "domingo: 08:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "210n-a-2",
+    "telefone": "(61) 3274-2922",
+    "horario": [
+      "segunda-feira: 08:00 – 20:00",
+      "terça-feira: 07:30 – 20:00",
+      "quarta-feira: 07:30 – 20:00",
+      "quinta-feira: 07:30 – 20:00",
+      "sexta-feira: 07:30 – 20:00",
+      "sábado: 07:30 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "210n-a-3",
+    "telefone": "(61) 99657-1414",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 17:00 – 00:00",
+      "quarta-feira: 17:00 – 00:00",
+      "quinta-feira: 17:00 – 00:00",
+      "sexta-feira: 17:00 – 00:00",
+      "sábado: 11:00 – 00:00",
+      "domingo: 11:00 – 20:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "210n-a-4",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: 09:30 – 19:00",
+      "terça-feira: 09:30 – 19:00",
+      "quarta-feira: 09:30 – 19:00",
+      "quinta-feira: 09:30 – 19:00",
+      "sexta-feira: 09:30 – 19:00",
+      "sábado: 09:30 – 19:00",
+      "domingo: 09:30 – 14:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "210n-a-5",
+    "telefone": "(61) 99142-3131",
+    "horario": [
+      "segunda-feira: 14:00 – 17:30",
+      "terça-feira: 14:00 – 17:30",
+      "quarta-feira: 14:00 – 18:00",
+      "quinta-feira: 14:00 – 18:00",
+      "sexta-feira: 14:00 – 18:00",
+      "sábado: 09:30 – 12:30",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "211n-a-2",
+    "telefone": "(61) 99653-3232",
+    "horario": [
+      "segunda-feira: 10:00 – 22:00",
+      "terça-feira: 10:00 – 22:00",
+      "quarta-feira: 10:00 – 22:00",
+      "quinta-feira: 10:00 – 22:00",
+      "sexta-feira: 10:00 – 22:00",
+      "sábado: 10:00 – 22:00",
+      "domingo: 10:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "116n-a-3",
+    "telefone": "(61) 99567-7530",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "116n-a-5",
+    "telefone": "(61) 99544-3003",
+    "horario": [
+      "segunda-feira: 08:00 – 19:00",
+      "terça-feira: 08:00 – 19:00",
+      "quarta-feira: 08:00 – 19:00",
+      "quinta-feira: 08:00 – 19:00",
+      "sexta-feira: 08:00 – 19:00",
+      "sábado: 08:00 – 14:30",
+      "domingo: 08:00 – 12:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "204n-a-1",
+    "telefone": "(61) 98118-4420",
+    "horario": [
+      "segunda-feira: 08:00 – 19:00",
+      "terça-feira: 08:00 – 18:00",
+      "quarta-feira: 08:00 – 17:00",
+      "quinta-feira: 08:00 – 18:00",
+      "sexta-feira: 08:00 – 19:00",
+      "sábado: 09:00 – 12:00",
+      "domingo: Fechado"
+    ],
     "foto_url": null
   },
   {
@@ -87,12 +1839,6 @@
       "sábado: 08:30 – 15:00",
       "domingo: Fechado"
     ],
-    "foto_url": null
-  },
-  {
-    "slug": "404n-a-2",
-    "telefone": "(61) 99249-2084",
-    "horario": null,
     "foto_url": null
   },
   {
@@ -1046,6 +2792,48 @@
     "foto_url": null
   },
   {
+    "slug": "309s-a-3",
+    "telefone": "(61) 99228-6739",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "309s-b-1",
+    "telefone": "(61) 3242-3700",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 17:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "309s-a-4",
+    "telefone": "(61) 3443-9399",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
     "slug": "306s-a-2",
     "telefone": "(61) 99979-0293",
     "horario": [
@@ -1490,6 +3278,20 @@
       "sexta-feira: 11:00 – 22:30",
       "sábado: 11:00 – 22:30",
       "domingo: 11:00 – 22:30"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "313s-b-1",
+    "telefone": "(61) 99670-9296",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: Fechado",
+      "quarta-feira: 18:00 – 00:00",
+      "quinta-feira: 18:00 – 01:00",
+      "sexta-feira: 18:00 – 02:00",
+      "sábado: 18:00 – 02:00",
+      "domingo: Fechado"
     ],
     "foto_url": null
   },
@@ -1998,48 +3800,6 @@
     "foto_url": null
   },
   {
-    "slug": "116n-a-3",
-    "telefone": "(61) 99567-7530",
-    "horario": [
-      "segunda-feira: 09:00 – 19:00",
-      "terça-feira: 09:00 – 19:00",
-      "quarta-feira: 09:00 – 19:00",
-      "quinta-feira: 09:00 – 19:00",
-      "sexta-feira: 09:00 – 19:00",
-      "sábado: 09:00 – 19:00",
-      "domingo: Fechado"
-    ],
-    "foto_url": null
-  },
-  {
-    "slug": "116n-a-5",
-    "telefone": "(61) 99544-3003",
-    "horario": [
-      "segunda-feira: 08:00 – 19:00",
-      "terça-feira: 08:00 – 19:00",
-      "quarta-feira: 08:00 – 19:00",
-      "quinta-feira: 08:00 – 19:00",
-      "sexta-feira: 08:00 – 19:00",
-      "sábado: 08:00 – 14:30",
-      "domingo: 08:00 – 12:00"
-    ],
-    "foto_url": null
-  },
-  {
-    "slug": "204n-a-1",
-    "telefone": "(61) 98118-4420",
-    "horario": [
-      "segunda-feira: 08:00 – 19:00",
-      "terça-feira: 08:00 – 18:00",
-      "quarta-feira: 08:00 – 17:00",
-      "quinta-feira: 08:00 – 18:00",
-      "sexta-feira: 08:00 – 19:00",
-      "sábado: 09:00 – 12:00",
-      "domingo: Fechado"
-    ],
-    "foto_url": null
-  },
-  {
     "slug": "204n-a-2",
     "telefone": "(61) 98366-2509",
     "horario": [
@@ -2098,15 +3858,7 @@
   {
     "slug": "204n-a-5",
     "telefone": "(61) 3326-1134",
-    "horario": [
-      "segunda-feira: 06:00 – 20:00",
-      "terça-feira: 06:00 – 20:00",
-      "quarta-feira: 06:00 – 20:00",
-      "quinta-feira: 06:00 – 20:00",
-      "sexta-feira: 06:00 – 20:00",
-      "sábado: 06:00 – 20:00",
-      "domingo: Fechado"
-    ],
+    "horario": null,
     "foto_url": null
   },
   {
@@ -2176,6 +3928,2460 @@
       "sexta-feira: Atendimento 24 horas",
       "sábado: Atendimento 24 horas",
       "domingo: Atendimento 24 horas"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "116n-a-4",
+    "telefone": "(61) 3201-2496",
+    "horario": null,
+    "foto_url": null
+  },
+  {
+    "slug": "304n-a-1",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: 07:30 – 00:00",
+      "terça-feira: 07:30 – 00:00",
+      "quarta-feira: 07:30 – 00:00",
+      "quinta-feira: 07:30 – 00:00",
+      "sexta-feira: 07:30 – 00:00",
+      "sábado: 07:30 – 00:00",
+      "domingo: 07:30 – 00:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "304n-a-2",
+    "telefone": "(61) 99378-5211",
+    "horario": [
+      "segunda-feira: 06:00 – 23:00",
+      "terça-feira: 06:00 – 23:00",
+      "quarta-feira: 06:00 – 23:00",
+      "quinta-feira: 06:00 – 23:00",
+      "sexta-feira: 06:00 – 23:00",
+      "sábado: 06:00 – 23:00",
+      "domingo: 06:00 – 23:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "304n-a-3",
+    "telefone": "(61) 3041-5335",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "304n-a-4",
+    "telefone": "(61) 3326-1406",
+    "horario": [
+      "segunda-feira: 07:00 – 19:00",
+      "terça-feira: 07:00 – 19:00",
+      "quarta-feira: 07:00 – 19:00",
+      "quinta-feira: 07:00 – 19:00",
+      "sexta-feira: 07:00 – 19:00",
+      "sábado: 07:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "102s-a-3",
+    "telefone": "(61) 3181-2600",
+    "horario": [
+      "segunda-feira: 07:30 – 20:00",
+      "terça-feira: 07:30 – 20:00",
+      "quarta-feira: 07:30 – 20:00",
+      "quinta-feira: 07:30 – 20:00",
+      "sexta-feira: 07:30 – 20:00",
+      "sábado: 07:30 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "102s-b-1",
+    "telefone": "(61) 3445-1212",
+    "horario": [
+      "segunda-feira: 08:00 – 19:00",
+      "terça-feira: 08:00 – 19:00",
+      "quarta-feira: 08:00 – 19:00",
+      "quinta-feira: 08:00 – 19:00",
+      "sexta-feira: 08:00 – 19:00",
+      "sábado: 08:00 – 13:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "102s-c-2",
+    "telefone": "(61) 3212-1000",
+    "horario": [
+      "segunda-feira: 07:00 – 00:00",
+      "terça-feira: 07:00 – 00:00",
+      "quarta-feira: 07:00 – 00:00",
+      "quinta-feira: 07:00 – 00:00",
+      "sexta-feira: 07:00 – 00:00",
+      "sábado: 07:00 – 00:00",
+      "domingo: 07:00 – 23:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "102s-a-4",
+    "telefone": "(61) 3212-1000",
+    "horario": [
+      "segunda-feira: 07:00 – 23:00",
+      "terça-feira: 07:00 – 23:00",
+      "quarta-feira: 07:00 – 23:00",
+      "quinta-feira: 07:00 – 23:00",
+      "sexta-feira: 07:00 – 23:00",
+      "sábado: 07:00 – 23:00",
+      "domingo: 07:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "103s-a-1",
+    "telefone": "(61) 99277-6357",
+    "horario": [
+      "segunda-feira: 09:00 – 21:00",
+      "terça-feira: 09:00 – 21:00",
+      "quarta-feira: 09:00 – 21:00",
+      "quinta-feira: 09:00 – 21:00",
+      "sexta-feira: 09:00 – 21:00",
+      "sábado: 09:00 – 21:00",
+      "domingo: 14:00 – 20:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "103s-a-2",
+    "telefone": "(61) 99452-6594",
+    "horario": [
+      "segunda-feira: 17:30 – 23:30",
+      "terça-feira: 11:30 – 00:00",
+      "quarta-feira: 11:30 – 00:00",
+      "quinta-feira: 11:30 – 00:00",
+      "sexta-feira: 11:30 – 00:00",
+      "sábado: 11:30 – 00:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "103s-a-3",
+    "telefone": "(61) 2411-3437",
+    "horario": [
+      "segunda-feira: 12:00 – 16:00, 19:00 – 00:00",
+      "terça-feira: 12:00 – 16:00, 19:00 – 00:00",
+      "quarta-feira: 12:00 – 16:00, 19:00 – 00:00",
+      "quinta-feira: 12:00 – 16:00, 19:00 – 00:00",
+      "sexta-feira: 12:00 – 17:00, 19:00 – 01:00",
+      "sábado: 12:00 – 17:00, 19:00 – 01:00",
+      "domingo: 12:00 – 17:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "103s-a-4",
+    "telefone": "(41) 99279-7895",
+    "horario": [
+      "segunda-feira: 08:00 – 18:30",
+      "terça-feira: 08:00 – 18:30",
+      "quarta-feira: 08:00 – 18:30",
+      "quinta-feira: 08:00 – 18:30",
+      "sexta-feira: 08:00 – 18:30",
+      "sábado: 08:00 – 18:00",
+      "domingo: 08:00 – 18:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "103s-a-5",
+    "telefone": "(61) 98659-9003",
+    "horario": [
+      "segunda-feira: 11:00 – 14:30",
+      "terça-feira: 11:00 – 14:30",
+      "quarta-feira: 11:00 – 14:30",
+      "quinta-feira: 11:00 – 14:30",
+      "sexta-feira: 11:00 – 14:30",
+      "sábado: 11:00 – 15:00",
+      "domingo: 11:00 – 15:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "104s-a-2",
+    "telefone": "(61) 3223-2252",
+    "horario": [
+      "segunda-feira: 08:00 – 17:30",
+      "terça-feira: 08:00 – 17:30",
+      "quarta-feira: 08:00 – 17:30",
+      "quinta-feira: 08:00 – 17:30",
+      "sexta-feira: 08:00 – 17:30",
+      "sábado: 08:00 – 15:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "104s-a-3",
+    "telefone": "(61) 3522-9631",
+    "horario": [
+      "segunda-feira: 12:00 – 15:00, 19:00 – 22:00",
+      "terça-feira: 12:00 – 15:00, 19:00 – 23:00",
+      "quarta-feira: 12:00 – 15:00, 19:00 – 23:00",
+      "quinta-feira: 12:00 – 15:00, 19:00 – 00:00",
+      "sexta-feira: 12:00 – 15:00, 19:00 – 00:00",
+      "sábado: 12:00 – 15:00, 19:00 – 00:00",
+      "domingo: 12:00 – 16:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "104s-a-4",
+    "telefone": "(61) 98247-8236",
+    "horario": [
+      "segunda-feira: 08:00 – 17:00",
+      "terça-feira: 08:00 – 17:00",
+      "quarta-feira: 08:00 – 17:00",
+      "quinta-feira: 08:00 – 17:00",
+      "sexta-feira: 08:00 – 17:00",
+      "sábado: 08:00 – 16:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "104s-a-5",
+    "telefone": "(61) 99582-8131",
+    "horario": [
+      "segunda-feira: 08:00 – 21:00",
+      "terça-feira: 08:00 – 21:00",
+      "quarta-feira: 08:00 – 21:00",
+      "quinta-feira: 08:00 – 21:00",
+      "sexta-feira: 08:00 – 21:00",
+      "sábado: 08:00 – 21:00",
+      "domingo: 08:00 – 20:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "104s-b-1",
+    "telefone": "(61) 3225-2003",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "105s-c-1",
+    "telefone": "(61) 99654-3445",
+    "horario": [
+      "segunda-feira: 07:00 – 22:00",
+      "terça-feira: 07:00 – 22:00",
+      "quarta-feira: 07:00 – 22:00",
+      "quinta-feira: 07:00 – 22:00",
+      "sexta-feira: 07:00 – 22:00",
+      "sábado: 07:00 – 22:00",
+      "domingo: 07:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "105s-a-1",
+    "telefone": "(61) 3256-9761",
+    "horario": [
+      "segunda-feira: 08:00 – 21:00",
+      "terça-feira: 08:00 – 21:00",
+      "quarta-feira: 08:00 – 21:00",
+      "quinta-feira: 08:00 – 21:00",
+      "sexta-feira: 08:00 – 21:00",
+      "sábado: 08:00 – 20:00",
+      "domingo: 08:00 – 16:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "111s-a-2",
+    "telefone": "(61) 3554-2935",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "111s-a-3",
+    "telefone": "(61) 3346-7851",
+    "horario": [
+      "segunda-feira: 07:00 – 23:00",
+      "terça-feira: 07:00 – 23:00",
+      "quarta-feira: 07:00 – 23:00",
+      "quinta-feira: 07:00 – 23:00",
+      "sexta-feira: 07:00 – 23:00",
+      "sábado: 07:00 – 23:00",
+      "domingo: 07:00 – 23:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "111s-a-5",
+    "telefone": "(61) 3346-2098",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "112s-a-3",
+    "telefone": "(61) 99186-5780",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "115s-d-1",
+    "telefone": "(61) 3346-7426",
+    "horario": [
+      "segunda-feira: 06:00 – 12:30, 15:00 – 21:00",
+      "terça-feira: 06:00 – 12:30, 15:00 – 21:00",
+      "quarta-feira: 06:00 – 12:30, 15:00 – 21:00",
+      "quinta-feira: 06:00 – 12:30, 15:00 – 21:00",
+      "sexta-feira: 06:00 – 12:30, 15:00 – 21:00",
+      "sábado: 08:30 – 12:30",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "115s-a-1",
+    "telefone": "(61) 99911-8402",
+    "horario": [
+      "segunda-feira: 07:00 – 21:00",
+      "terça-feira: 07:00 – 21:00",
+      "quarta-feira: 07:00 – 21:00",
+      "quinta-feira: 07:00 – 21:00",
+      "sexta-feira: 07:00 – 20:00",
+      "sábado: 08:00 – 12:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "115s-a-3",
+    "telefone": "(61) 99226-0880",
+    "horario": [
+      "segunda-feira: 11:00 – 23:00",
+      "terça-feira: 11:00 – 23:00",
+      "quarta-feira: 11:00 – 23:00",
+      "quinta-feira: 11:00 – 23:00",
+      "sexta-feira: 11:00 – 23:00",
+      "sábado: 11:00 – 23:00",
+      "domingo: 11:00 – 23:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "115s-b-1",
+    "telefone": "(61) 99324-9184",
+    "horario": [
+      "segunda-feira: 09:00 – 20:00",
+      "terça-feira: 09:00 – 20:00",
+      "quarta-feira: 09:00 – 20:00",
+      "quinta-feira: 09:00 – 20:00",
+      "sexta-feira: 09:00 – 20:00",
+      "sábado: Fechado",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "115s-a-4",
+    "telefone": "(61) 3345-4182",
+    "horario": [
+      "segunda-feira: 07:00 – 22:00",
+      "terça-feira: 07:00 – 22:00",
+      "quarta-feira: 07:00 – 22:00",
+      "quinta-feira: 07:00 – 22:00",
+      "sexta-feira: 07:00 – 22:00",
+      "sábado: 07:00 – 22:00",
+      "domingo: 07:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "115s-b-2",
+    "telefone": "(61) 3686-2152",
+    "horario": [
+      "segunda-feira: 10:00 – 22:00",
+      "terça-feira: 10:00 – 22:00",
+      "quarta-feira: 10:00 – 22:00",
+      "quinta-feira: 10:00 – 22:00",
+      "sexta-feira: 10:00 – 22:00",
+      "sábado: 10:00 – 22:00",
+      "domingo: 10:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "116s-a-1",
+    "telefone": "(61) 3223-1193",
+    "horario": [
+      "segunda-feira: 08:00 – 23:30",
+      "terça-feira: 08:00 – 23:30",
+      "quarta-feira: 08:00 – 23:30",
+      "quinta-feira: 08:00 – 23:30",
+      "sexta-feira: 08:00 – 23:30",
+      "sábado: 08:00 – 23:30",
+      "domingo: 08:00 – 23:30"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "116s-a-2",
+    "telefone": "(61) 3223-1193",
+    "horario": [
+      "segunda-feira: 08:00 – 22:30",
+      "terça-feira: 08:00 – 22:30",
+      "quarta-feira: 08:00 – 22:30",
+      "quinta-feira: 08:00 – 22:30",
+      "sexta-feira: 08:00 – 22:30",
+      "sábado: 08:00 – 22:30",
+      "domingo: 08:00 – 22:30"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "116s-d-1",
+    "telefone": "(61) 98547-3647",
+    "horario": [
+      "segunda-feira: 07:30 – 19:30",
+      "terça-feira: 07:30 – 19:30",
+      "quarta-feira: 07:30 – 19:30",
+      "quinta-feira: 07:30 – 19:30",
+      "sexta-feira: 07:30 – 19:30",
+      "sábado: Fechado",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "116s-b-1",
+    "telefone": "(61) 3257-0037",
+    "horario": [
+      "segunda-feira: 11:00 – 21:00",
+      "terça-feira: 11:00 – 21:00",
+      "quarta-feira: 11:00 – 21:00",
+      "quinta-feira: 11:00 – 21:00",
+      "sexta-feira: 11:00 – 21:00",
+      "sábado: 10:00 – 20:00",
+      "domingo: 10:00 – 20:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "116s-a-3",
+    "telefone": "(61) 3245-5681",
+    "horario": [
+      "segunda-feira: 07:00 – 21:00",
+      "terça-feira: 07:00 – 21:00",
+      "quarta-feira: 07:00 – 21:00",
+      "quinta-feira: 07:00 – 21:00",
+      "sexta-feira: 07:00 – 21:00",
+      "sábado: 07:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "201s-a-1",
+    "telefone": "(61) 99022-7504",
+    "horario": [
+      "segunda-feira: 11:30 – 00:00",
+      "terça-feira: 11:30 – 00:00",
+      "quarta-feira: 11:30 – 00:00",
+      "quinta-feira: 11:30 – 00:00",
+      "sexta-feira: 11:30 – 01:00",
+      "sábado: 11:30 – 02:00",
+      "domingo: 11:30 – 00:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "201s-a-2",
+    "telefone": "(61) 3226-9947",
+    "horario": [
+      "segunda-feira: 11:30 – 00:00",
+      "terça-feira: 11:30 – 00:00",
+      "quarta-feira: 11:30 – 00:00",
+      "quinta-feira: 11:30 – 00:00",
+      "sexta-feira: 11:30 – 00:00",
+      "sábado: 11:30 – 00:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "201s-b-1",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 16:00 – 01:00",
+      "quarta-feira: 16:00 – 01:00",
+      "quinta-feira: 16:00 – 01:00",
+      "sexta-feira: 12:00 – 01:00",
+      "sábado: 12:00 – 01:00",
+      "domingo: 15:00 – 00:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "201s-a-3",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: 07:00 – 22:00",
+      "terça-feira: 07:00 – 22:00",
+      "quarta-feira: 07:00 – 22:00",
+      "quinta-feira: 07:00 – 22:00",
+      "sexta-feira: 07:00 – 22:00",
+      "sábado: 07:00 – 22:00",
+      "domingo: 07:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "201s-a-4",
+    "telefone": "(61) 3465-3374",
+    "horario": [
+      "segunda-feira: 08:00 – 16:00",
+      "terça-feira: 08:00 – 16:00",
+      "quarta-feira: 08:00 – 16:00",
+      "quinta-feira: 08:00 – 16:00",
+      "sexta-feira: 08:00 – 16:00",
+      "sábado: Fechado",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "202s-a-1",
+    "telefone": "(61) 3225-5636",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "202s-a-2",
+    "telefone": "(61) 3877-1057",
+    "horario": [
+      "segunda-feira: 12:00 – 16:00",
+      "terça-feira: 12:00 – 00:00",
+      "quarta-feira: 12:00 – 00:00",
+      "quinta-feira: 12:00 – 00:00",
+      "sexta-feira: 12:00 – 00:00",
+      "sábado: 12:00 – 00:00",
+      "domingo: 12:00 – 00:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "202s-a-3",
+    "telefone": "(61) 99875-7211",
+    "horario": [
+      "segunda-feira: 16:00 – 00:00",
+      "terça-feira: 16:00 – 00:00",
+      "quarta-feira: 16:00 – 00:00",
+      "quinta-feira: 15:00 – 01:00",
+      "sexta-feira: 12:00 – 01:00",
+      "sábado: 12:00 – 01:00",
+      "domingo: 12:00 – 23:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "202s-b-1",
+    "telefone": "(61) 99258-3670",
+    "horario": [
+      "segunda-feira: 11:00 – 16:00",
+      "terça-feira: 11:00 – 16:00",
+      "quarta-feira: 11:00 – 16:00",
+      "quinta-feira: 11:00 – 16:00",
+      "sexta-feira: 11:00 – 16:00",
+      "sábado: 11:00 – 16:00",
+      "domingo: 11:00 – 16:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "202s-a-4",
+    "telefone": "(61) 99212-8113",
+    "horario": [
+      "segunda-feira: 08:00 – 19:00",
+      "terça-feira: 08:00 – 19:00",
+      "quarta-feira: 08:00 – 19:00",
+      "quinta-feira: 08:00 – 19:00",
+      "sexta-feira: 08:00 – 19:00",
+      "sábado: Fechado",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "203s-a-1",
+    "telefone": "(61) 99157-3272",
+    "horario": [
+      "segunda-feira: 08:00 – 20:00",
+      "terça-feira: 08:00 – 20:00",
+      "quarta-feira: 08:00 – 20:00",
+      "quinta-feira: 08:00 – 20:00",
+      "sexta-feira: 08:00 – 20:00",
+      "sábado: 08:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "203s-a-2",
+    "telefone": "(61) 3578-8992",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: 09:00 – 15:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "203s-b-1",
+    "telefone": "4002-8282",
+    "horario": [
+      "segunda-feira: 07:00 – 23:00",
+      "terça-feira: 07:00 – 23:00",
+      "quarta-feira: 07:00 – 23:00",
+      "quinta-feira: 07:00 – 23:00",
+      "sexta-feira: 07:00 – 23:00",
+      "sábado: 07:00 – 23:00",
+      "domingo: 08:00 – 20:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "203s-a-3",
+    "telefone": "(61) 98183-4885",
+    "horario": [
+      "segunda-feira: 08:00 – 21:00",
+      "terça-feira: 08:00 – 21:00",
+      "quarta-feira: 08:00 – 21:00",
+      "quinta-feira: 08:00 – 21:00",
+      "sexta-feira: 08:00 – 21:00",
+      "sábado: 08:00 – 19:00",
+      "domingo: 09:00 – 15:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "204s-a-1",
+    "telefone": "(61) 98124-6725",
+    "horario": [
+      "segunda-feira: 11:30 – 23:00",
+      "terça-feira: 11:30 – 23:30",
+      "quarta-feira: 11:30 – 23:30",
+      "quinta-feira: 11:30 – 23:30",
+      "sexta-feira: 11:30 – 00:00",
+      "sábado: 11:30 – 00:00",
+      "domingo: 11:30 – 17:30"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "204s-a-3",
+    "telefone": "(61) 3226-8566",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "204s-a-4",
+    "telefone": "(61) 3297-4921",
+    "horario": [
+      "segunda-feira: 09:00 – 20:00",
+      "terça-feira: 09:00 – 20:00",
+      "quarta-feira: 09:00 – 20:00",
+      "quinta-feira: 09:00 – 20:00",
+      "sexta-feira: 09:00 – 20:00",
+      "sábado: 09:00 – 17:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "204s-a-5",
+    "telefone": "(61) 3225-5556",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 17:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "205s-a-1",
+    "telefone": "(61) 3345-1558",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "205s-b-1",
+    "telefone": "(61) 3547-3108",
+    "horario": [
+      "segunda-feira: 10:00 – 20:00",
+      "terça-feira: 10:00 – 20:00",
+      "quarta-feira: 10:00 – 20:00",
+      "quinta-feira: 10:00 – 20:00",
+      "sexta-feira: 10:00 – 20:00",
+      "sábado: 10:00 – 20:00",
+      "domingo: 10:00 – 18:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "205s-a-2",
+    "telefone": "(61) 98516-8227",
+    "horario": [
+      "segunda-feira: 07:00 – 20:20",
+      "terça-feira: 07:00 – 20:20",
+      "quarta-feira: 07:00 – 20:20",
+      "quinta-feira: 07:00 – 20:20",
+      "sexta-feira: 07:00 – 20:00",
+      "sábado: 07:00 – 19:30",
+      "domingo: 08:00 – 14:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "205s-a-3",
+    "telefone": "(61) 99318-3670",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "205s-a-4",
+    "telefone": "(61) 99888-8130",
+    "horario": [
+      "segunda-feira: 10:00 – 18:00",
+      "terça-feira: 10:00 – 18:00",
+      "quarta-feira: 10:00 – 18:00",
+      "quinta-feira: 10:00 – 18:00",
+      "sexta-feira: 10:00 – 18:00",
+      "sábado: 10:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "206s-a-2",
+    "telefone": "(61) 98147-9856",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "206s-b-2",
+    "telefone": "(61) 3443-6342",
+    "horario": [
+      "segunda-feira: 09:00 – 19:30",
+      "terça-feira: 09:00 – 19:30",
+      "quarta-feira: 09:00 – 19:30",
+      "quinta-feira: 09:00 – 19:30",
+      "sexta-feira: 09:00 – 19:30",
+      "sábado: 09:00 – 19:30",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "206s-a-4",
+    "telefone": "(61) 3045-0890",
+    "horario": [
+      "segunda-feira: 09:30 – 18:30",
+      "terça-feira: 09:30 – 18:30",
+      "quarta-feira: 09:30 – 18:30",
+      "quinta-feira: 09:30 – 18:30",
+      "sexta-feira: 09:30 – 18:30",
+      "sábado: 09:00 – 18:30",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "208s-a-1",
+    "telefone": "(61) 3242-0077",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 14:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "208s-a-3",
+    "telefone": "(61) 3242-4085",
+    "horario": [
+      "segunda-feira: 06:30 – 20:00",
+      "terça-feira: 06:30 – 20:00",
+      "quarta-feira: 06:30 – 20:00",
+      "quinta-feira: 06:30 – 20:00",
+      "sexta-feira: 06:30 – 20:00",
+      "sábado: 06:30 – 20:00",
+      "domingo: 06:30 – 14:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "208s-a-4",
+    "telefone": "(61) 99893-9260",
+    "horario": [
+      "segunda-feira: 07:00 – 23:00",
+      "terça-feira: 07:00 – 23:00",
+      "quarta-feira: 07:00 – 23:00",
+      "quinta-feira: 07:00 – 23:00",
+      "sexta-feira: 07:00 – 23:00",
+      "sábado: 07:30 – 18:30",
+      "domingo: 07:00 – 19:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "208s-a-5",
+    "telefone": "(61) 99252-9333",
+    "horario": [
+      "segunda-feira: 09:00 – 17:00",
+      "terça-feira: 09:00 – 17:00",
+      "quarta-feira: 09:00 – 17:00",
+      "quinta-feira: 09:00 – 17:00",
+      "sexta-feira: 09:00 – 17:00",
+      "sábado: 09:00 – 12:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "209s-a-3",
+    "telefone": "(61) 3244-2619",
+    "horario": [
+      "segunda-feira: 08:00 – 19:00",
+      "terça-feira: 08:00 – 19:00",
+      "quarta-feira: 08:00 – 19:00",
+      "quinta-feira: 08:00 – 19:00",
+      "sexta-feira: 08:00 – 19:00",
+      "sábado: 08:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "209s-a-4",
+    "telefone": "(61) 3242-0506",
+    "horario": [
+      "segunda-feira: 06:00 – 23:30",
+      "terça-feira: 06:00 – 23:30",
+      "quarta-feira: 06:00 – 23:30",
+      "quinta-feira: 06:00 – 23:30",
+      "sexta-feira: 06:00 – 23:30",
+      "sábado: 06:00 – 23:30",
+      "domingo: 06:00 – 23:30"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "209s-a-5",
+    "telefone": "(61) 3443-5050",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 11:00 – 23:30",
+      "quarta-feira: 11:00 – 23:30",
+      "quinta-feira: 11:00 – 23:30",
+      "sexta-feira: 11:00 – 23:30",
+      "sábado: 11:00 – 23:30",
+      "domingo: 11:00 – 23:30"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "209s-c-2",
+    "telefone": "(61) 3244-2935",
+    "horario": [
+      "segunda-feira: 06:30 – 21:15",
+      "terça-feira: 06:30 – 21:15",
+      "quarta-feira: 06:30 – 21:15",
+      "quinta-feira: 06:30 – 21:15",
+      "sexta-feira: 06:30 – 21:15",
+      "sábado: 06:30 – 21:15",
+      "domingo: 06:30 – 21:15"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "209s-a-6",
+    "telefone": "(61) 3443-0227",
+    "horario": [
+      "segunda-feira: 07:00 – 23:00",
+      "terça-feira: 07:00 – 23:00",
+      "quarta-feira: 07:00 – 23:00",
+      "quinta-feira: 07:00 – 23:00",
+      "sexta-feira: 07:00 – 23:00",
+      "sábado: 07:00 – 23:00",
+      "domingo: 07:00 – 23:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "209s-c-3",
+    "telefone": "(61) 3212-1000",
+    "horario": [
+      "segunda-feira: 07:00 – 23:00",
+      "terça-feira: 07:00 – 23:00",
+      "quarta-feira: 07:00 – 23:00",
+      "quinta-feira: 07:00 – 23:00",
+      "sexta-feira: 07:00 – 23:00",
+      "sábado: 07:00 – 23:00",
+      "domingo: 07:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "210s-a-1",
+    "telefone": "4003-1043",
+    "horario": [
+      "segunda-feira: 10:00 – 15:00",
+      "terça-feira: 10:00 – 15:00",
+      "quarta-feira: 10:00 – 15:00",
+      "quinta-feira: 10:00 – 15:00",
+      "sexta-feira: 10:00 – 15:00",
+      "sábado: Fechado",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "210s-b-2",
+    "telefone": "(61) 3224-8391",
+    "horario": [
+      "segunda-feira: 08:30 – 19:00",
+      "terça-feira: 08:30 – 19:00",
+      "quarta-feira: 08:30 – 19:00",
+      "quinta-feira: 08:30 – 19:00",
+      "sexta-feira: 08:30 – 19:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "210s-b-3",
+    "telefone": "(61) 3224-2926",
+    "horario": [
+      "segunda-feira: 08:00 – 19:00",
+      "terça-feira: 08:00 – 19:00",
+      "quarta-feira: 08:00 – 19:00",
+      "quinta-feira: 08:00 – 19:00",
+      "sexta-feira: 08:00 – 19:00",
+      "sábado: 08:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "211s-a-1",
+    "telefone": "(61) 99922-4995",
+    "horario": [
+      "segunda-feira: 09:00 – 21:00",
+      "terça-feira: 09:00 – 21:00",
+      "quarta-feira: 09:00 – 21:00",
+      "quinta-feira: 09:00 – 21:00",
+      "sexta-feira: 09:00 – 21:00",
+      "sábado: 09:00 – 21:00",
+      "domingo: 08:00 – 13:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "211s-a-2",
+    "telefone": "(61) 99961-6976",
+    "horario": [
+      "segunda-feira: 06:00 – 22:00",
+      "terça-feira: 06:00 – 22:00",
+      "quarta-feira: 06:00 – 22:00",
+      "quinta-feira: 06:00 – 22:00",
+      "sexta-feira: 06:00 – 21:00",
+      "sábado: 08:00 – 14:00",
+      "domingo: 08:00 – 14:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "211s-c-1",
+    "telefone": "(61) 99995-2292",
+    "horario": [
+      "segunda-feira: 12:00 – 15:30, 19:30 – 00:00",
+      "terça-feira: 12:00 – 15:30, 19:30 – 00:00",
+      "quarta-feira: 12:00 – 15:30, 19:30 – 00:00",
+      "quinta-feira: 12:00 – 15:30, 19:30 – 00:00",
+      "sexta-feira: 12:00 – 15:30, 19:30 – 00:00",
+      "sábado: 12:00 – 16:00, 19:30 – 00:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "212s-b-1",
+    "telefone": "(61) 99276-8153",
+    "horario": [
+      "segunda-feira: 11:30 – 20:00",
+      "terça-feira: 11:30 – 20:00",
+      "quarta-feira: 11:30 – 20:00",
+      "quinta-feira: 11:30 – 20:00",
+      "sexta-feira: 11:30 – 20:00",
+      "sábado: 10:00 – 20:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "213s-c-2",
+    "telefone": "(61) 3543-8845",
+    "horario": [
+      "segunda-feira: 10:00 – 15:30",
+      "terça-feira: 10:00 – 15:30",
+      "quarta-feira: 10:00 – 15:30",
+      "quinta-feira: 10:00 – 15:30",
+      "sexta-feira: 10:00 – 15:30",
+      "sábado: 10:00 – 15:30",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "304s-c-2",
+    "telefone": "(61) 3225-8138",
+    "horario": [
+      "segunda-feira: 09:00 – 18:30",
+      "terça-feira: 09:00 – 18:30",
+      "quarta-feira: 09:00 – 18:30",
+      "quinta-feira: 09:00 – 18:30",
+      "sexta-feira: 09:00 – 18:30",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "304s-a-1",
+    "telefone": "(61) 3526-7639",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "304s-a-2",
+    "telefone": "(61) 3543-1107",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "304s-a-3",
+    "telefone": "(61) 99582-4046",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "304s-a-4",
+    "telefone": "(61) 3322-9256",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "305s-a-1",
+    "telefone": "(61) 99401-3838",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "305s-a-2",
+    "telefone": "(61) 3242-8817",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "305s-a-3",
+    "telefone": "(61) 3254-9297",
+    "horario": [
+      "segunda-feira: 08:00 – 18:00",
+      "terça-feira: 08:00 – 18:00",
+      "quarta-feira: 08:00 – 18:00",
+      "quinta-feira: 08:00 – 18:00",
+      "sexta-feira: 08:00 – 18:00",
+      "sábado: 08:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "305s-a-4",
+    "telefone": "(61) 99520-5448",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "305s-c-1",
+    "telefone": "(61) 3226-3391",
+    "horario": [
+      "segunda-feira: 09:00 – 18:30",
+      "terça-feira: 09:00 – 18:30",
+      "quarta-feira: 09:00 – 18:30",
+      "quinta-feira: 09:00 – 18:30",
+      "sexta-feira: 09:00 – 18:30",
+      "sábado: 09:00 – 18:30",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "305s-a-5",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: 12:00 – 19:00",
+      "terça-feira: 12:00 – 19:00",
+      "quarta-feira: 12:00 – 19:00",
+      "quinta-feira: 12:00 – 20:00",
+      "sexta-feira: 12:00 – 20:00",
+      "sábado: 12:00 – 20:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "314s-a-1",
+    "telefone": "(61) 3346-4501",
+    "horario": [
+      "segunda-feira: 11:00 – 22:00",
+      "terça-feira: 11:00 – 22:00",
+      "quarta-feira: 11:00 – 22:00",
+      "quinta-feira: 11:00 – 22:00",
+      "sexta-feira: 11:00 – 22:00",
+      "sábado: 11:00 – 16:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "314s-d-1",
+    "telefone": "(61) 3245-6521",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 11:30 – 15:30, 18:00 – 23:00",
+      "quarta-feira: 11:30 – 15:30, 18:00 – 23:00",
+      "quinta-feira: 11:30 – 15:30, 18:00 – 23:00",
+      "sexta-feira: 11:30 – 15:30, 18:00 – 23:00",
+      "sábado: 12:00 – 21:00",
+      "domingo: 11:30 – 16:30"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "314s-a-2",
+    "telefone": "(61) 98353-5190",
+    "horario": [
+      "segunda-feira: 09:30 – 22:00",
+      "terça-feira: 09:30 – 22:00",
+      "quarta-feira: 09:30 – 22:00",
+      "quinta-feira: 09:30 – 22:00",
+      "sexta-feira: 09:30 – 22:00",
+      "sábado: 09:30 – 22:00",
+      "domingo: 09:30 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "315s-a-1",
+    "telefone": "(61) 3346-1160",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "315s-b-1",
+    "telefone": "(61) 3245-3842",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "315s-a-2",
+    "telefone": "(61) 3543-5057",
+    "horario": [
+      "segunda-feira: 12:30 – 20:00",
+      "terça-feira: 10:00 – 20:00",
+      "quarta-feira: 10:00 – 20:00",
+      "quinta-feira: 10:00 – 20:00",
+      "sexta-feira: 10:00 – 20:00",
+      "sábado: 10:00 – 20:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "315s-d-1",
+    "telefone": "(61) 99890-0870",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 17:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "315s-a-3",
+    "telefone": "3445-1197",
+    "horario": [
+      "segunda-feira: 08:00 – 18:00",
+      "terça-feira: 08:00 – 18:00",
+      "quarta-feira: 08:00 – 18:00",
+      "quinta-feira: 08:00 – 18:00",
+      "sexta-feira: 08:00 – 18:00",
+      "sábado: 08:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "315s-a-4",
+    "telefone": "(61) 3345-6286",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "404s-a-1",
+    "telefone": "(61) 3321-1412",
+    "horario": [
+      "segunda-feira: 12:00 – 15:00",
+      "terça-feira: 12:00 – 15:00, 19:00 – 23:00",
+      "quarta-feira: 12:00 – 15:00, 19:00 – 23:00",
+      "quinta-feira: 12:00 – 15:00, 19:00 – 23:00",
+      "sexta-feira: 12:00 – 15:00, 19:00 – 00:00",
+      "sábado: 12:00 – 16:00, 19:00 – 00:00",
+      "domingo: 12:00 – 16:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "404s-a-2",
+    "telefone": "(61) 3257-8999",
+    "horario": [
+      "segunda-feira: 12:00 – 15:00",
+      "terça-feira: 12:00 – 15:00, 19:00 – 23:30",
+      "quarta-feira: 12:00 – 15:00, 19:00 – 23:30",
+      "quinta-feira: 12:00 – 15:00, 19:00 – 23:30",
+      "sexta-feira: 12:00 – 15:00, 19:00 – 23:30",
+      "sábado: 12:00 – 16:00, 19:00 – 23:30",
+      "domingo: 12:00 – 17:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "404s-a-3",
+    "telefone": "(61) 3226-2730",
+    "horario": [
+      "segunda-feira: 11:00 – 15:00",
+      "terça-feira: 11:00 – 15:00, 18:00 – 22:30",
+      "quarta-feira: 11:00 – 15:00, 18:00 – 22:30",
+      "quinta-feira: 11:00 – 15:00, 18:00 – 22:30",
+      "sexta-feira: 11:00 – 15:00, 18:00 – 22:30",
+      "sábado: 11:00 – 16:00, 18:00 – 22:30",
+      "domingo: 11:00 – 16:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "404s-a-5",
+    "telefone": "(61) 3536-1125",
+    "horario": [
+      "segunda-feira: 07:00 – 22:00",
+      "terça-feira: 07:00 – 22:00",
+      "quarta-feira: 07:00 – 22:00",
+      "quinta-feira: 07:00 – 22:00",
+      "sexta-feira: 07:00 – 22:00",
+      "sábado: 07:00 – 22:00",
+      "domingo: 08:00 – 18:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "404s-a-6",
+    "telefone": "(61) 98105-0187",
+    "horario": [
+      "segunda-feira: 09:00 – 21:30",
+      "terça-feira: 09:00 – 21:30",
+      "quarta-feira: 09:00 – 21:30",
+      "quinta-feira: 09:00 – 21:30",
+      "sexta-feira: 09:00 – 21:30",
+      "sábado: 09:00 – 21:30",
+      "domingo: 09:00 – 21:30"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "405s-a-2",
+    "telefone": "(61) 3548-4451",
+    "horario": [
+      "segunda-feira: 11:30 – 23:00",
+      "terça-feira: 11:30 – 23:00",
+      "quarta-feira: 11:30 – 23:00",
+      "quinta-feira: 11:30 – 23:00",
+      "sexta-feira: 11:30 – 23:30",
+      "sábado: 11:30 – 23:30",
+      "domingo: 17:00 – 23:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "405s-a-3",
+    "telefone": "(61) 3244-2621",
+    "horario": [
+      "segunda-feira: 11:30 – 22:00",
+      "terça-feira: 11:30 – 22:00",
+      "quarta-feira: 11:30 – 22:00",
+      "quinta-feira: 11:30 – 22:00",
+      "sexta-feira: 11:30 – 22:00",
+      "sábado: 11:30 – 22:00",
+      "domingo: 11:30 – 17:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "405s-a-4",
+    "telefone": "(61) 4040-4616",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "405s-a-5",
+    "telefone": "(61) 3443-1450",
+    "horario": [
+      "segunda-feira: 12:00 – 15:00",
+      "terça-feira: 12:00 – 15:00, 19:00 – 23:30",
+      "quarta-feira: 12:00 – 15:00, 19:00 – 23:30",
+      "quinta-feira: 12:00 – 15:00, 19:00 – 23:30",
+      "sexta-feira: 12:00 – 15:00, 19:00 – 23:30",
+      "sábado: 12:00 – 16:00, 19:00 – 23:30",
+      "domingo: 12:00 – 16:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "405s-b-2",
+    "telefone": "(61) 3554-0133",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 12:00 – 22:00",
+      "quarta-feira: 12:00 – 22:00",
+      "quinta-feira: 12:00 – 22:00",
+      "sexta-feira: 12:00 – 22:00",
+      "sábado: 12:00 – 22:00",
+      "domingo: 12:00 – 21:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "405s-a-6",
+    "telefone": "(61) 3274-5931",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 13:30 – 20:30",
+      "quarta-feira: 13:30 – 20:30",
+      "quinta-feira: 13:30 – 20:30",
+      "sexta-feira: 13:30 – 20:30",
+      "sábado: 12:00 – 20:00",
+      "domingo: 12:00 – 19:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "406s-a-2",
+    "telefone": "(61) 99613-9700",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 16:00 – 00:00",
+      "quarta-feira: 16:00 – 00:00",
+      "quinta-feira: 16:00 – 00:00",
+      "sexta-feira: 16:00 – 02:00",
+      "sábado: 16:00 – 02:00",
+      "domingo: 16:00 – 00:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "406s-a-3",
+    "telefone": "(61) 3242-9666",
+    "horario": [
+      "segunda-feira: 08:00 – 19:00",
+      "terça-feira: 08:00 – 19:00",
+      "quarta-feira: 08:00 – 19:00",
+      "quinta-feira: 08:00 – 19:00",
+      "sexta-feira: 08:00 – 19:00",
+      "sábado: 08:00 – 14:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "406s-d-3",
+    "telefone": "(61) 98355-0908",
+    "horario": [
+      "segunda-feira: 08:00 – 18:00",
+      "terça-feira: 08:00 – 18:00",
+      "quarta-feira: 08:00 – 18:00",
+      "quinta-feira: 08:00 – 18:00",
+      "sexta-feira: 08:00 – 18:00",
+      "sábado: 08:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "406s-d-4",
+    "telefone": "(61) 99220-2073",
+    "horario": [
+      "segunda-feira: 08:30 – 17:30",
+      "terça-feira: 08:30 – 17:30",
+      "quarta-feira: 08:30 – 17:30",
+      "quinta-feira: 08:30 – 17:30",
+      "sexta-feira: 08:30 – 17:30",
+      "sábado: Fechado",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "406s-a-4",
+    "telefone": "(61) 99366-9180",
+    "horario": [
+      "segunda-feira: 11:00 – 00:00",
+      "terça-feira: 11:00 – 00:00",
+      "quarta-feira: 11:00 – 00:00",
+      "quinta-feira: 11:00 – 00:00",
+      "sexta-feira: 11:00 – 00:00",
+      "sábado: 11:00 – 00:00",
+      "domingo: 11:00 – 23:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "406s-a-5",
+    "telefone": "(61) 3244-1519",
+    "horario": [
+      "segunda-feira: 09:00 – 18:30",
+      "terça-feira: 09:00 – 18:30",
+      "quarta-feira: 09:00 – 18:30",
+      "quinta-feira: 09:00 – 18:30",
+      "sexta-feira: 09:00 – 18:30",
+      "sábado: 09:00 – 17:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "407s-b-1",
+    "telefone": "(61) 3242-3644",
+    "horario": [
+      "segunda-feira: 08:00 – 19:30",
+      "terça-feira: 08:00 – 19:30",
+      "quarta-feira: 08:00 – 19:30",
+      "quinta-feira: 08:00 – 19:30",
+      "sexta-feira: 08:00 – 19:30",
+      "sábado: 08:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "407s-a-1",
+    "telefone": "(61) 3242-8678",
+    "horario": [
+      "segunda-feira: 07:00 – 23:00",
+      "terça-feira: 07:00 – 23:00",
+      "quarta-feira: 07:00 – 23:00",
+      "quinta-feira: 07:00 – 23:00",
+      "sexta-feira: 07:00 – 23:00",
+      "sábado: 07:00 – 23:00",
+      "domingo: 06:00 – 23:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "407s-a-2",
+    "telefone": "(61) 3443-8710",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 12:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "409s-c-1",
+    "telefone": "(61) 98256-8220",
+    "horario": null,
+    "foto_url": null
+  },
+  {
+    "slug": "410s-a-1",
+    "telefone": "(61) 3244-0421",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 11:30 – 23:00",
+      "quarta-feira: 11:30 – 23:00",
+      "quinta-feira: 11:30 – 23:00",
+      "sexta-feira: 11:30 – 23:00",
+      "sábado: 11:30 – 23:00",
+      "domingo: 11:30 – 19:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "410s-a-2",
+    "telefone": "(19) 99705-6859",
+    "horario": [
+      "segunda-feira: 11:00 – 20:00",
+      "terça-feira: 10:00 – 19:40",
+      "quarta-feira: 11:00 – 20:00",
+      "quinta-feira: 11:00 – 20:00",
+      "sexta-feira: 11:00 – 20:00",
+      "sábado: 11:00 – 19:30",
+      "domingo: 12:00 – 18:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "410s-c-1",
+    "telefone": "(61) 99195-8863",
+    "horario": [
+      "segunda-feira: 11:30 – 23:00",
+      "terça-feira: 11:30 – 23:00",
+      "quarta-feira: 11:30 – 23:00",
+      "quinta-feira: 11:30 – 23:00",
+      "sexta-feira: 11:30 – 23:00",
+      "sábado: 11:30 – 23:00",
+      "domingo: 11:30 – 23:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "410s-a-3",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: 10:00 – 15:00",
+      "terça-feira: 10:00 – 15:00",
+      "quarta-feira: 10:00 – 15:00",
+      "quinta-feira: 10:00 – 15:00",
+      "sexta-feira: 10:00 – 00:00",
+      "sábado: 10:00 – 00:00",
+      "domingo: 10:00 – 15:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "410s-d-1",
+    "telefone": "(61) 99000-2585",
+    "horario": [
+      "segunda-feira: 09:00 – 22:00",
+      "terça-feira: 09:00 – 22:00",
+      "quarta-feira: 09:00 – 22:00",
+      "quinta-feira: 09:00 – 22:00",
+      "sexta-feira: 09:00 – 22:00",
+      "sábado: 09:00 – 22:00",
+      "domingo: 11:00 – 18:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "410s-a-4",
+    "telefone": "(61) 3297-8836",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "410s-a-5",
+    "telefone": "(61) 3242-6399",
+    "horario": [
+      "segunda-feira: 10:30 – 19:30",
+      "terça-feira: 10:00 – 19:30",
+      "quarta-feira: 10:00 – 19:30",
+      "quinta-feira: 10:00 – 19:00",
+      "sexta-feira: 10:00 – 19:30",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "411s-a-1",
+    "telefone": "(61) 3345-5558",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "411s-a-2",
+    "telefone": "(61) 98365-2002",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: Fechado",
+      "quarta-feira: 20:00 – 01:00",
+      "quinta-feira: 20:00 – 02:00",
+      "sexta-feira: 20:00 – 02:00",
+      "sábado: 20:00 – 02:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "411s-a-3",
+    "telefone": "(61) 3797-6640",
+    "horario": [
+      "segunda-feira: 11:00 – 22:00",
+      "terça-feira: 11:00 – 22:00",
+      "quarta-feira: 11:00 – 22:00",
+      "quinta-feira: 11:00 – 22:00",
+      "sexta-feira: 11:00 – 22:00",
+      "sábado: 11:00 – 23:00",
+      "domingo: 11:00 – 22:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "411s-a-4",
+    "telefone": "(61) 98345-5559",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 11:00 – 01:00",
+      "quarta-feira: 11:00 – 01:00",
+      "quinta-feira: 11:00 – 01:00",
+      "sexta-feira: 11:00 – 01:00",
+      "sábado: 11:00 – 01:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "411s-a-5",
+    "telefone": "(61) 3346-0505",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "411s-a-6",
+    "telefone": "(61) 3999-1206",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 08:30 – 18:00",
+      "quarta-feira: 08:30 – 18:00",
+      "quinta-feira: 08:30 – 18:00",
+      "sexta-feira: 08:30 – 18:00",
+      "sábado: 08:30 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "412s-a-2",
+    "telefone": "(61) 99648-8593",
+    "horario": [
+      "segunda-feira: 07:00 – 23:00",
+      "terça-feira: 07:00 – 23:00",
+      "quarta-feira: 07:00 – 23:00",
+      "quinta-feira: 07:00 – 23:00",
+      "sexta-feira: 07:00 – 23:00",
+      "sábado: 07:00 – 23:00",
+      "domingo: 07:00 – 23:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "412s-b-1",
+    "telefone": "(61) 99599-7455",
+    "horario": [
+      "segunda-feira: 11:00 – 14:40",
+      "terça-feira: 11:00 – 14:40",
+      "quarta-feira: 11:00 – 14:40",
+      "quinta-feira: 11:00 – 14:40",
+      "sexta-feira: 11:00 – 14:40",
+      "sábado: 11:00 – 15:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "412s-a-3",
+    "telefone": "(61) 99114-6403",
+    "horario": [
+      "segunda-feira: 09:00 – 22:00",
+      "terça-feira: 09:00 – 22:00",
+      "quarta-feira: 09:00 – 22:00",
+      "quinta-feira: 09:00 – 22:00",
+      "sexta-feira: 09:00 – 00:00",
+      "sábado: 10:00 – 00:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "412s-a-4",
+    "telefone": "(61) 3877-0603",
+    "horario": [
+      "segunda-feira: Atendimento 24 horas",
+      "terça-feira: Atendimento 24 horas",
+      "quarta-feira: Atendimento 24 horas",
+      "quinta-feira: Atendimento 24 horas",
+      "sexta-feira: Atendimento 24 horas",
+      "sábado: Atendimento 24 horas",
+      "domingo: Atendimento 24 horas"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "412s-a-5",
+    "telefone": "(61) 3345-3531",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "413s-b-2",
+    "telefone": "(61) 3541-2031",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 11:00 – 00:00",
+      "quarta-feira: 11:00 – 00:00",
+      "quinta-feira: 11:00 – 00:00",
+      "sexta-feira: 11:00 – 00:00",
+      "sábado: 11:00 – 00:00",
+      "domingo: 11:00 – 20:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "413s-d-1",
+    "telefone": "(61) 3346-8661",
+    "horario": [
+      "segunda-feira: Atendimento 24 horas",
+      "terça-feira: Atendimento 24 horas",
+      "quarta-feira: Atendimento 24 horas",
+      "quinta-feira: Atendimento 24 horas",
+      "sexta-feira: Atendimento 24 horas",
+      "sábado: Atendimento 24 horas",
+      "domingo: Atendimento 24 horas"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "413s-a-2",
+    "telefone": "(61) 3541-4944",
+    "horario": [
+      "segunda-feira: 11:00 – 00:00",
+      "terça-feira: 11:00 – 00:00",
+      "quarta-feira: 11:00 – 00:00",
+      "quinta-feira: 11:00 – 00:00",
+      "sexta-feira: 11:00 – 00:00",
+      "sábado: 11:00 – 00:00",
+      "domingo: 11:00 – 00:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "413s-a-3",
+    "telefone": "(61) 3345-6918",
+    "horario": [
+      "segunda-feira: 09:00 – 17:30",
+      "terça-feira: 09:00 – 17:30",
+      "quarta-feira: 09:00 – 17:30",
+      "quinta-feira: 09:00 – 17:30",
+      "sexta-feira: 09:00 – 17:30",
+      "sábado: 09:00 – 12:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "414s-d-1",
+    "telefone": "(61) 3346-7655",
+    "horario": [
+      "segunda-feira: 07:00 – 19:45",
+      "terça-feira: 07:00 – 19:45",
+      "quarta-feira: 07:00 – 19:45",
+      "quinta-feira: 07:00 – 19:45",
+      "sexta-feira: 07:00 – 19:45",
+      "sábado: 07:00 – 18:45",
+      "domingo: 07:00 – 14:45"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "414s-a-1",
+    "telefone": "(41) 99279-7895",
+    "horario": [
+      "segunda-feira: 07:00 – 18:00",
+      "terça-feira: 07:00 – 18:00",
+      "quarta-feira: 07:00 – 18:00",
+      "quinta-feira: 07:00 – 18:00",
+      "sexta-feira: 07:00 – 18:00",
+      "sábado: 07:00 – 18:00",
+      "domingo: 09:00 – 14:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "414s-a-2",
+    "telefone": "(61) 99623-4603",
+    "horario": [
+      "segunda-feira: 11:00 – 15:00, 18:00 – 21:00",
+      "terça-feira: 11:00 – 15:00, 18:00 – 21:00",
+      "quarta-feira: 11:00 – 15:00, 18:00 – 21:00",
+      "quinta-feira: 11:00 – 15:00, 18:00 – 21:00",
+      "sexta-feira: 11:00 – 15:00, 18:00 – 21:00",
+      "sábado: 11:00 – 16:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "414s-a-3",
+    "telefone": "(61) 3245-1524",
+    "horario": [
+      "segunda-feira: 08:00 – 18:00",
+      "terça-feira: 08:00 – 18:00",
+      "quarta-feira: 08:00 – 18:00",
+      "quinta-feira: 08:00 – 18:00",
+      "sexta-feira: 08:00 – 18:00",
+      "sábado: 08:00 – 12:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "415s-b-1",
+    "telefone": "(61) 99432-1729",
+    "horario": [
+      "segunda-feira: 11:30 – 15:00",
+      "terça-feira: 11:30 – 15:00",
+      "quarta-feira: 11:30 – 15:00",
+      "quinta-feira: 11:30 – 15:00",
+      "sexta-feira: 11:30 – 15:00",
+      "sábado: 11:30 – 15:00",
+      "domingo: 11:30 – 15:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "415s-a-2",
+    "telefone": "(61) 3532-4968",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "415s-a-3",
+    "telefone": "(61) 2194-8280",
+    "horario": [
+      "segunda-feira: 08:00 – 18:00",
+      "terça-feira: 08:00 – 18:00",
+      "quarta-feira: 08:00 – 18:00",
+      "quinta-feira: 08:00 – 18:00",
+      "sexta-feira: 08:00 – 18:00",
+      "sábado: Fechado",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "415s-a-4",
+    "telefone": "(61) 3245-1760",
+    "horario": [
+      "segunda-feira: 08:00 – 18:00",
+      "terça-feira: 08:00 – 18:00",
+      "quarta-feira: 08:00 – 18:00",
+      "quinta-feira: 08:00 – 18:00",
+      "sexta-feira: 08:00 – 18:00",
+      "sábado: 08:00 – 13:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "415s-a-5",
+    "telefone": "(61) 3224-6415",
+    "horario": [
+      "segunda-feira: 09:00 – 17:30",
+      "terça-feira: 09:00 – 17:30",
+      "quarta-feira: 09:00 – 17:30",
+      "quinta-feira: 09:00 – 17:30",
+      "sexta-feira: 09:00 – 17:30",
+      "sábado: 09:00 – 12:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "415s-a-6",
+    "telefone": "(61) 99662-1087",
+    "horario": [
+      "segunda-feira: 10:00 – 18:00",
+      "terça-feira: 10:00 – 18:00",
+      "quarta-feira: 10:00 – 18:00",
+      "quinta-feira: 10:00 – 18:00",
+      "sexta-feira: 10:00 – 18:00",
+      "sábado: 10:00 – 18:00",
+      "domingo: 10:00 – 14:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "513s-c-1",
+    "telefone": "(61) 3272-4904",
+    "horario": [
+      "segunda-feira: 09:00 – 17:30",
+      "terça-feira: 09:00 – 17:30",
+      "quarta-feira: 09:00 – 17:30",
+      "quinta-feira: 09:00 – 17:30",
+      "sexta-feira: 09:00 – 17:30",
+      "sábado: Fechado",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "104n-a-3",
+    "telefone": "(61) 3963-1956",
+    "horario": [
+      "segunda-feira: 10:00 – 16:00",
+      "terça-feira: 10:00 – 00:00",
+      "quarta-feira: 10:00 – 00:00",
+      "quinta-feira: 10:00 – 00:00",
+      "sexta-feira: 10:00 – 00:00",
+      "sábado: 10:00 – 16:00",
+      "domingo: 10:00 – 16:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "104n-a-4",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: 09:00 – 23:00",
+      "terça-feira: 09:00 – 23:00",
+      "quarta-feira: 09:00 – 23:00",
+      "quinta-feira: 09:00 – 23:00",
+      "sexta-feira: 09:00 – 23:00",
+      "sábado: 09:00 – 23:00",
+      "domingo: 09:00 – 23:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "104n-b-1",
+    "telefone": "(61) 99523-2064",
+    "horario": [
+      "segunda-feira: 08:00 – 19:30",
+      "terça-feira: 08:00 – 19:30",
+      "quarta-feira: 08:00 – 19:30",
+      "quinta-feira: 08:00 – 19:30",
+      "sexta-feira: 08:00 – 19:30",
+      "sábado: 08:00 – 18:30",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "104n-a-5",
+    "telefone": "(61) 99901-1575",
+    "horario": [
+      "segunda-feira: 09:00 – 17:30",
+      "terça-feira: 09:00 – 17:30",
+      "quarta-feira: 09:00 – 17:30",
+      "quinta-feira: 09:00 – 17:30",
+      "sexta-feira: 09:00 – 17:30",
+      "sábado: 09:00 – 13:00",
+      "domingo: 09:00 – 12:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "104n-a-6",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 17:00 – 00:00",
+      "quarta-feira: 17:00 – 00:00",
+      "quinta-feira: 17:00 – 00:00",
+      "sexta-feira: 17:00 – 00:00",
+      "sábado: 17:00 – 00:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "105n-a-1",
+    "telefone": "(61) 99123-0625",
+    "horario": [
+      "segunda-feira: 11:00 – 23:30",
+      "terça-feira: 11:00 – 23:30",
+      "quarta-feira: 11:00 – 23:30",
+      "quinta-feira: 11:00 – 23:30",
+      "sexta-feira: 11:00 – 23:30",
+      "sábado: 11:00 – 23:30",
+      "domingo: 11:00 – 23:30"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "105n-a-2",
+    "telefone": "(61) 3024-9961",
+    "horario": [
+      "segunda-feira: 09:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 09:00 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: 10:00 – 16:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "205n-b-1",
+    "telefone": "(61) 99699-5999",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: Fechado",
+      "quarta-feira: Fechado",
+      "quinta-feira: 14:00 – 23:00",
+      "sexta-feira: 14:00 – 23:00",
+      "sábado: 14:00 – 23:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "205n-b-2",
+    "telefone": "(61) 99957-6602",
+    "horario": [
+      "segunda-feira: 13:00 – 19:00",
+      "terça-feira: 09:00 – 19:00",
+      "quarta-feira: 10:30 – 19:00",
+      "quinta-feira: 09:00 – 19:00",
+      "sexta-feira: 09:00 – 19:00",
+      "sábado: 09:00 – 19:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "205n-a-3",
+    "telefone": "(61) 3347-1540",
+    "horario": null,
+    "foto_url": null
+  },
+  {
+    "slug": "206n-a-1",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: 11:00 – 14:30",
+      "terça-feira: 11:00 – 14:30",
+      "quarta-feira: 11:00 – 14:30",
+      "quinta-feira: 11:00 – 14:30",
+      "sexta-feira: 11:00 – 14:30",
+      "sábado: 11:00 – 14:30",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "206n-d-1",
+    "telefone": "(61) 98126-5889",
+    "horario": [
+      "segunda-feira: 08:00 – 20:00",
+      "terça-feira: 08:00 – 20:00",
+      "quarta-feira: 08:00 – 20:00",
+      "quinta-feira: 08:00 – 20:00",
+      "sexta-feira: 08:00 – 20:00",
+      "sábado: 08:00 – 20:00",
+      "domingo: 08:00 – 20:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "206n-a-2",
+    "telefone": "(61) 99127-0059",
+    "horario": [
+      "segunda-feira: 17:00 – 00:00",
+      "terça-feira: 17:00 – 00:00",
+      "quarta-feira: 17:00 – 00:00",
+      "quinta-feira: 17:00 – 00:00",
+      "sexta-feira: 12:00 – 00:00",
+      "sábado: 12:00 – 00:00",
+      "domingo: 12:00 – 23:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "207n-a-1",
+    "telefone": "(61) 99961-1669",
+    "horario": [
+      "segunda-feira: 00:30 – 01:00, 11:30 – 00:00",
+      "terça-feira: 11:30 – 00:00",
+      "quarta-feira: 11:30 – 00:00",
+      "quinta-feira: 11:30 – 00:00",
+      "sexta-feira: 11:30 – 00:00",
+      "sábado: 00:30 – 01:00, 11:30 – 00:00",
+      "domingo: 00:30 – 01:00, 11:30 – 00:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "207n-b-2",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 13:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "207n-a-2",
+    "telefone": "(61) 99220-9456",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 15:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "208n-c-1",
+    "telefone": "(61) 3202-1331",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: Fechado",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "208n-a-1",
+    "telefone": "(61) 3039-6369",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 16:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "208n-a-2",
+    "telefone": null,
+    "horario": [
+      "segunda-feira: 08:00 – 18:00",
+      "terça-feira: 08:00 – 18:00",
+      "quarta-feira: 08:00 – 18:00",
+      "quinta-feira: 08:00 – 18:00",
+      "sexta-feira: 08:00 – 18:00",
+      "sábado: 08:00 – 15:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "208n-c-2",
+    "telefone": "(61) 3541-1649",
+    "horario": [
+      "segunda-feira: 09:00 – 18:00",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 13:00",
+      "domingo: Fechado"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "209n-a-1",
+    "telefone": "(61) 3963-0505",
+    "horario": [
+      "segunda-feira: 09:00 – 20:30",
+      "terça-feira: 09:00 – 20:30",
+      "quarta-feira: 09:00 – 20:30",
+      "quinta-feira: 09:00 – 20:30",
+      "sexta-feira: 09:00 – 20:30",
+      "sábado: 09:00 – 20:30",
+      "domingo: 09:00 – 14:30"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "209n-a-2",
+    "telefone": "(61) 3340-7552",
+    "horario": [
+      "segunda-feira: 11:00 – 00:00",
+      "terça-feira: 11:00 – 00:00",
+      "quarta-feira: 11:00 – 01:00",
+      "quinta-feira: 11:00 – 01:00",
+      "sexta-feira: 11:00 – 01:00",
+      "sábado: 11:00 – 01:00",
+      "domingo: 11:00 – 00:00"
+    ],
+    "foto_url": null
+  },
+  {
+    "slug": "209n-a-3",
+    "telefone": "(61) 98164-5785",
+    "horario": [
+      "segunda-feira: Fechado",
+      "terça-feira: 09:00 – 18:00",
+      "quarta-feira: 09:00 – 18:00",
+      "quinta-feira: 09:00 – 18:00",
+      "sexta-feira: 09:00 – 18:00",
+      "sábado: 09:00 – 18:00",
+      "domingo: Fechado"
     ],
     "foto_url": null
   },
