@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=400, height=400"/>
+  <title>Capivara QC — Emoji</title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    body { margin: 0; background: transparent; }
+    #root { position: relative; width: 400px; height: 400px; overflow: hidden; }
+    .clip { position: absolute; inset: 0; }
+  </style>
+</head>
+<body>
+  <div
+    id="root"
+    data-composition-id="capivara-rating"
+    data-width="400"
+    data-height="400"
+    data-duration="4"
+    data-start="0"
+    style="position:relative;width:400px;height:400px;overflow:hidden"
+  >
+    <section class="clip" data-start="0" data-duration="4" data-track-index="1">
+      <svg id="capy" viewBox="0 0 400 400" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Orelhas (atrás) -->
+        <g id="ear-l" style="transform-origin:112px 112px">
+          <circle cx="112" cy="90" r="38" fill="#B06830" stroke="#2A1208" stroke-width="7"/>
+          <circle cx="112" cy="90" r="22" fill="#CC8E5A"/>
+        </g>
+        <g id="ear-r" style="transform-origin:288px 112px">
+          <circle cx="288" cy="90" r="38" fill="#B06830" stroke="#2A1208" stroke-width="7"/>
+          <circle cx="288" cy="90" r="22" fill="#CC8E5A"/>
+        </g>
+
+        <!-- Rosto: quadrado arredondado -->
+        <rect x="42" y="68" width="316" height="302" rx="88"
+              fill="#C07840" stroke="#2A1208" stroke-width="8"/>
+
+        <!-- Focinho grande -->
+        <rect x="112" y="222" width="176" height="122" rx="36"
+              fill="#D4924E" stroke="#2A1208" stroke-width="6"/>
+
+        <!-- Narinas -->
+        <ellipse cx="166" cy="264" rx="18" ry="14" fill="#2A1208"/>
+        <ellipse cx="234" cy="264" rx="18" ry="14" fill="#2A1208"/>
+
+        <!-- Sorriso simples -->
+        <path d="M 172,308 Q 200,328 228,308"
+              stroke="#2A1208" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+
+        <!-- Olhos -->
+        <circle cx="148" cy="180" r="20" fill="#2A1208"/>
+        <circle cx="141" cy="173" r="7"  fill="white"/>
+        <circle cx="252" cy="180" r="20" fill="#2A1208"/>
+        <circle cx="245" cy="173" r="7"  fill="white"/>
+
+      </svg>
+    </section>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    window.__timelines = window.__timelines || {};
+    window.__timelines["capivara-rating"] = tl;
+
+    tl.to("#capy", {
+        scaleY: 1.013,
+        scaleX: 0.989,
+        transformOrigin: "50% 100%",
+        duration: 1.1,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: 3,
+      }, 0)
+      .to("#ear-l", { rotation: -8, duration: 1, ease: "sine.inOut", yoyo: true, repeat: 3 }, 0.2)
+      .to("#ear-r", { rotation:  8, duration: 1, ease: "sine.inOut", yoyo: true, repeat: 3 }, 0.5);
+  </script>
+</body>
+</html>

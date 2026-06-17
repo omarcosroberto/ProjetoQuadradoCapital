@@ -1,101 +1,109 @@
-import { useId } from "react";
+import { CAPY_LABELS } from "@/components/capivara-face";
 
-/** Cabeça de capivara — derivada de brand/quadrado-capital/capivara-rating.svg */
-function Cabeca({ mode }: { mode: "fill" | "outline" }) {
-  if (mode === "outline") {
-    const s = {
-      fill: "none",
-      stroke: "var(--qc-linha)",
-      strokeWidth: 2,
-    } as const;
-    return (
-      <g>
-        <ellipse cx="32" cy="40" rx="24" ry="28" {...s} />
-        <circle cx="16" cy="18" r="7" {...s} />
-        <circle cx="48" cy="18" r="7" {...s} />
-        <circle cx="24" cy="35" r="4" {...s} />
-        <circle cx="40" cy="35" r="4" {...s} />
-        <ellipse cx="32" cy="48" rx="3" ry="2.5" {...s} />
-        <path d="M 28 52 Q 32 54 36 52" stroke="var(--qc-linha)" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-      </g>
-    );
-  }
-  return (
-    <g>
-      <ellipse cx="32" cy="40" rx="24" ry="28" fill="var(--qc-verde)" />
-      <circle cx="16" cy="18" r="7" fill="var(--qc-verde)" />
-      <circle cx="48" cy="18" r="7" fill="var(--qc-verde)" />
-      <circle cx="24" cy="35" r="4" fill="#1a1a1a" />
-      <circle cx="24.5" cy="33.5" r="1.5" fill="#fff" />
-      <circle cx="40" cy="35" r="4" fill="#1a1a1a" />
-      <circle cx="40.5" cy="33.5" r="1.5" fill="#fff" />
-      <ellipse cx="32" cy="48" rx="3" ry="2.5" fill="#1a1a1a" />
-      <path d="M 28 52 Q 32 54 36 52" stroke="#1a1a1a" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-    </g>
-  );
-}
+const FADE_STYLE = "opacity(0.3) grayscale(0.6)";
 
-function CapivaraIcon({
-  variant,
-  className = "h-5 w-[18px]",
+/** Mostra a capivara mascote — usada no seletor do formulário. */
+export function CapivaraSprite({
+  nivel: _nivel,
+  className = "h-16 w-16",
 }: {
-  variant: "full" | "half" | "empty";
+  nivel: number;
   className?: string;
 }) {
-  const clip = useId();
   return (
-    <svg viewBox="0 0 64 72" className={className} role="presentation">
-      {variant === "half" && (
-        <defs>
-          <clipPath id={clip}>
-            <rect x="0" y="0" width="32" height="72" />
-          </clipPath>
-        </defs>
-      )}
-      <Cabeca mode="outline" />
-      {variant !== "empty" && (
-        <g clipPath={variant === "half" ? `url(#${clip})` : undefined}>
-          <Cabeca mode="fill" />
-        </g>
-      )}
-    </svg>
+    <div
+      role="presentation"
+      className={className}
+      style={{
+        backgroundImage: "url(/capivara.png)",
+        backgroundSize: "contain",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    />
   );
 }
 
+/**
+ * Mostra as 5 capivaras como sistema de score.
+ * Sem avaliação → todas coloridas. Conforme a nota cai, capivaras ficam apagadas.
+ */
 export function CapivaraRating({
   value,
   count,
-  size,
 }: {
   value: number;
   count?: number;
-  size?: string;
 }) {
-  const r = Math.round(value * 2) / 2;
-  const full = Math.floor(r);
-  const hasHalf = r % 1 !== 0;
+  const semAvaliacao = count === 0 || value === 0;
+  const nivel = semAvaliacao ? 5 : Math.min(5, Math.max(1, Math.round(value)));
+  const label = CAPY_LABELS[nivel];
 
   return (
     <div
-      className="flex items-center gap-2"
+      className="flex flex-col gap-2"
       role="img"
-      aria-label={`${value.toFixed(1)} de 5 capivaras`}
+      aria-label={`${value.toFixed(1)} de 5 capivaras — ${label}`}
     >
-      <div className="flex gap-0.5">
-        {Array.from({ length: 5 }).map((_, i) => (
-          <CapivaraIcon
-            key={i}
-            className={size}
-            variant={i < full ? "full" : i === full && hasHalf ? "half" : "empty"}
-          />
-        ))}
+      <div className="flex items-center gap-0.5">
+        {[1, 2, 3, 4, 5].map((i) => {
+          const fill = semAvaliacao ? 1 : Math.min(1, Math.max(0, value - (i - 1)));
+          const baseStyle = {
+            backgroundImage: "url(/capivara.png)",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat" as const,
+          };
+
+          if (fill <= 0) {
+            return (
+              <div
+                key={i}
+                className="h-10 w-10 shrink-0"
+                style={{ ...baseStyle, filter: FADE_STYLE }}
+              />
+            );
+          }
+
+          if (fill >= 1) {
+            return (
+              <div
+                key={i}
+                className="h-10 w-10 shrink-0"
+                style={baseStyle}
+              />
+            );
+          }
+
+          // Preenchimento parcial: base apagada + overlay original cortado
+          return (
+            <div key={i} className="relative h-10 w-10 shrink-0">
+              <div
+                className="absolute inset-0"
+                style={{ ...baseStyle, filter: FADE_STYLE }}
+              />
+              <div
+                className="absolute inset-0"
+                style={{
+                  ...baseStyle,
+                  clipPath: `inset(0 ${(1 - fill) * 100}% 0 0)`,
+                }}
+              />
+            </div>
+          );
+        })}
       </div>
-      <span className="text-sm font-semibold text-concreto">
-        {value.toFixed(1).replace(".", ",")}
-      </span>
-      {count != null && (
-        <span className="text-sm text-concreto-claro">({count})</span>
-      )}
+      <div className="flex items-baseline gap-2">
+        <span className="text-2xl font-bold leading-none text-concreto">
+          {value.toFixed(1).replace(".", ",")}
+        </span>
+        <span className="text-xs font-semibold text-verde-escuro">{label}</span>
+        {count != null && (
+          <span className="text-xs text-concreto-claro">
+            {count} {count === 1 ? "avaliação" : "avaliações"}
+          </span>
+        )}
+      </div>
     </div>
   );
 }

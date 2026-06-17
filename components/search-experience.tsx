@@ -247,8 +247,8 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
           </div>
 
           {/* mascote */}
-          <div className="mt-6 flex justify-center">
-            <CapivaraMascote className="qc-float h-20 w-auto" />
+          <div className="mt-4 flex justify-center">
+            <CapivaraMascote className="qc-float h-36 w-auto md:h-44" />
           </div>
 
           <h1 className="qc-display mt-6 text-center text-3xl text-concreto md:text-5xl">
@@ -299,7 +299,13 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
           <Reveal delay={100}>
             <div className="mt-8 rounded-2xl border border-linha bg-branco/60 p-5 shadow-sm shadow-ceu/5">
               <div className="rounded-xl bg-branco p-4 shadow-sm">
-                <MapaQuadras businesses={businesses} onSelecionar={setQuery} />
+                <MapaQuadras
+                  businesses={businesses}
+                  onSelecionar={(q) => {
+                    setQuery(q);
+                    setTimeout(scrollToResults, 80);
+                  }}
+                />
               </div>
             </div>
           </Reveal>
@@ -340,8 +346,7 @@ export function SearchExperience({ businesses }: { businesses: Business[] }) {
           </div>
         ) : res.total === 0 ? (
           <div className="qc-rise rounded-xl border border-linha bg-branco p-8 text-center">
-            <CapivaraMascote className="mx-auto h-24 w-auto opacity-80" />
-            <p className="mt-4 text-concreto-claro">
+            <p className="text-concreto-claro">
               Nada encontrado para{" "}
               <strong className="text-concreto">
                 &ldquo;{res.titulo}&rdquo;
