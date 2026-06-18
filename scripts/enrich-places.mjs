@@ -8,17 +8,16 @@ import { writeFileSync } from "fs";
 
 // Rotação de chaves — cada uma tem 100 GetPlaceRequests/dia grátis
 // 5 projetos × 100 = 500 requests → cobre os 441 comércios
-const API_KEYS = (process.env.GOOGLE_MAPS_API_KEY
-  ? [process.env.GOOGLE_MAPS_API_KEY]
-  : []
-).concat([
-  "AIzaSyACEzhCYwyUiTPXI_vLfBI-IQmKTAoeSsI", // decent-being-382201
-  "AIzaSyBrdFyaoOOVRRfU6si7ivvTI19HQYontXM", // gen-lang-client-0215379670
-  "AIzaSyAJQuasPSQE7CpXHq0BPQ4VfuZk-gPZ6r8", // gen-lang-client-0825597435
-  "AIzaSyD_OFjnXnGv37TYwz2OxkgGc2rQdMOGWQw", // gtm-m557kcc-382201
-  "AIzaSyBWXhoPET91lWcjEw4HD1-WtlNBpHt28tM", // quadrado-capital (nova)
-  "AIzaSyDR6Kd-vmNTm6amLwvCuu9i9a8hQAioPBg", // chave original (reserva)
-]);
+// Configure suas chaves no .env.local:
+// GOOGLE_MAPS_API_KEY_1=... GOOGLE_MAPS_API_KEY_2=... etc.
+const API_KEYS = [
+  process.env.GOOGLE_MAPS_API_KEY,
+  process.env.GOOGLE_MAPS_API_KEY_1,
+  process.env.GOOGLE_MAPS_API_KEY_2,
+  process.env.GOOGLE_MAPS_API_KEY_3,
+  process.env.GOOGLE_MAPS_API_KEY_4,
+  process.env.GOOGLE_MAPS_API_KEY_5,
+].filter(Boolean);
 
 let keyIndex = 0;
 let requestsNaChaveAtual = 0;
